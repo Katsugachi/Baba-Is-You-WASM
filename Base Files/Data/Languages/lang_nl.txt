@@ -1,0 +1,2125 @@
+[general]
+name=Nederlands
+customfont
+[texts]
+main_start=Start het spel
+main_continue=Continue
+settings=Instellingen
+main_custom=Speel levels
+main_editor=Level editor
+credits=Aftiteling
+main_exit=Sluit het spel
+main_version=Version
+settings_colon=Settings:
+
+ingame_victory=Gefeliciteerd!
+ingame_clear=Kaart af!
+ingame_complete=Kaart compleet!
+ingame_infiniteloop=Oneindige lus
+ingame_toocomplex=Te complex!
+
+resume=Hervat
+restart=Herstart
+return=Terug
+
+pause_returnmap=Terug naar kaart
+pause_returnmain=Terug naar menu
+pause_returneditor=Terug naar editor
+pause_returnplaylevels=Terug naar levellijst
+pause_reportlevel=Level melden
+
+settings_music=Muziekvolume:
+settings_sound=Geluidsvolume:
+settings_repeat=Invoer herhaling vertraging:
+settings_repeat_m=Bewegingsvertraging:
+controls=Besturing
+settings_language=Taal instellingen
+lang_setup=Kies de taal die je wilt gebruiken:
+settings_fullscreen=Volledig scherm activeren
+settings_grid=Raster inschakelen
+settings_wobble=Wobble-effect uitschakelen
+settings_particles=Deeltjeseffecten uitschakelen
+settings_shake=Scherm-schudden uitschakelen
+settings_palette=Kleuren met hoog contrast afdwingen
+settings_blinking=knipperende kleuren voorkomen
+settings_restart=Niet vragen bij opstarten
+settings_zoom=Zoom modus:
+zoom1=Geen
+zoom2=Standaard
+zoom3=Uitrekken
+please_restart=Deze optie vereist het herstarten van het spel.
+
+lang_restart=Weet je het zeker? Het spel wordt opnieuw gestart als je 'ja' kiest.
+slot_current=Huidige opslag sleuf:
+slot_change=Verander opslag sleuf
+world_unknown= Naamloos levelpakket
+hotkeys_objlist_gpad_search=@gamepad_editor_drag in Object Lijst: start zoekopdracht
+
+controls_setup=Besturing instellen:
+controls_noconnectedgamepad=Geen verbonden gamepad gevonden.
+controls_gamepadname=Gamepad naam:
+controls_unknowngamepad=Onbekende gamepad
+controls_detectgamepad=Detecteer gamepad
+controls_gamepadsetup=Gamepad instellingen
+controls_defaultgamepad=Standaard gamepad instellingen
+controls_keysetup=Toetsenbord instellingen
+controls_defaultkey=Standaard toetsenbord besturing
+controls_disablegamepad_off=Schakel gamepad-invoer uit
+controls_disablegamepad_on=Schakel gamepad-invoer in
+controls_disablestick=Schakel analoge sticks uit
+move=Bewegen
+move2=Move 2
+idle=Wacht
+undo=Ongedaan maken
+controls_restart=Herstart
+confirm=Bevestigen
+pause=Pauzeer
+right=Rechts
+up=Omhoog
+left=Links
+down=Omlaag
+controls_pressany=Druk op een willekeurige toets...
+
+restart_confirm=Weet je zeker dat je opnieuw wilt opstarten?
+restart_tip=Je kunt deze prompt uitschakelen in de instellingen
+no=Nee
+yes=Ja
+cancel=Annuleer
+undefined=Niet gedefinieerd
+none=Geen
+restart_confirm_m=Herstart?
+restart_tip_m_1=Je kunt dit prompt uitschakelen
+restart_tip_m_2=In de instellingen
+
+enterlevel_multiple=Selecteer het level dat je wilt spelen:
+enterlevel_multiple_m=Selecteer het level
+
+slot=Sleuf
+slots_select=Selecteer de opslag sleuf:
+slots_erase=Wis een opslag sleuf
+erase_select=Selecteer de te wissen opslag sleuf:
+erase_confirm=Weet je zeker dat je deze sleuf wilt wissen?
+erase_tip=(Alle opgeslagen gegevens in deze sleuf gaan verloren!)
+erase_confirm_mobile=echt deze sleuf wissen?
+erase_tip_mobile=(alle opgeslagen gegevens gaan verloren!)
+intro_confirm=Wil je de intro bekijken?
+
+mobile_tuto1a=Veeg je vinger in een richting om te bewegen.
+mobile_tuto1b=Houd je vinger stil om te wachten.
+mobile_tuto1c=Tik en houd vast met twee vingers om ongedaan te maken.
+
+mobile_tuto2a=Veeg om de level selector te bewegen
+mobile_tuto2b=en selecteer een level om te spelen.
+mobile_tuto2c=Tik en houd vast om het level te openen.
+
+ending=Bedankt voor het spelen!
+
+rules=Regels
+level=$s
+rules_colon=Regels:
+level_colon=Level:
+
+customlevels_pack=Selecteer het levelpakket dat je wilt spelen
+customlevels_single=Kies het level dat je wil spelen
+customlevels_play_singular=Speel aangepaste levels
+customlevels_play_pack=Speel levelpakketen
+customlevels_play_get=Verkrijg nieuwe levels
+customlevels_play_getlist=Level geschiedenis
+customlevels_play_changename=Sleufnaam wijzigen
+customlevels_play_eraseslot=Wis opgeslagen gegevens in sleuf
+customlevels_play_eraseslot_tip=(Hierdoor worden opgeslagen gegevens voor levelpakken en gemaakte levels gewist!)
+customlevels_pack_emptysave=Geen opgeslagen gegevens
+customlevels_delete=Verwijderen
+customlevels_forget=Wis sleuf
+customlevels_deleteconfirm_single=Weet je zeker dat je dit level wil verwijderen?
+customlevels_deleteconfirm_pack=Weet je zeker dat je opgeslagen gegevens voor dit levelpakket wil wissen?
+customlevels_get=Level gevonden
+customlevels_get_save=Level opslaan
+customlevels_get_nosave=Speel nu, niet opslaan
+customlevels_get_cancel=Annuleer
+customlevels_get_fail=Kan level niet downloaden
+customlevels_get_fail_reason=Fout:
+customlevels_get_saved=Level opgeslagen!
+customlevels_get_play=Speel het level
+customlevels_get_levellist=Bekijk aangepaste levels
+customlevels_get_wait=Downloaden...
+customlevels_getlist=Eerder bekeken levels
+customlevels_getlist2=(Klik om te downloaden en naar het klembord te kopiëren)
+customlevels_getlist_download=Gedownloade levels
+customlevels_getlist_upload=Geüploade levels
+
+playlevels_get_featured=Aanbevolen levels
+playlevels_get_featured_colon=Aanbevolen levels:
+playlevels_get_new=Nieuwste levels
+playlevels_get_code=Gebruik level code
+playlevels_featured_fail=Kon de levellijst niet ophalen
+playlevels_featured_fail_reason=Fout:
+playlevels_featured_wait=Ophalen van levellijst ...
+
+reportlevel_confirm=Weet je zeker dat je een probleem wilt melden?
+reportlevel_success=Probleem succesvol gemeld!
+reportlevel_fail=Probleem melden mislukt.
+reportlevel_ok=Terug
+
+credits_designetc=Ontwerp, code etc
+credits_audio=Muziek & sfx
+credits_audioconsult=Audio-adviseurs
+credits_porting=Porting
+credits_testers=Testers
+credits_translation=Vertaling
+credits_help=Hulp en suggesties
+credits_thanks=Dank
+credits_gamejams=Game jams in het algemeen
+credits_indies=Verschillende andere indiegemeenschappen
+credits_dogs=Goede honden
+credits_dogs2=ook andere honden
+credits_specialthanks=Speciale dank
+credits_anni1=Aanmoediging, feedback & ondersteuning
+credits_anni2=gedurende het project
+credits_lukas1=Enorm veel hulp en ondersteuning
+credits_lukas2=door de jaren heen
+credits_mokesmoe1=Feedback, ontwerphulp en
+credits_mokesmoe2=algemene hulp in overvloed
+credits_alan1=Feedback en hulp bij ontwerp &
+credits_alan2=indie affaire
+credits_music=Muziek gemaakt met behulp van
+credits_musicby=gemaakt door
+credits_mmfby=gemaakt door
+credits_sound=Geluiden gemaakt met behulp van
+credits_audacity=Het Audacity team
+credits_freesound=Geluiden van freesound.org:
+credits_extensions=Gebruikte MMF2 extensies:
+credits_madeusing=Dit spel is gemaakt met behulp van
+credits_words=woord ideeën
+pluralby=door
+singularby=door
+by=door
+
+credits_thankyou=bedankt voor het spelen!
+
+intro_mp2=Geport door $4,1MP2 Games
+intro_mmf2=Gemaakt met gebruik van $4,1Multimedia Fusion 2$0,3 door Clickteam
+intro_madeby=Een spel door $4,1Arvi Teikari
+intro_charity=$4,110% $0,3van het persoonlijke inkomen van de ontwikkelaar gaat naar $2,4goede doelen
+intro_hold=Houd ingedrukt om de intro over te slaan
+
+image_desc_1=Een zeer vroege versie van het spel.
+image_desc_2=Mockups gemaakt tijdens het uitzoeken van de tekenstijl.
+image_desc_3=Aanvankelijke testen voor verschillende paletten.
+image_desc_4=Een zeer vroege versie van de kaart.
+image_desc_5=Hoe de kaart eruit had moeten zien.
+image_desc_6=Eerste iteraties van een niet-abstracte wereldkaart.
+image_desc_7=Proberen het trek mechanisme te begrijpen.
+image_desc_8=Waterverf – Titel
+image_desc_9=Waterverf – Spatie
+image_desc_10=Waterverf – Keke
+image_desc_11=Plotselinge inspiratie leidde tot een drieogige Baba.
+image_desc_12=Het duwsysteem was erg moeilijk om te maken.
+image_desc_13=Enkele to-do-notities, in het Fins!
+image_desc_14=Een mockup van de kaart.
+image_desc_15=Proberen de 'standaard'-objecten aan te leggen.
+image_desc_16=Een flowchart om te zien welke levels 'gerelateerd' zijn.
+
+editor_start_title=Welkom bij de level editor!
+editor_start_level=Aangepaste levels bewerken...
+editor_start_world=Levelpakken bewerken...
+editor_start_settings=Help & algemene instellingen
+
+editor_settings_controls=Editor besturing instellingen
+editor_settings_advanced=Geavanceerde woorden inschakelen
+editor_settings_mod=Schakel uitgebreide functies in
+editor_settings_tips=Schakel gamepad-knop tips uit
+editor_settings_tips_n=Knop tips uitschakelen
+editor_settings_slide=Schakel visuele effecten van editor uit
+editor_settings_help=Tutorials en shortcuts
+editor_settings_music=Schakel aangepaste editor-muziek uit
+editor_settings_hotkeys=Bekijk lijst met editor shortcuts
+editor_settings_defaultpad=Standaard gamepad-besturing
+
+editor_tutorial1=Les 1: Overzicht
+editor_tutorial2=Les 2: Level bewerken
+editor_tutorial3=Les 3: Editor-tools
+editor_tutorial4=Les 4: Objectpalet
+editor_tutorial5=Les 5: Level-instellingen
+editor_tutorial6=Les 6: Een level uploaden
+editor_tutorial7=Les 7: Levels downloaden
+editor_tutorial8=Les 8: Geavanceerde shortcuts
+editor_tutorial9=Les 9: Levelontwerp tips 
+editor_tutorial10=Les 10: De draak verslaan
+
+editor_newworld=Maak een nieuw levelpakket
+editor_editworld=Selecteer het levelpakket die je wilt bewerken:
+editor_editworld_none=geen levelpakketten gevonden
+editor_setfirstlevel=Eerste level instellen
+editor_setdefaultlevel=Standaard level instellen
+editor_entername=Voer de naam in
+
+editor_levellist_return=Terug naar editor-menu
+editor_levellist_returnworld=Terug naar wereldlijst
+editor_levellist_new=Maak een nieuw level
+editor_levellist_edit=Selecteer het level dat je wilt bewerken
+editor_levellist_page=Pagina
+editor_levellist_setstart=Eerste level instellen
+editor_levellist_setauthor=Wijzig auteur
+editor_levellist_setname=Wijzig naam
+editor_levellist_setmap=Wereldkaart instellen
+editor_levellist_levels=Aangepaste levels
+editor_levellist_sort=Sorteer op naam
+editor_levellist_sorttypes=Sorteer op type
+editor_levellist_search=Zoek
+editor_levellist_removesearch=Verwijder zoekopdracht
+
+editor_mainmenu=Menu
+editor_editormenu=Editor menu
+editor_objectlist=Objecten lijst
+editor_settingsmenu=Instellingen
+editor_changelayer=Laag wijzigen
+editor_l1=l1
+editor_l2=l2
+editor_l3=l3
+editor_savelevel=Opslaan
+editor_addlevel=Level toevoegen
+editor_setcursor=Cursor instellen
+editor_addpath=Plaats pad
+editor_setpath=Pad instellen
+editor_undo=Ongedaan maken
+editor_swap=Inwisselen
+editor_testlevel=Test level
+editor_test=Test
+
+editor_brush_normal=Objecten
+editor_brush_level=Levels
+editor_brush_path=Paden
+editor_brush_special=Speciaal
+
+editor_objectlist_add=Voeg nieuw object toe
+editor_objectlist_remove=Verwijder object
+editor_objectlist_editobject=Bewerk object
+editor_objectlist_pairs_yes=Alles weergeven
+editor_objectlist_pairs_no=Paren stapelen
+
+tooltip_currobjlist_add=Voeg een nieuw object toe aan je palet
+tooltip_currobjlist_remove=Verwijder een object uit je palet
+tooltip_currobjlist_editobject=Bewerk de details van een object
+tooltip_currobjlist_dopairs=Schakel tussen het tonen van alle objecten en het koppelen met hun woorden
+tooltip_currobjlist_tool_normal=Tekengereedschap
+tooltip_currobjlist_tool_line=Lijngereedschap
+tooltip_currobjlist_tool_rectangle=Holle rechthoek gereedschap
+tooltip_currobjlist_tool_fillrectangle=Gevulde rechthoek gereedschap
+tooltip_currobjlist_tool_fill=Gereedschap voor vullen
+tooltip_currobjlist_tool_erase=Gum
+tooltip_currobjlist_tool_select=Selectietool
+tooltip_currobjlist_search_edit=Objecten zoeken op naam
+tooltip_currobjlist_search_remove=Zoekopdracht verwijderen
+tooltip_currobjlist_search_tags=Objecten filteren met tags
+tooltip_currobjlist_return=Keer terug naar de hoofdeditorweergave
+tooltip_currobjlist_swap=Schakel tussen objecten en hun woorden
+
+tooltip_currobjlist_dir_right=Geplaatste objecten zullen naar rechts wijzen
+tooltip_currobjlist_dir_up=Geplaatste objecten zullen naar boven wijzen
+tooltip_currobjlist_dir_left=Geplaatste objecten zullen naar links wijzen
+tooltip_currobjlist_dir_down=Geplaatste objecten zullen naar beneden gericht zijn
+
+tooltip_quickmenu_editorsettingsmenu=Pas level-instellingen aan (naam, palet, muziek, ...)
+tooltip_quickmenu_editormenu=Upload het level, keer terug naar de lijst met levels, verwijder het level, enzovoort
+
+tooltip_editor_menu=Upload het level, keer terug naar de lijst met levels, verwijder het level, enzovoort
+tooltip_editor_settingsmenu=Pas level-instellingen aan (naam, palet, muziek, ...)
+tooltip_editor_objects=Selecteer, bewerk, verwijder en voeg objecten toe in het objectenpalet
+tooltip_editor_save=Sla het level op
+tooltip_editor_undo=Maak je misstappen ongedaan
+tooltip_editor_swap=Schakelen tussen objecten en hun woordtegenhangers
+tooltip_editor_layer=Wisselen tussen lagen
+tooltip_editor_test=Test het level zoals het nu is
+
+tooltip_editor_menu_test=Voer een testrun uit van het level zoals het nu is
+tooltip_editor_menu_upload=Upload het level naar het internet! Het moet te winnen zijn om dit te doen
+tooltip_editor_menu_theme=Gebruik een voorinstelling voor het objectenpalet en de instellingen van het level. Dit wist het level
+tooltip_editor_menu_return=Keer terug naar de lijst met levels. Alle niet-opgeslagen wijzigingen gaan verloren
+tooltip_editor_menu_returnfull=Keer terug naar het hoofdmenu van de leveleditor. Alle niet-opgeslagen wijzigingen gaan verloren
+tooltip_editor_menu_delete=Verwijder het level volledig. Kan niet worden teruggedraaid!
+tooltip_editor_menu_copy=Maak een identieke kopie van dit level (de kopie heeft een nummer naast de naam)
+
+buttons_editor_move=Verplaats
+buttons_editor_rotate=Draai
+buttons_editor_place=Plaats
+buttons_editor_copy=Kopiëren
+buttons_editor_drag=Sleep
+buttons_editor_undo=Ongedaan maken
+buttons_editor_scrollleft_hotbar=< Quickbar
+buttons_editor_scrollright_hotbar=Quickbar >
+buttons_editor_scrollleft_tool=< Tool
+buttons_editor_scrollright_tool=Tool >
+buttons_editor_currobjlist=Objectenpalet
+buttons_editor_quickmenu=Snelmenu
+buttons_editor_swap=Wissel
+buttons_editor_scrollleft_layer=< Laag
+buttons_editor_scrollright_layer=Laag >
+buttons_editor_moveall=Verplaats alles
+buttons_editor_altpress=Meer acties
+buttons_editor_cut=Knippen
+buttons_editor_lock=Sleuf opslot doen
+buttons_editor_showdir=Toon mappen
+buttons_editor_autopick=Kies met string
+buttons_editor_pickempty=Kies leeg
+buttons_editor_selection_rotate_right=Draai >
+buttons_editor_selection_rotate_left=< Draai
+buttons_editor_selection_mirror=Spiegel
+buttons_editor_selection_flip=Draai om
+buttons_editor_selection_place=Plaats
+buttons_editor_selection_cancel=Annuleren
+buttons_editor_selection_ignore=Negeer leeg
+buttons_editor_emptytile=Verwijder
+buttons_editor_empty_hotbar=Verwijder sleuf
+buttons_editor_test=Test level
+buttons_editor_save=Sla level op
+
+editor_toolindicator_eraser=Q - Kies leeg
+editor_saved=Level opgeslagen!
+
+buttons_currobjlist_move=Verplaats
+buttons_currobjlist_select=Selecteer
+buttons_currobjlist_swap=Wissel
+buttons_currobjlist_drag=Sleep
+buttons_currobjlist_tooltip=Tooltip
+buttons_currobjlist_scrollleft=< Toolbar
+buttons_currobjlist_scrollright=Toolbar >
+buttons_currobjlist_closemenu=Sluit menu
+buttons_currobjlist_tags=Tags
+buttons_currobjlist_remove=Verwijder
+buttons_currobjlist_edit=Bewerk
+buttons_currobjlist_addnew=Voeg toe
+buttons_currobjlist_search=Zoek
+buttons_currobjlist_autoadd=Toevoegen met string
+buttons_currobjlist_removesearch=Stop met zoeken
+
+editor_objectlist_object=Normale voorwerpen
+editor_objectlist_text=Tekstobjecten
+editor_objectlist_verb=Werkwoorden
+editor_objectlist_quality=Kwaliteiten
+editor_objectlist_conditional=Voorwaarden
+editor_objectlist_special=Speciale tekst
+editor_objectlist_objlist=Object lijst
+editor_objectlist_result=Zoek naar
+editor_objectlist_tag=Tag:
+editor_objectlist_tags=Tags:
+editor_objectlist_tags_select=Tags
+editor_objectlist_tags_cleartags=Verwijder tags
+editor_objectlist_search_edit=Bewerk zoekopdracht
+editor_objectlist_search_remove=Verwijder zoekopdracht
+editor_objectlist_search_none=Geen zoekopdracht of tags toegepast
+editor_objectlist_page=Pagina
+editor_objectlist_nothing=Kies niets
+
+editor_level_levelsetup=Level setup
+editor_level_leveltarget=Naar welk level dit leidt:
+editor_level_iconcolour=Pictogram kleur:
+editor_level_setcolour=Kleur instellen
+editor_level_setclearcolour=Duidelijke kleur instellen
+editor_level_initialstate=Oorspronkelijke staat:
+editor_level_initialstate_hidden=Verborgen
+editor_level_initialstate_normal=Normaal
+editor_level_initialstate_opened=Geopend
+editor_level_levelsymbol=Symbool stijl:
+editor_level_levelsymbol_none=Geen
+editor_level_levelsymbol_numbers=Getallen
+editor_level_levelsymbol_text=Tekst
+editor_level_levelsymbol_dots=Stippen
+editor_level_levelsymbol_Symbol=Symbool:
+editor_level_remove=Verwijder
+
+editor_path_settings=Pad instellingen
+editor_path_pathstate=Selecteer de initiële padstatus
+editor_path_pathstate_hidden=Verborgen
+editor_path_pathstate_visible=Zichtbaar
+editor_path_object=Pad object:
+editor_path_locked=Is dit pad geblokkeerd?
+editor_path_locked_levels=Voltooide levels
+editor_path_locked_maps=Voltooide kaarten
+editor_path_locked_orbs=Orbs
+editor_path_locked_loclevels=Lokale overwinningen
+
+editor_menu_close=Menu sluiten
+editor_menu_return=Terug naar level lijst
+editor_menu_returnfull=Terug naar het hoofdbewerkingsmenu
+editor_menu_test=Test level
+editor_menu_themes=Thema's...
+editor_menu_delete=Wis level
+editor_menu_upload=Upload level
+editor_menu_copy=Kopieer level
+
+editor_unsaved_confirm=Er kunnen niet-opgeslagen wijzigingen zijn. Weet je het zeker?
+
+editor_delete_confirm=Echt dit level verwijderen?
+
+editor_copy_confirm=Weet je zeker dat je dit level wilt kopiëren?
+editor_copy_confirm_name=De kopie krijgt de naam
+editor_copy_done=Level succesvol gekopieerd!
+
+editor_theme_edit=Selecteer het thema dat je wilt bewerken:
+editor_theme_use=Selecteer het thema dat je wilt gebruiken:
+editor_theme_warning=Pas op! Als je het thema wijzigt, worden alle huidige objecten gewist
+editor_theme_return=Terug naar level-instelling
+editor_theme_load=Laad een thema
+editor_theme_load_confirm=weet je zeker dat je dit thema wilt laden?
+editor_theme_load_confirm_hint=Pas op! Dit zal alles in het level wissen!
+editor_theme_load_confirm_newlevel=Wil je een thema laden voor dit level?
+editor_theme_themeload=Selecteer het thema dat je wilt laden
+editor_theme_save=Sla het huidige thema op
+editor_theme_save_confirm=Dat thema bestaat al. Overschrijf?
+editor_theme_delete=Verwijder een thema
+editor_theme_delete_confirm=Weet je zeker dat je dit thema wilt verwijderen?
+editor_theme_themedelete=Selecteer het thema dat je wilt verwijderen
+editor_theme_none=Er zijn geen thema's beschikbaar
+editor_theme_done=Begin met bewerken
+
+editor_levelmenu_name=Naam:
+editor_levelmenu_rename=Hernoem level
+editor_levelmenu_music=Muziek:
+editor_levelmenu_changemusic=Verander muziek
+editor_levelmenu_author=Auteur:
+editor_levelmenu_changeauthor=Wijzig auteur
+editor_levelmenu_subtitle=Ondertitel:
+editor_levelmenu_subtitle_none=Geen
+editor_levelmenu_changesubtitle=Verander ondertitel
+editor_levelmenu_particles=Deeltjes:
+editor_levelmenu_changeparticles=Verander deeltjes
+editor_levelmenu_palette=Palet:
+editor_levelmenu_changepalette=Verander palet
+editor_levelmenu_levelsize=Level grootte:
+editor_levelmenu_levelwidth=Breedte
+editor_levelmenu_levelheight=Hoogte
+editor_levelmenu_changelevelsize=Verander level grootte
+editor_levelmenu_disableparticles=Deeltjeseffecten uitschakelen
+editor_levelmenu_disableruleeffect=Regel effect uitschakelen
+editor_levelmenu_disableshake=Screenshake uitschakelen
+editor_levelmenu_autodelay='Level Is Auto' vertraging
+editor_levelmenu_mapsetup=Kaartinstellingen
+
+editor_music_select=Selecteer de muziek die je wilt gebruiken:
+editor_music_none=Geen muziek gevonden
+
+editor_particles_select=Selecteer het deeltjeseffect dat je wilt gebruiken:
+editor_particles_none=Geen deeltjeseffecten gevonden
+
+editor_palette_select=Selecteer het palet dat je wilt gebruiken:
+editor_palette_none=Geen paletten gevonden
+
+editor_levelsize_width=Pas de levelbreedte aan:
+editor_levelsize_height=Pas level hoogte aan:
+editor_levelsize_quick=Voorgedefinieerde opties:
+editor_levelsize_apply=Nieuwe maat toepassen
+
+editor_upload_confirm=Weet je zeker dat je dit level wilt uploaden?
+editor_upload_confirm_note=(Je moet het level oplossen om het te uploaden)
+editor_upload_name=$2,4Level naam:
+editor_upload_author=$2,4Auteur:
+editor_upload_subtitle=$2,4Subtitel:
+editor_upload_uploading=Uploaden...
+editor_upload_done=Succesvol geupload! Je levelcode is:
+editor_upload_failed=Upload mislukt. Reden:
+editor_upload_copy=Kopieer de code naar het klembord
+editor_upload_copyhint=Oude codes vind je in het “Play levels” -menu
+author=Auteur
+noauthor=Onbekende auteur
+
+editor_map_leveltype=Selecteer level type:
+editor_map_level=Level
+editor_map_map=Kaart
+editor_map_clearlimit=Levels nodig om te voltooien:
+editor_map_clearlimit_hint=(Nul -> Onvoltooibaar)
+editor_map_mapicon=Kaart pictogram instellingen
+editor_map_returnto=Level om naar terug te keren na het verslaan:
+editor_map_parentlevel=Ouder level
+editor_map_winlevel=Overwinning
+editor_map_selectlevel=Selecteer een level
+
+editor_objectsetup_palette=Palet wijzigen...
+editor_objectsetup_select=Selecteer het object dat u wilt bewerken
+
+editor_object_sprite=Wijzig sprite...
+editor_object_name=Verander naam...
+editor_object_name_invalid=Die naam kon niet worden gebruikt.
+editor_object_type=Verander type...
+editor_object_colour=Object kleuropties:
+editor_object_colour_onlybase=Verander kleur
+editor_object_colour_base=Basis kleur
+editor_object_colour_active=Actieve kleur
+editor_object_colour_select=Welke kleur moet dit object gebruiken?
+editor_object_animation=Animatiestijl:
+editor_object_animation_none=Geen
+editor_object_animation_dirs=Richtingen
+editor_object_animation_anim=Geanimeerde
+editor_object_animation_animdirs=Geanimeerde richtingen
+editor_object_animation_character=Karakter
+editor_object_animation_tiled=Betegeld
+editor_object_text_type=Tekst type:
+editor_object_text_manualtype=Handmatige teksttype selectie:
+editor_object_zlevel=Z level:
+editor_object_reset=Reset alle waarden
+
+editor_spritelist_title=Selecteer de sprite die je wilt gebruiken:
+editor_spritelist_none=Geen sprites gevonden!
+editor_spritelist_page=Pagina:
+
+editor_tool_normal=Vrije vorm
+editor_tool_line=Lijn
+editor_tool_rectangle=Rechthoek
+editor_tool_fillrectangle=Gevulde rechthoek
+editor_tool_fill=Vlakvulling
+
+mapid_extra=Extra
+
+tag_text=Woord
+tag_text_verb=Woord - Werkwoord
+tag_text_quality=Woord - Eigenschap
+tag_text_condition=Woord - Voorwaarde
+tag_text_prefix=Woord - Voorvoegsel
+tag_text_special=Woord - Speciaal
+tag_text_letter=Letter
+
+particles_none=Geen
+particles_bubbles=Bubbels
+particles_soot=Roet
+particles_sparks=Vonken
+particles_dust=Stof
+particles_snow=Sneeuw
+particles_clouds=Wolken
+particles_smoke=Rook
+particles_pollen=Stuifmeel
+particles_stars=Sterren
+particles_glitter=Glitter
+particles_leaves=Bladeren
+particles_rain=Regen
+
+music_baba=Baba
+music_burn=Herfst
+music_cave=Grot
+music_crystal=Kristal
+music_editor=Tinker
+music_ending=Einde
+music_factory=Fabriek
+music_float=Onderwater
+music_forest=Bos
+music_garden=Tuin
+music_map=Map
+music_menu=Thema
+music_mountain=Sneeuw
+music_noise=Leeg
+music_ruin=Ruïnes
+music_stars=Ruimte
+music_editorsong=Editor
+music_nothing=Niets
+music_rain=Regen
+music_scary=Spookachtige
+music_space=Jammen
+
+palettes_abstract=Groen
+palettes_autumn=Herfst
+palettes_contrast=Hoog contrast
+palettes_crystal=Kristal
+palettes_default=Standaard
+palettes_factory=Fabriek
+palettes_garden=Tuin
+palettes_marshmallow=Luchtig
+palettes_mono=Grijstinten
+palettes_mountain=Koud
+palettes_ocean=Onderwater
+palettes_ruins=Ruïnes
+palettes_space=Ruimte
+palettes_swamp=Moeras
+palettes_test=Onheilspellend
+palettes_variant=Levendig
+palettes_volcano=Vurig
+
+themes_underwater=Onderwater
+themes_cavern=Grot
+themes_autumn=Herfst
+themes_factory=Fabriek
+themes_ruins=Ruïnes
+themes_forest=Bos
+themes_space=Ruimte
+themes_garden=Tuin
+themes_mountain=Berg
+themes_default=Standaard
+themes_rainy=Regenachtige dag
+themes_spooky=Spookachtige
+themes_crystal=Kristallen grot
+themes_abstract=Groen
+
+namegiving_newworldname=Voer de naam van het levelpack in:
+namegiving_changelevelname=Voer de nieuwe naam van het level in:
+namegiving_newlevelname=Voer de nieuwe naam van het level in:
+namegiving_changeunitname=Voer de nieuwe naam van het object in:
+namegiving_changeunittype=Voer de nieuwe naam van het object in:
+namegiving_newthemename=Voer de naam van het thema in:
+namegiving_objectsearchstring=Zoek in de objectenlijst naar:
+namegiving_levelauthor=Voer de naam van de auteur van het level in:
+namegiving_worldauthor=Voer de naam van de auteur van het levelpakket in:
+namegiving_changeworldname=Voer de nieuwe naam van het levelpack in:
+namegiving_downloadcode=Voer de level code in (XXXX-YYYY):
+namegiving_levelsearchstring=Zoek in de level lijst naar:
+namegiving_spritesearchstring=Zoek in de sprite lijst naar:
+namegiving_slotname=Voer de naam van de opslag sleuf in:
+namegiving_subtitle=Voer de ondertitel in die je wilt gebruiken:
+namegiving_editor_autopick=Voer de woorden in om te kiezen:
+namegiving_currobjlist_autoadd=Voer het woord in dat u wilt toevoegen:
+
+hotkeys_editor_category_editor=Editor shortcuts
+hotkeys_editor_category_currobjlist=Objectpalet shortcuts
+hotkeys_editor_category_levellist=Levellijst shortcuts
+
+hotkeys_editor_keyboard=Voor toetsenbord
+hotkeys_editor_gamepad=Voor gamepad
+
+hotkeys_editor_rotate=Pijltjestoetsen: draai objecten
+hotkeys_editor_copy=Klik met de rechtermuisknop / Shift + klik met de linkermuisknop: object kopiëren
+hotkeys_editor_cut=Klik met het muis wieltje: object knippen
+hotkeys_editor_quickbar_scroll=Muiswiel: scroll snelbalk
+hotkeys_editor_quickbar_lock=Klik met de rechtermuisknop op de snelbalk: vergrendel / ontgrendel slot
+hotkeys_editor_quickbar_reset=Klik met de middelste muisknop op de snelbalk: maak slot leeg
+hotkeys_editor_swap=Control + muiswiel: wissel tussen objecten en woorden
+hotkeys_editor_changetool=Shift + muiswiel: wissel van gereedschap
+hotkeys_editor_changelayer=Control + 1/2/3: verander laag
+hotkeys_editor_pickis=I: kies Is
+hotkeys_editor_pickand=U: kies And
+hotkeys_editor_picknot=Y: kies Not
+hotkeys_editor_pickempty=Q: kies leegte
+hotkeys_editor_massdir=F: toon richtingen van alle objecten
+hotkeys_editor_moveall=WASD: verplaats alle objecten
+hotkeys_editor_rotateselection=Rechter-/linkerpijltjestoets: selectie roteren
+hotkeys_editor_flipselection=Pijl omhoog / omlaag: selectie spiegelen / omdraaien
+hotkeys_editor_altselection=Shift + linkermuisknop met selectie: negeer lege tegels
+hotkeys_editor_opencurrobjlist=Tab: open objectpalet
+hotkeys_editor_openeditormenu=Escape: open level menu
+hotkeys_editor_openeditorsettingsmenu=F1: open level instellingen
+hotkeys_editor_testlevel=F3: test level
+hotkeys_editor_windowsize=Shift + 1/2/3: venstergrootte wijzigen (alleen in venster modus)
+hotkeys_editor_undo=Control + Z: ongedaan maken
+hotkeys_editor_save=Control + S: opslaan
+hotkeys_editor_deleteall=Control + Delete: level leegmaken
+hotkeys_editor_addobject=R: nieuw object aan palet toevoegen
+hotkeys_editor_return=Backspace: Keer terug naar de level lijst
+hotkeys_editor_drag=Control + linkermuisknop: object slepen
+hotkeys_editor_editlevel=Mouseover + E: begin met het bewerken van dat niveau
+hotkeys_editor_quickaddlevel=Control bij het plaatsen van een level: level setup niet openen
+hotkeys_editor_restart=Control + F2: start het spel opnieuw
+hotkeys_editor_resetmapicon=Middelklik in kaartpictogrammenu: pictogramsleuf resetten
+hotkeys_editor_cleartile=Control + Middelklik: tegel wissen
+hotkeys_editor_autopick=F4: woorden toevoegen als string
+
+hotkeys_editor_gpad_rotate=@gamepad_editor_rotate: objecten draaien
+hotkeys_editor_gpad_copy=@gamepad_editor_copy: kopieer object
+hotkeys_editor_gpad_cut=@gamepad_editor_altpress + @gamepad_editor_cut: knip object
+hotkeys_editor_gpad_swap=@gamepad_editor_altpress + @gamepad_editor_swap: wissel tussen objecten en woorden
+hotkeys_editor_gpad_drag=Houd @gamepad_editor_drag vast: sleep object
+hotkeys_editor_gpad_emptytile=@gamepad_editor_altpress + @gamepad_editor_emptytile: wis tegel (alle lagen)
+hotkeys_editor_gpad_changetool=@gamepad_editor_scrollleft_tool & @gamepad_editor_scrollright_tool: wissel gereedschap
+hotkeys_editor_gpad_changelayer=@gamepad_editor_scrollleft_layer & @gamepad_editor_scrollright_layer: verander laag
+hotkeys_editor_gpad_quickbar_scroll=@gamepad_editor_scrollleft_hotbar & @gamepad_editor_scrollright_hotbar: scroll snelbalk
+hotkeys_editor_gpad_quickbar_lock=@gamepad_editor_altpress + @gamepad_editor_lock: vergrendel/ontgrendel slot voor snelbalk 
+hotkeys_editor_gpad_quickbar_empty=@gamepad_editor_altpress + @gamepad_editor_empty_hotbar: maak snelbalk sleuf leeg
+hotkeys_editor_gpad_pickempty=@gamepad_editor_altpress + @gamepad_editor_pickempty: kies lege ruimte
+hotkeys_editor_gpad_massdir=@gamepad_editor_altpress + @gamepad_editor_showdir: toon richtingen van alle objecten
+hotkeys_editor_gpad_moveall=@gamepad_editor_moveall + @gamepad_editor_rotate: alle objecten verplaatsen
+hotkeys_editor_gpad_rotateselection=@gamepad_editor_scrollleft_tool & @gamepad_editor_scrollright_tool: selectie draaien
+hotkeys_editor_gpad_flipselection=@gamepad_editor_scrollleft_hotbar & @gamepad_editor_scrollright_hotbar: draai om/spiegel selectie
+hotkeys_editor_gpad_altselection=@gamepad_editor_undo with selection: negeer lege tegels
+hotkeys_editor_gpad_opencurrobjlist=@gamepad_editor_currobjlist: objectpalet openen
+hotkeys_editor_gpad_openquickmenu=@gamepad_editor_quickmenu: snelmenu openen
+hotkeys_editor_gpad_undo=@gamepad_editor_undo: ongedaan maken
+hotkeys_editor_gpad_autopick=@gamepad_editor_altpress + @gamepad_editor_autopick: woorden toevoegen als string
+hotkeys_editor_gpad_save=@gamepad_editor_altpress + @gamepad_editor_quickmenu: level opslaan
+hotkeys_editor_gpad_test=@gamepad_editor_altpress + @gamepad_editor_currobjlist: test level
+hotkeys_editor_gpad_altmove=@gamepad_editor_altpress + @gamepad_editor_rotate: beweeg cursor
+
+hotkeys_currobjlist_swap=Muiswiel: wissel tussen objecten en woorden
+hotkeys_currobjlist_drag=Control + linkermuisknop: sleep objecten
+hotkeys_currobjlist_leave=Tab/Escape: verlaat menu
+hotkeys_currobjlist_edit=Klik met de rechtermuisknop: bewerk metagegevens van object
+hotkeys_currobjlist_remove=Control + rechtermuisknop: object verwijderen
+hotkeys_currobjlist_search=Lettertoetsen: start zoekopdracht
+hotkeys_currobjlist_autoadd=F4: objecten toevoegen als string
+hotkeys_objlist_quickadd=Control + linkermuisknop in Objectlijst: voeg object toe en blader verder
+
+hotkeys_currobjlist_gpad_swap=@gamepad_currobjlist_swap: wissel tussen objecten en woorden
+hotkeys_currobjlist_gpad_drag=@gamepad_currobjlist_drag: sleep objecten
+hotkeys_currobjlist_gpad_leave=@gamepad_editor_currobjlist: verlaat menu
+hotkeys_currobjlist_gpad_edit=@gamepad_currobjlist_edit: bewerk metagegevens van object
+hotkeys_currobjlist_gpad_remove=@gamepad_currobjlist_remove: verwijder object
+hotkeys_currobjlist_gpad_search=@gamepad_currobjlist_search: start zoekopdracht
+hotkeys_currobjlist_gpad_add=@gamepad_currobjlist_addnew: nieuw object toevoegen
+hotkeys_currobjlist_gpad_removesearch=@gamepad_editor_scrollright_tool in Objectpalet: zoekactie verwijderen
+hotkeys_currobjlist_gpad_removesearch_alt=@gamepad_editor_copy buiten Objectpalet: zoekactie verwijderen
+hotkeys_currobjlist_gpad_autoadd=@gamepad_currobjlist_autoadd: voeg objecten toe als string
+hotkeys_objlist_gpad_quickadd=@gamepad_editor_undo in Objectlijst: voeg object toe en blader verder
+
+hotkeys_levellist_search=Letter toetsen: start zoekopdracht
+hotkeys_levellist_leave=Escape: verlaat menu
+hotkeys_levellist_delete=Right click: verwijder level
+
+hotkeys_levellist_gpad_search=@gamepad_editor_drag: start zoekopdracht
+hotkeys_levellist_gpad_leave=@gamepad_editor_quickmenu: verlaat menu
+hotkeys_levellist_gpad_delete=@gamepad_editor_undo: verwijder level
+
+0level=Baba is you
+0level_subtitle=Welkom bij baba is you
+100level=Liefde op het eerste gezicht
+101level=De diefstal
+102level=Fabrieksarbeider
+104level=Tektonische bewegingen
+105level=Schudden
+106level=Kaart
+106level_mapid=Kaart
+107level=Assemblageteam
+109level=Sluit je aan bij de bemanning
+10level=Genegenheid
+110level=Lavavloed
+111level=De lat hoog leggen
+112level=Trio
+115level=Zware woorden
+116level=Wat is baba?
+117level=Vijandige omgeving
+118level=Zweverige platformen
+119level=Automaton
+11level=Eenzame vlag
+120level=Verbindingsstuk
+122level=Tunnel
+124level=Ontspannende plek
+125level=Zware wolk
+127level=Geheime tuin
+128level=Reünie
+129level=Verdere velden
+130level=Overwoeker
+132level=Eenrichtingsingang
+134level=Zwak signaal
+135level=Eindeloze gang
+136level=Gelei troon
+137level=Niet daar
+138level=Nog minder daar
+139level=Gaatje
+13level=Babas zijn jou
+140level=Zware fortificatie
+141level=Weegschaal
+142level=Op zee
+143level=Appartementencomplex
+145level=Valse deur
+146level=Uit elkaar gerukt
+148level=Tour
+150level=Blokade
+151level=Concrete doelen
+155level=Metawaarneming
+156level=Keke en de ster
+15level=Beginnende slotenmaker
+160level=Trucje
+163level=Geautomatiseerde deuren
+164level=Multi tool
+165level=Baba bezoeken
+166level=Inbraak
+167level=Steeg
+168level=Ultieme doolhof
+169level=5. Diep bos
+169level_mapid=Bos
+16level=4. Bos van de herfst
+16level_mapid=Herfst
+171level=Bruggenbouw
+172level=Bruggenbouw?
+173level=...Bruggen?
+174level=Doodlopend
+175level=Kapot
+176level=Gevangen
+177level=1. Het meer
+177level_mapid=Meer
+178level=Gebroken verwachtingen
+179level=8. Vulkanische grot
+179level_mapid=Grot
+17level=Onbereikbare oevers
+180level=7. Bloementuin
+180level_mapid=Tuin
+182level=9. Afgrond
+182level_mapid=Afgrond
+188level=Drieling
+189level=Wat is dit nu?
+18level=Entropie
+191level=Bewegende vloer
+192level=Glitch
+193level=Afbrokkelende vloer
+194level=Spoken
+195level=Eenzaamheid
+196level=Onbegaanbare tuin
+196level_subtitle=Gemaakt door Alan Hazelden
+197level=Fout
+198level=Het einde
+198level_mapid=<empty>
+199level=Breekbaarheid
+19level=Op zoek naar een hart
+1level=Waar ga ik heen?
+200level=???
+200level_mapid=???
+201level=Horror verhaal
+203level=Een uitweg?
+203level_mapid=Slotstuk
+205level=Zweef
+206level=3. Tempelruïnes
+206level_mapid=Ruïnes
+207level=2. Eenzaam eiland
+207level_mapid=Eiland
+209level=Slot
+20level=Ijskoude wateren
+210level=Twee deuren
+211level=Verzonken ruïnes
+212level=Bochten
+215level=Verdampende rivier
+216level=Platformer
+217level=Lucht fort
+218level=Warme rivier
+219level=Kokende rivier
+21level=Rotsachtige gevangenis
+220level=Kratten plein
+221level=Grote stroom
+222level=Verborgen relikwie
+223level=Begraven schat
+226level=De kuil
+227level=Gemeen hek
+230level=Tag team
+231level=VIP-ruimte
+232level=10. Bergtop
+232level_mapid=Berg
+233level=Kleine weide
+234level=Bron van overwinning
+235level=Rotsachtige weg
+236level=Onveranderlijk
+238level=Hop
+239level=Spring
+23level=Maar waar is de sleutel
+240level=Schatkamer
+241level=Belegering
+242level=Sorteerfaciliteit
+243level=Diavoorstelling
+245level=Fragiel bestaan
+246level=Gereedschapsschuur
+247level=Draai de hoek om
+248level=Supermarkt
+250level=Gespannen sfeer
+251level=Sporthal
+252level=BA
+253level=AB
+255level=Maan galerij
+257level=Niet helemaal
+25level=Sluizen
+260level=Passeren
+261level=Schoonmaakdienst
+262level=Samenwerking
+263level=Brekers
+264level=Diepten
+264level_mapid=Diepten
+265level=Levende landen
+266level=Pilarenwerk
+268level=Insulatie
+269level=Ophalen
+26level=Spook bewaker
+270level=Achter de schermen
+271level=Redden
+272level=Parade
+274level=Voorrangsstrook
+275level=Veiligheidscontrole
+276level=Trein
+277level=De doos
+279level=Wachtrij
+280level=Muur
+281level=Meteoor inslag
+282level=ABC
+282level_mapid=ABC
+283level=Meta
+283level_mapid=Meta
+284level=Wirwar
+285level=Container
+286level=Samenkomen
+286level_mapid=Geheim
+287level=Avontuur
+288level=Hete aardappel
+289level=Acrobatiek
+28level=Fabriek
+291level=Lawine
+292level=Inbreken
+293level=Huh?
+293level_mapid=Geheim
+294level=Een verdiende prijs
+294level_mapid=Geheim
+295level=Braamstruik
+297level=Wederzijdse gevoelens
+298level=Delicate sterren
+299level=Verborgen pad
+29level=Kapotte speeltuin
+2level=Nog steeds buiten bereik
+300level=Kanon
+302level=Booby trap
+303level=Echt niet
+304level=Centrum
+304level_mapid=<empty>
+305level=Galerij
+305level_mapid=<empty>
+306level=Bol
+306level_mapid=Geheim
+307level=Schilderachtige vijver
+308level=Diep zwembad
+309level=De terugkeer van schilderachtige vijver
+30level=Krab opslag
+310level=Gedicht
+313level=Stukje ster
+314level=Verzonken tempel
+315level=Mooi huis
+317level=Rietje
+318level=Kerker
+319level=Onderzoeksfaciliteit
+31level=Ongrijpbare toestand
+320level=Een andere uitweg
+320level_mapid=Geheim
+321level=Veilig huisje
+322level=Indrukwekkende zuilen
+323level=Stroomgenerator
+324level=Bestaanscrisis
+325level=Zonder vrienden
+326level=Orkestbak
+327level=Whoa
+327level_mapid=Geheim
+33level=Liefde is ergens
+34level=Baba reageert niet
+35level=Bladkamer
+36level=Geest vriend
+37level=Kleine vijver
+39level=Nederzetting
+3level=Buiten bereik
+40level=Gevaarlijke tuin
+41level=Klein eiland
+46level=Vitale ingrediënten
+47level=Gevaar bij elke bocht
+48level=De zweverigste platformen
+4level=Pilaren tuin
+50level=Bijna
+51level=Kroning
+52level=Tunnelvisie
+54level=Schedel huis
+56level=Muren van goud
+57level=Patrouilleren
+58level=Een cadeautje voor jou
+59level=Conditie
+5level=Verboden gebied
+60level=Eenzaam zicht
+61level=Kamers
+62level=Telefoon
+64level=Maritieme avonturen
+65level=Gevangenis
+66level=Renoveren
+67level=Doe de deur op slot
+68level=Draadloze verbinding
+69level=Wegblijven!
+6level=Gras hof
+70level=Skeletdeur
+71level=Gevaarlijke bende
+72level=Dubbele slotgracht
+75level=Openhaard
+77level=Geletterdheid
+78level=?
+78level_mapid=?
+79level=Knelpunt
+7level=Vang de dief!
+80level=Houd alstjeblieft mijn sleutel vast
+82level=Beschermers
+84level=Oeps
+85level=Canyon
+86level=Lift
+87level=6. Raketreis
+87level_mapid=Ruimte
+89level=Verwoeste boomgaard
+8level=Ingesloten
+90level=Vulkaan
+91level=Wegmisbruikers verenigd
+92level=Avonturiers
+93level=Stenen muur
+94level=Struikgewas
+95level=Muis gat
+96level=Harmonie
+97level=Baba velden
+98level=Openbare overwinning
+99level=Acceptatie zoeken
+9level=Leeg
+n1level=Baba heeft keke
+n1level_subtitle=Gemaakt door nicklas nygren
+n2level=Kasteel ramp
+n2level_subtitle=Gemaakt door nicklas nygren
+t1level=Aan de overkant
+t1level_subtitle=Gemaakt door Corey Martin
+
+editorbeta_warning_1a=Belangrijk:
+editorbeta_warning_1b=Dit programma is bedoeld om de aanstaande officiële level-editor te testen voor mensen die er anders geen toegang toe hebben. Het wordt alleen ondersteund tot de officiële editor releases begin 2021; daarna zal het niet meer worden bijgewerkt en zal het uiteindelijk niet in staat zijn om levels naar de officiële servers te uploaden.
+editorbeta_warning_1c=Merk ook op dat de editor spoilers bevat! Het is aanbevolen dat je ten minste de 10 levels op de hoofdwereldkaart van het originele spel verslaat als je grote spoilers wilt vermijden.
+editorbeta_warning_1d=Excuses voor deze ietwat onhandige manier van toegang, en geniet van het spelen met de editor!
+
+newadv_42level_1a=Welkom!
+newadv_42level_1b=Deze avonturen zitten vol met nieuwe
+newadv_42level_1c=woorden en verrassingen. Veel plezier!
+
+newadv_42level_2a=Merk echter op dat deze levels mogelijk
+newadv_42level_2b=aannemen dat je weet hoe het spel werkt,
+newadv_42level_2c=dus wees gewaarschuwd!
+
+newadv_31level_1a=Goed om te weten:
+newadv_31level_1b=Beweeg naar beneden om te wisselen
+newadv_31level_1c=welk personage je bestuurt!
+
+newadv_180level_1a=Bedankt voor het spelen en
+newadv_180level_1b=ondersteunen van het spel! We hopen
+newadv_180level_1c=dat je ervan genoten hebt!
+
+levelpack_museum_intro1a=Welkom in het museum!
+levelpack_museum_intro1b=Hier kun je oude en/of
+levelpack_museum_intro1c=ongebruikte inhoud zien.
+
+levelpack_museum_intro2a=Tekens zoals deze vertellen
+levelpack_museum_intro2b=interessante details over de
+levelpack_museum_intro2c=levels en het spelontwerp!
+
+levelpack_museum_intro3a=Geniet van je verblijf!
+levelpack_museum_intro3b=Het kan spoilers bevatten als je
+levelpack_museum_intro3c=het originele spel nog niet hebt verslagen.
+
+museum_10level_1a=Een van de allereerste niveaus.
+museum_10level_1b=Ik denk dat ik uiteindelijk het
+museum_10level_1c=gevoel had dat het te chaotisch was.
+
+museum_12level_1a=Dit is van de jamversie! Vrij chaotisch
+museum_12level_1b=en doelloos, en ik moest het een beetje aanpassen
+museum_12level_1c=vanwege de manier waarop de logica is veranderd.
+
+museum_13level_1a=Een ander level dat in de jamversie zat. Het
+museum_13level_1b=concept vind ik erg grappig, maar ik heb nooit
+museum_13level_1c=uitgevonden hoe ik er een goede puzzel mee kan maken.
+
+museum_13level_2a=Ik denk dat in de originele versie 'Empty Is Win' was
+museum_13level_2b=bedoeld als oplossing. Het kostte wat tijd om 
+museum_13level_2c=de volledige implicaties van het woord te beseffen, haha.
+
+museum_14level_1a=Waarschijnlijk het eerste level over More 
+museum_14level_1b=waarvan ik dacht dat het goed genoeg was. Uiteindelijk
+museum_14level_1c=toch geschrapt omdat het te doelloos aanvoelde.
+
+museum_15level_1a=Een heel erg oud level. Ik denk dat ik dit wilde gebruiken
+museum_15level_1b=om Shut & Open te introduceren, maar er waren uiteindelijk te
+museum_15level_1c=veel oplossingen die geen van beide gebruikte.
+
+museum_16level_1a=Dit level zou uiteindelijk Unreachable Shores worden.
+museum_16level_1b=Het basisidee is er, maar ik was op dit moment nog een beetje te enthousiast
+museum_16level_1c=om dingen toe te voegen aan een level zonder er goed over na te denken.
+
+museum_16level_2a=In de game jam-versie koos ik willekeurig 20x20 als maat
+museum_16level_2b=van de levels. Het kostte veel tijd om van vierkant levels
+museum_16level_2c=naar rechthoeken te gaan tijdens de ontwikkeling van het spel.
+
+museum_20level_1a=Dit is een van de ontwerpen dat uiteindelijk Ijzige wateren
+museum_20level_1b=werd. Het level heeft een interessant open einde, maar
+museum_20level_1c=ik wilde uiteindelijk een compactere tutorial voor And.
+
+museum_x20level_1a=Gezien de eenvoud van dit level en hoe vroeg het
+museum_x20level_1b=verschijnt, heeft het verbazend veel veranderingen
+museum_x20level_1c=ondergaan. En is echter een belangrijke les!
+
+museum_24level_1a=In het begin waren er veel minder manieren om All in toom te houden.
+museum_24level_1b=Zoals je kunt zien, moest ik nogal wat specifieke beperking toevoegen
+museum_24level_1c=om dit level een beetje te laten functioneren.
+
+museum_25level_1a=Ik denk dat dit level uiteindelijk Siege zou worden. Het
+museum_25level_1b=einde van dit level is best grappig, maar ik had zelfverzekerder
+museum_25level_1c=moeten zijn en geen extra obstakels moeten toevoegen als onduidelijkheden.
+
+museum_35level_1a=Ik probeerde over het algemeen te vermijden om levels te maken puur over
+museum_35level_1b=blokken duwen. Pull trok me echter vaak in die richting.
+museum_35level_1c=Oh, en die handen waren vroeger wolken, vandaar de naam, haha.
+
+museum_39level_1a=Ik was enorm trots op dit duo toen ik ze voor het eerst
+museum_39level_1b=had gemaakt. ~3 jaar later en nu lijken ze niet zo spannend
+museum_39level_1c=meer (en waren eigenlijk een beetje defect!)
+
+museum_46level_1a=Deze twee waren waarschijnlijk een van de allereerste gevallen van
+museum_46level_1b=levelvarianten waar daadwerkelijk een zinvol idee achter de
+museum_46level_1c=variant zat. Het werkte niet helemaal, maar het was een begin!
+
+museum_55level_1a=Ik had geprobeerd iets extras toe te voegen aan de tutorial voor de 'X Is X'
+museum_55level_1b=mechaniek. Uiteindelijk heb ik gekozen voor een veel director
+museum_55level_1c=ontwerp, aangezien X Is X moeilijker te begrijpen bleek te zijn.
+
+museum_61level_1a=Een groot probleem in het begin was mijn neiging om elementen toe te voegen aan
+museum_61level_1b=een level zonder voldoende aandacht te hebben voor het kernconcept.
+museum_61level_1c=Het resultaat was meestal een zeer ingewikkeld maar onsamenhangend level.
+
+museum_62level_1a=Dit level was bedoeld om Tele te introduceren. Ondanks dat
+museum_62level_1b=het een simpele puzzel is, is dit level behoorlijk chaotisch. Ik vraag me af waarom ik
+museum_62level_1c=de behoefte voelde om te proberen "Grass Is You" als oplossing te voorkomen?
+
+museum_63level_1a=Ik was in eerste instantie zeer tevreden met dit level. Echter, nadat ik
+museum_63level_1b=het een tijd had laten staan, voelde de puzzel aan als iets wat de speler
+museum_63level_1c=onnodig bezig hield doordat de oplossing gevonden wordt met te veel vallen en opstaan.
+
+museum_82level_1a=Let goed op! Dit is geen ongebruikt level; ik heb het
+museum_82level_1b=toegevoegd om een nogal raar randgeval te laten zien dat
+museum_82level_1c=relevant zal zijn in het volgende level.
+
+museum_97level_1a=Verdere velden, die over het algemeen wordt beschouwd als een van
+museum_97level_1b=de moeilijkere levels in het basisspel, begon als een variant voor Baba velden.
+museum_97level_1c=Het level werd geschrapt omdat het niet veel nieuws te bieden had.
+
+museum_113level_1a=Ik was gehecht aan deze levels en wilde ze niet 
+museum_113level_1b=verwijderen. Maar uiteindelijk ben ik gelukkiger
+museum_113level_1c=met de elegantere versie van het idee in De kuil.
+
+museum_126level_1a=Zoveel regels! Deze vond ik altijd leuk, maar ik heb
+museum_126level_1b=ze geschrapt vanwege de warboel. Ik hoop dat het
+museum_126level_1c=logisch is dat Fall je gevaren laat passeren.
+
+museum_143level_1a=Ik denk dat ik 2-3 levels heb gemaakt met hetzelfde basis
+museum_143level_1b=idee; het kostte me een lange tijd om te realiseren hoe vergelijkbaar
+museum_143level_1c=de levels waren. De appartementen vind ik echter wel leuk!
+
+museum_x148level_1a=Dit ontwerp voelde erg onelegant aan, maar tegelijkertijd zou
+museum_x148level_1b=ik het wat stijlpunten toekennen. Als je Eat nog niet hebt
+museum_x148level_1c=gezien, denk maar dat Lava schadelijk is voor Key.
+
+museum_50level_1a=Toen ik dit maakte, begon ik me af te vragen: als je een object
+museum_50level_1b=Tele'd dat Swap is, zou het Tele-eindpunt dan niet moeten
+museum_50level_1c=Swappen met het geteleporteerde object?
+
+museum_50level_2a=Ik testte het uit en eerlijkgezegd leek het me best logisch
+museum_50level_2b=in eerste instantie! Maar ik ben er vrij zeker van dat de testers
+museum_50level_2c=lieten weten hoe vreselijk dat zou zijn en ik schrapte het idee.
+
+museum_50level_3a=Dit level toont de toevoeging van extra obstakels
+museum_50level_3b=uit angst dat de oplossing te voor de hand liggend is.
+museum_50level_3c=Over het algemeen bleek dat zinloos, zelfs schadelijk.
+
+museum_yylevel_1a=Soms, wanneer je naar een level kijkt dat je een
+museum_yylevel_1b=lange tijd niet hebt gezien, kun je je van je leven 
+museum_yylevel_1c=niet herinneren wat het idee achter het level was.
+
+museum_80level_1a=De kleine truc in dit level is best schattig naar mijn
+museum_80level_1b=mening. Het heeft niet veel met de regelmanipulatie te maken
+museum_80level_1c=en voelde daarom een beetje te standaard aan om te gebruiken.
+
+museum_87level_1a=Op een gegeven moment was ik erg enthousiast over variantlevels
+museum_87level_1b=en vroeg ik me af of het allereerste level er een zou moeten hebben;
+museum_87level_1c=het voelde echter niet erg elegant aan.
+
+museum_41level_1a=Het idee dat een reeks puzzels iteraties zijn
+museum_41level_1b=op hetzelfde idee, maar met kleine aanpassingen om
+museum_41level_1c=de moeilijkheidsgraad te verhogen vind ik erg intrigerend.
+
+museum_42level_1a=Ik heb sommige puzzelspellen gezien die geweldig
+museum_42level_1b=waren in de voortgang van het puzzelontwerp te laten weerspiegelen
+museum_42level_1c=waar de gedachten van mensen in het begin voor gaan, enzovoort.
+
+museum_43level_1a=In de vroege stadia van de ontwikkeling van Baba Is You
+museum_43level_1b=wilde ik een soortgelijk ontwerp proberen. Echter,
+museum_43level_1c=mijn aanpak was om een paar redenen gebrekkig.
+
+museum_44level_1a=Om nieuwe variaties op een puzzel te bedenken, wil je
+museum_44level_1b=ideeën van buitenaf krijgen. Om zowel een frisse blik te krijgen
+museum_44level_1c=en om te begrijpen hoe mensen de puzzel in het algemeen benaderen.
+
+museum_45level_1a=Ik begreep dat een beetje, maar probeerde een interessante
+museum_45level_1b=reeks puzzels te "forceren". Het resultaat was deze Huis-set.
+museum_45level_1c=En deze zijn uitgebreid bijgewerkt voor deze release!
+
+museum_68level_1a=Het hier getoonde basisidee volgde me gedurende de hele spelontwikkeling.
+museum_68level_1b=Ik probeerde de complexiteit ervan op verschillende manieren te vergroten,
+museum_68level_1c=maar uiteindelijk zaten de extra onderdelen in de weg.
+
+museum_d68level_1a=Terwijl ik door deze oude level-ideeën bladerde, kreeg ik
+museum_d68level_1b=meerdere ideeën voor varianten. Dus sommige van deze variantlevels
+museum_d68level_1c=zijn 'nieuw' in de zin dat ze voor het museum zijn gemaakt.
+
+museum_x70level_1a=Bij het bedenken van namen heb ik de neiging om mijn gedachten vrij te laten
+museum_x70level_1b=dwalen. Soms heeft de resulterende naam eerlijk gezegd erg weinig
+museum_x70level_1c=te maken met het level zelf. Ik zie hier weinig "klassiek"!!
+
+museum_73level_1a=Ik heb erg mijn best gedaan om iets extras aan het einde van dit
+museum_73level_1b=level te stoppen, maar het werkte nooit echt. In deze vorm had het echter
+museum_73level_1c=prima kunnen werken als een introductie tot On, zou ik zeggen!
+
+museum_86level_1a=Dit level voelde te triviaal en heb ik weggelaten. Maar
+museum_86level_1b=ik houd wel van de algemene idee achter de oplossing!
+museum_86level_1c
+
+museum_86level_2a=Ik probeerde over het algemeen te voorkomen dat ik levels namen gaf die
+museum_86level_2b=direct aansluiten bij de bedoelde aanpak. Ik denk dat het geven van
+museum_86level_2c=hints op die manier te direct zou kunnen aanvoelen? Of onbevredigend?
+
+museum_92level_1a=Shift bleek op zijn eigen manier verrassend krachtig te zijn; ik bleef
+museum_92level_1b=vergeten dat ik niet zomaar een barrière kan plaatsen zonder
+museum_92level_1c=dat dat ook wordt weggeschoven. Dit vergde veel herzieningen.
+
+museum_96level_1a=Alles met betrekking tot het originele concept achter dit level
+museum_96level_1b=is te zien in de binnenkamer in het midden van het level.
+museum_96level_1c=Al het andere is "extra" toegevoegd als ondersteuning. Eh. Hmm. Misschien niet ideaal.
+
+museum_102level_1a=Dit is een geweldig voorbeeld van een level waar een cool mentaal beeld 
+museum_102level_1b=resulteerde in een vrij mager level. De "fabriekslijn" zou miscchien 
+museum_102level_1c=beter geschikt zijn geweest voor een automaton dan voor een puzzel.
+
+museum_x103level_1a=Dit is nog een level die probeerde tot een puzzel te komen
+museum_x103level_1b=door gewoon elementen te stapelen. Ik denk dat vooral mijn vroege
+museum_x103level_1c=Has-gerelateerde levels zo waren!
+
+museum_112level_1a=Als laatste kleine showcase, hier is een variatie op de wereld
+museum_112level_1b=kaart die werd gebruikt in showcase-builds van het spel, bijvoorbeeld 
+museum_112level_1c=op het GamesCom festival in Duitsland in 2018.
+
+museum_114level_1a=Wat je hier niet ziet is een enorme puinhoop van bruikbare blokken. Om
+museum_114level_1b=het ontwerp toonbaar te maken had ik het ontwerp flink opgeruimd; het
+museum_114level_1c=origineel was veel te ingewikkeld en erg onhandig.
+
+museum_114level_2a=Veel levels die gebruik maken van Level hebben te maken met zijn destructieve
+museum_114level_2b=mogelijkheden. Als gevolg hiervan zou deze naam prima kunnen worden gebruikt
+museum_114level_2c=in het spel, ondanks dat het ontwerp heel anders is!
+
+museum_134level_1a=Ik heb verschillende keren geprobeerd om een versie van Dim signaal te maken
+museum_134level_1b=dat met het beperken van je gereedschap nog een extra uitdaging zou geven
+museum_134level_1c=aan het einde. Helaas niet gelukt; hier is een poging.
+
+museum_x135level_1a=Bah! Het algemene concept van het level is te zien in
+museum_x135level_1b=deze eerste versie, maar deze implementatie vereist
+museum_x135level_1c=*veel* heen en weer geschuifel. Niet ideaal. Sorry.
+
+museum_140level_1a=Not bleek erg krachtig te zijn, ondanks dat het conceptueel simpel is
+museum_140level_1b=Hoe veelzijdiger een woord is, hoe moeilijker het wordt om er
+museum_140level_1c=puzzels mee te ontwerpen zonder al te specifieke beperkingen.
+
+museum_259level_1a=Zoals je kunt raden, was Swap een van de meest gecompliceerde
+museum_259level_1b=woorden om levels rond te ontwerpen. Ik heb de tweede isolatie laag toegevoegd
+museum_259level_1c=nadat het idee niet met één kon worden geimplementeerd.
+
+museum_259level_2a=Deze lay-out was echter esthetisch onaangenaam en voelde onhandig
+museum_259level_2b=aan. Uiteindelijk keerde ik terug naar het levelconcept en
+museum_259level_2c=slaagde erin (denk ik?) om het idee met slechts één laag op te zetten.
+
+museum_276level_1a=Ik vond de oplossing hiervan best goed toen ik het Museum maakte.
+museum_276level_1b=Echter heeft het een ietwat complex ontwerp en zijn er leesbaarheidsproblemen
+museum_276level_1c=die het spel kan hebben wanneer objecten met elkaar overlappen.
+
+museum_290level_1a=Bij het implementeren van dit level vond ik een bug met het 'Woord'-woord.
+museum_290level_1b=Ik had geen tijd/motivatie om het voor de release te repareren en heb in plaats daarvan
+museum_290level_1c=gewoon stilletjes dit level onvoltooid achtergelaten, wachtend op een betere toekomst.
+
+museum_296level_1a=De structuur van de laatste gebieden van het basisspel zijn veel veranderd.
+museum_296level_1b=Dit level zou uiteindelijk deel worden van de verbijsterende meta-puzzel,
+museum_296level_1c=maar voelde een beetje doelloos en te chaotisch aan.
+
+museum_300level_1a=Een ander level gemaakt voor de eindspel-meta; ik denk dat ik gewoon
+museum_300level_1b=geen plek had hiervoor. Verscheidene spelers hebben laten weten
+museum_300level_1c=dat ze het een leuke puzzel vonden, dus ik ben blij om het nu te presenteren!
+
+museum_321level_1a=Dit level belandde bijna in het uitgebrachte spel. Ik was er
+museum_321level_1b=erg aan gehecht, maar door de feedback van testers realiseerde ik me dat een zeer
+museum_321level_1c=cruciale onderdeel van de oplossing een beetje te esoterisch was.
+
+museum_328level_1a=Dit level zat bij de release in het spel! Ik heb het uiteindelijk vervangen
+museum_328level_1b=omdat de sectie waarin het zich bevond 'Facing' zou bevatten,
+museum_328level_1c=en dit level heeft dat niet. Het is ook nogal luid en chaotisch.
+
+museum_spoilerlevel_1a=Waarschuwing!
+museum_spoilerlevel_1b=De volgende levels zullen sommige grote spelmechanieken laten zien,
+museum_spoilerlevel_1c=dus het wordt aanbevolen om de wereldkaart van het basisspel te verslaan!
+
+tutorial_skip=Sla tutorial over
+tutorial_continue=Doorgaan
+tutorial_end=Beeindig tutorial
+
+tutorial_intro_1a=Welkom bij de level-editor!
+tutorial_intro_1b=De editor is redelijk ingewikkeld, dus het is aanbevolen om deze tutorials te bekijken. Als je ze liever overslaat, selecteer dan 'Skip tutorial'. Je kunt de tutorials later bekijken in het menu 'Help & instellingen' in het hoofdmenu van de editor. Deze intro-tutorial laat je zien hoe je een eenvoudig level maakt, en de andere tutorials zullen verschillende functies van de editor dieper uitleggen.
+tutorial_intro_1c=Let op! De editor bevat spoilers - bepaalde spoilerwoorden zijn standaard uitgeschakeld (je kunt ze inschakelen in de instellingen van de editor), maar je kunt ze nog steeds tegenkomen tijdens het spelen van levels van andere mensen. Het is daarom aanbevolen om minimaal de hoofdwereldkaart van het originele spel te verslaan.
+
+tutorial_intro_2a=Wanneer je de editor voor het eerst opent, zie je dit hoofdeditormenu. Vanaf hier kun je je levels bewerken, nieuwe downloaden, editorgerelateerde instellingen wijzigen, enzovoort. Vooralsnog selecteren we 'Levels bewerken' en gaan we verder.
+
+tutorial_intro_3a=Dit is het levelscherm. Hier kun je alle levels zien die je hebt gemaakt of gedownload. Selecteer 'maak een nieuw level' om een nieuw level te maken.
+tutorial_intro_3a_n=Dit is het levelscherm. Hier kun je alle levels zien die je hebt gemaakt of gedownload. Je kunt maximaal 100 levels tegelijk hebben. Selecteer 'maak een nieuw level' om een nieuw level te maken.
+
+tutorial_intro_4a=Eerst kies je de naam van het level. Je kunt dat altijd later wijzigen, dus maak je geen zorgen. Daarna kun je één van de standaard thema's kiezen om direct je level een specifieke uitstraling te geven! Dit is echter volledig optioneel.
+
+tutorial_intro_5a=Dit is het hoofdaanzicht van de level editor. Het kan overweldigend lijken, maar maak je geen zorgen, we zullen nu alleen de basis overwegen.
+
+tutorial_intro_6a=Selecteer hier eerst de optie 'Objecten' om te zien wat je in je level kunt plaatsen.
+tutorial_intro_6a_gpad=Druk eerst op @gamepad_editor_currobjlist om te zien wat je in je level kunt stoppen.
+
+tutorial_intro_7a=Dit is het Objectenpalet. Nogmaals, maak je geen zorgen over de knoppen. Laten we voor nu gewoon Baba uit de lijst selecteren.
+
+tutorial_intro_8a=Als je een object hebt geselecteerd, kun je het overal in je level plaatsen. Je kunt de pijltjestoetsen gebruiken om het object te draaien. Hallo Baba!
+tutorial_intro_8a_gpad=Als je een object hebt geselecteerd, kun je het overal in je level plaatsen. Gebruik @gamepad_editor_rotate om het object te draaien. Hallo Baba!
+
+tutorial_intro_9a=De huidige selectie van objecten is vrij klein. Laten we een nieuw object aan ons palet toevoegen - het kan via die knop daar!
+
+tutorial_intro_10a=Dit is de lijst met alle objecten die beschikbaar zijn. Je kunt zoeken en tags toevoegen om interessante dingen te vinden. Voor deze tutorial gaan we op zoek naar het object 'Wall' en selecteren het.
+
+tutorial_intro_11a=Helemaal top! Wall (en zijn woord) maakt nu deel uit van ons palet! Laten we Wall selecteren in het palet en een aantal in ons level plaatsen.
+
+tutorial_intro_12a=Als je per ongeluk iets plaatst waar het niet hoort dan kun je dat op verschillende manieren oplossen. Je kunt de plaatsing ongedaan maken, op Q drukken om 'Empty' te selecteren en dat over de verkeerde plaatsing te plaatsen, of met de rechtermuisknop op een leeg vakje te klikken om “Empty” te selecteren en het misplaatste object te vervangen.
+tutorial_intro_12a_gpad=Als je per ongeluk iets plaatst waar het niet hoort dan kun je dat op verschillende manieren oplossen. Je kunt de plaatsing ongedaan maken door op @gamepad_editor_undo te drukken, op @gamepad_editor_altpress + @gamepad_editor_pickempty te drukken om 'Empty' te selecteren en dan het misplaatste object te vervangen, of door op @gamepad_editor_copy te drukken en een leeg vlakje, ofwel “Empty”, te selecteren en dan het misplaatste object te vervangen.
+
+tutorial_intro_13a=Dit is de basis van level bewerken! Kies objecten uit het palet, voeg indien nodig meer toe uit de lijst met objecten en plaats ze in je level. Laten we, om het kort te houden, snel vooruitspoelen naar een voltooid level!
+
+tutorial_intro_14a=Denk eraan om vaak op te slaan! Druk op de knop daar beneden (of Control + S) om op te slaan. Zo kun je later ook weer terug naar je level. Je moet ook je level opslaan om het met anderen te kunnen delen.
+tutorial_intro_14a_gpad=Denk eraan om vaak op te slaan! Druk op @gamepad_editor_quickmenu om naar het Snelmenu te gaan en daar op te slaan, of druk op @gamepad_editor_altpress + @gamepad_editor_quickmenu om snel op te slaan. Zo kun je later ook weer terug naar je level. Je moet ook je level opslaan om het met anderen te kunnen delen.
+
+tutorial_intro_15a=Als je je level wilt testen, druk je gewoon op de 'Test'-knop daar beneden (of F3 op het toetsenbord). Tijdens het playtesten kun je via het pauzemenu terugkeren naar de editor(of met F3.)
+tutorial_intro_15a_gpad=Als je je level wilt testen, ga je naar het Snelmenu of druk je gewoon op @gamepad_editor_altpress + @gamepad_editor_currobjlist . Tijdens het playtesten kun je via het pauzemenu terugkeren naar de editor.
+
+tutorial_intro_16a=En dat is het eigenlijk! De andere tutorials zullen alle leuke kleine details grondiger uitleggen, maar met de hier getoonde tools zou je in staat moeten zijn om een ​​level te maken. Veel plezier!
+
+tutorial_2_1a=Welkom terug!
+tutorial_2_1b=In deze tutorial gaan we wat dieper in op hoe de editor zelf werkt. Deze zelfstudie concentreert zich op het plaatsen van objecten en gerelateerde functies.
+
+tutorial_2_2a=Oké, hier zijn we dan, terug in de level-editor.
+
+tutorial_2_3a=In de eerste tutorial werd het plaatsen van objecten kort uitgelegd. Het is heel eenvoudig - ga naar het objectpalet (ofwel door op de 'objecten'-knop te drukken of door op tab te drukken), selecteer daar een object en plaats het waar je wilt door met de linkermuisknop te klikken. De kleine pijl in de hoek van de objectplaatser vertelt je in welke richting je objecten zijn gericht.
+tutorial_2_3a_gpad=In de eerste tutorial werd het plaatsen van objecten kort uitgelegd. Het is heel simpel; ga naar het objectpalet door op @gamepad_editor_currobjlist te drukken, selecteer daar een object en plaats het waar je wilt door op @gamepad_editor_place te drukken. De kleine pijl in de hoek van de objectplaatser vertelt je in welke richting je objecten zijn gericht.
+
+tutorial_2_4a=Als je met de rechtermuisknop op een reeds geplaatst object klikt dan 'kopieer' je dat object en kun je het plaatsen in plaats van wat je eerder had geselecteerd. Op dezelfde manier kun je met de middelste muisknop op een object klikken om het te 'knippen'; dit laat een lege plek achter waarna je het object ergens anders kunt plaatsen.
+tutorial_2_4a_gpad=Als je @gamepad_editor_copy op een reeds geplaatst object drukt, 'kopieer' je dat object en kun je het plaatsen in plaats van wat je eerder had geselecteerd. Op dezelfde manier kun je @gamepad_editor_altpress + @gamepad_editor_cut drukken op een object waardoor het wordt geknipt; dit laat een lege plek achter waarna je het object ergens anders kunt plaatsen.
+
+tutorial_2_4b=Als je een object zoals Baba of Flag hebt geselecteerd, kun je Control ingedrukt houden en het muiswiel gebruiken om te schakelen tussen het object en hun woordtegenhangers. Handig om snel regels op te bouwen!
+tutorial_2_4b_gpad=Als je een object zoals Baba of Flag hebt geselecteerd, druk je op @gamepad_editor_swap om te schakelen tussen deze objecten en hun woordtegenhangers. Handig om snel regels op te bouwen!
+
+tutorial_2_5a=Als je de positie van een reeds geplaatst object wilt wijzigen, plaats dan je muisaanwijzer erop met de objectplaatser en klik op Control; houd Control ingedrukt en verplaats vervolgens de objectplaatser en het object zal volgen. Laat Control los om het object neer te leggen (als er een lege plek is).
+tutorial_2_5a_gpad=Als je de positie van een reeds geplaatst object wilt wijzigen, plaats je de muisaanwijzer erop met de objectplaatser en houdt je @gamepad_editor_drag ingedrukt. Verplaats vervolgens, terwijl je @gamepad_editor_drag ingedrukt houdt, je objectplaatser en het object zal volgen. Laat @gamepad_editor_drag los om het object neer te leggen (als er een lege plek is).
+
+tutorial_2_5b=Wanneer je je boven een reeds geplaatst object bevindt, zal de kleine pijl in de hoek van de objectplaatser je vertellen in welke richting het object is gericht. Je kunt deze richting wijzigen door op de pijltoetsen te drukken terwijl je over het object zweeft.
+tutorial_2_5b_gpad=Wanneer je je boven een reeds geplaatst object bevindt, zal de kleine pijl in de hoek van de objectplaatser je vertellen in welke richting het object is gericht. Je kunt deze richting veranderen door @gamepad_editor_rotate te gebruiken terwijl je over het object zweeft.
+
+tutorial_2_6a=Als je 'niets' wilt selecteren om reeds geplaatste objecten te wissen, kun je ofwel de kopieermogelijkheid over een lege tegel gebruiken, of op Q drukken om je geselecteerde object snel leeg te maken.
+tutorial_2_6a_gpad=Als je 'niets' wilt selecteren om reeds geplaatste objecten te wissen, kun je ofwel de kopieermogelijkheid over een lege tegel gebruiken, of op @gamepad_editor_altpress + @gamepad_editor_pickempty drukken om je geselecteerde object snel leeg te maken.
+
+tutorial_2_7a=Je kunt ook meerdere objecten tegelijk plaatsen! Je kunt dit doen met behulp van de verschillende gereedschappen die hier worden vermeld. Deze gereedschappen vereisen echter extra uitleg die we in een latere tutorial zullen behandelen.
+
+tutorial_2_8a=Elk Baba Is You level heeft 3 lagen. Dat betekent dat je bij het maken van een level maximaal 3 objecten op elkaar kunt hebben. Druk op deze knoppen om de laag waarop je je bevindt te wijzigen. Je kunt ook Control ingedrukt houden en op de cijfertoetsen 1, 2 en 3 drukken. Objecten op verschillende lagen worden gedimd, dus let daar op!
+tutorial_2_8a_gpad=Elk Baba Is You level heeft 3 lagen. Dat betekent dat je bij het maken van een level maximaal 3 objecten op elkaar kunt hebben. Je kunt op @gamepad_editor_scrollleft_layer & @gamepad_editor_scrollright_layer drukken om van laag te wisselen die je aan het bewerken bent. Objecten op verschillende lagen worden gedimd, dus let daar op!
+
+tutorial_2_9a=Hierboven zie je de 'quickbar'! Hiermee kun je snel objecten selecteren die je recentelijk hebt gebruikt, en ook objecten die je het belangrijkst vindt.
+
+tutorial_2_10a=Gebruik de cijfertoetsen of het muiswiel om door de snelbalk te bladeren. De groene cursor geeft aan welk slot je momenteel hebt geselecteerd. Je kunt ook direct op de slots klikken om ze te selecteren.
+tutorial_2_10a_gpad=Gebruik @gamepad_editor_scrollleft_hotbar & @gamepad_editor_scrollright_hotbar om door de snelbalk te bladeren. De groene cursor geeft aan welk slot je momenteel hebt geselecteerd.
+
+tutorial_2_11a=De snelbalk wordt automatisch bijgewerkt met het meest recente object dat je hebt gekozen, als dat object nog niet in de snelbalk staat. Wil je er zeker van zijn dat een bepaald object de quickbar nooit verlaat, klik er dan met de rechtermuisknop op. De contouren van de gleuf veranderen een beetje om aan te geven dat de gleuf 'vergrendeld' is. Klik er nogmaals met de rechtermuisknop op om het te ontgrendelen. Het woord 'Is' is standaard vergrendeld wanneer je de editor start.
+tutorial_2_11a_gpad=De snelbalk wordt automatisch bijgewerkt met het meest recente object dat je hebt gekozen, als dat object nog niet in de snelbalk staat. Als je er zeker van wilt zijn dat een specifiek object de snelbalk nooit verlaat, druk je op @gamepad_editor_altpress + @gamepad_editor_lock . De contouren van de gleuf veranderen een beetje om aan te geven dat de gleuf 'vergrendeld' is. Druk nogmaals op de knoppen om deze te ontgrendelen. Het woord 'Is' is standaard vergrendeld wanneer je de editor start.
+
+tutorial_2_12a=Als je een specifiek object uit de snelbalk wilt verwijderen, klik je met de middelste muisknop op dat slot.
+tutorial_2_12a_gpad=Als je een specifiek object uit de snelbalk wilt verwijderen, druk dan op @gamepad_editor_altpress + @gamepad_editor_empty_hotbar wanneer dat slot is geselecteerd.
+
+tutorial_2_13a=Denk er bij het maken van een level aan om het regelmatig te testen en op te slaan! Gebruik de knoppen hieronder om een ​​van beide te doen. Je kunt ook Control ingedrukt houden en op S drukken om op te slaan, en op F3 drukken om een ​​level te testen.
+tutorial_2_13a_gpad=Denk er bij het maken van een level aan om het regelmatig te testen en op te slaan! Gebruik het Snelmenu ( @gamepad_editor_quickmenu ) om beide te doen, of druk op @gamepad_editor_altpress + @gamepad_editor_quickmenu om op te slaan en op @gamepad_editor_altpress + @gamepad_editor_currobjlist om een ​​level te testen.
+
+tutorial_2_14a=Goed, dat was het voor nu! Er zijn verschillende extra trucs die het maken van een level soepeler kunnen maken, maar daar komen we in latere tutorials op terug.
+
+tutorial_3_1a=Welkom terug!
+tutorial_3_1b=In deze tutorial wordt dieper ingegaan op het gebruik van de editorweergave; in het bijzonder zullen we de verschillende hulpmiddelen voor het plaatsen van objecten doornemen die in tutorial 2 zijn overgeslagen.
+
+tutorial_3_2a=En daar zijn we weer, de editor. U kunt de lijst met gereedschappen aan de rechterkant zien.
+
+tutorial_3_3a=Uw standaardgereedschap is het potlood. Het werkt zoals je zou verwachten; klik op een tegel en er verschijnt een object.
+tutorial_3_3a_gpad=Uw standaardgereedschap is het potlood. Het werkt zoals je zou verwachten; selecteer een tegel en druk op @gamepad_editor_place op een tegel en er verschijnt een object.
+
+tutorial_3_4a=Een beetje naar beneden springend, is een ander basisgereedschap de gum. Het werkt als het potlood, behalve dat het objecten verwijdert. Het effect is praktisch hetzelfde als het potlood gebruiken en 'Empty' tegels plaatsen.
+
+tutorial_3_5a=Het volgende is het lijn gereedschap. Selecteer een tegel, sleep er een lijn vanaf en op elke tegel onderweg verschijnt een object. De lijn is soms wat onnauwkeurig, maar kan erg handig zijn om snel rijen en kolommen met objecten te plaatsen.
+
+tutorial_3_6a=Zoals hier. We hebben de tegel aan de rechterkant geselecteerd en een lijn naar links gesleept om meerdere Flags te plaatsen.
+
+tutorial_3_7a=Dan komt het rechthoek gereedschap. Het werkt volgens hetzelfde principe als het lijngereedschap; selecteer een tegel en sleep een rechthoek om meerdere objecten tegelijk te plaatsen.
+
+tutorial_3_8a=Mooi!
+
+tutorial_3_9a=Het volgende gereedschap, gevulde rechthoek, is een variatie op het rechthoek gereedschap. Het werkt op dezelfde manier, behalve dat de resulterende rechthoek gevuld is.
+
+tutorial_3_10a=We slaan het volgende gereedschap even over, naar het vul gereedschap. Gebruik het om een doorlopend gebied met hetzelfde object te vullen. Met doorlopend wordt een gebied dat uit hetzelfde object bestaat bedoelt, zoals een aaneengesloten groep Babas, of een lege ruimte.
+
+tutorial_3_11a=Oké, nu het meest complexe gereedschap: selecteer! Hiermee kun je snel meerdere objecten in het level verplaatsen en roteren.
+
+tutorial_3_12a=De basisfunctie is vergelijkbaar met het gereedschap Rechthoek: selecteer een tegel en sleep een rechthoekig gebied. Het wordt gemarkeerd met rood, zoals hier te zien is.
+
+tutorial_3_13a=Zodra een gebied is geselecteerd, verplaats je alle objecten in dat gebied door de cursor te bewegen. Als je op de linkermuisknop drukt, kun je zoveel exemplaren van dat object plaatsen als je wilt, waar je selectie zich ook bevindt. Normaal gesproken verwijderen de lege tegels in de selectie alle onderliggende objecten bij het plaatsen van de selectie, maar je kunt dit gedrag veranderen door Shift ingedrukt te houden tijdens de plaatsing.
+tutorial_3_13a_gpad=Zodra een gebied is geselecteerd, verplaats je alle objecten in dat gebied door de cursor te bewegen. Als je op @gamepad_editor_place drukt, kun je zoveel exemplaren van dat object plaatsen als je wilt, waar je selectie zich ook bevindt. Als je de selectie op deze manier plaatst, zullen de lege tegels erin alle objecten eronder verwijderen; gebruik @gamepad_editor_undo om dit gedrag te vermijden.
+
+tutorial_3_14a=Je kunt de selectie roteren en spiegelen met de pijltjestoetsen. Met de linker- en rechterpijltjes toetsen kun je de selectie draaien en met de omhoog- en omlaagpijltjes toetsen spiegel je ze.
+tutorial_3_14a_gpad=Je kunt de selectie draaien en spiegelen. Met @gamepad_editor_scrollleft_tool & @gamepad_editor_scrollright_tool kun je de selectie draaien. En met @gamepad_editor_scrollright_hotbar spiegelt en @gamepad_editor_scrollleft_hotbar spiegel je de selectie.
+
+tutorial_3_15a=Druk op de rechtermuisknop om de selectie te verwijderen. Houd er echter rekening mee dat de objecten in de selectie hierna zullen verdwijnen!
+tutorial_3_15a_gpad=Druk op de @gamepad_editor_drag om de selectie te verwijderen. Houd er echter rekening mee dat de objecten in de selectie hierna zullen verdwijnen!
+
+tutorial_3_16a=...En dat is alles vooralsnog! Met deze technieken, zal het bewerken van levels een stuk makkelijker moeten zijn.
+
+tutorial_4_1a=Welkom terug!
+tutorial_4_1b=In deze tutorial richten we onze aandacht op het objectpalet, de lijst met objecten die je in je level kunt plaatsen.
+
+tutorial_4_2a=Nogmaals, we beginnen met een leeg niveau.
+
+tutorial_4_3a=Door op de knop 'Objects' of Tab te drukken, ga je naar het objectenpalet.
+tutorial_4_3a_gpad=Als je op @gamepad_editor_currobjlist drukt, ga je naar het objectenpalet.
+
+tutorial_4_4a=Om een ​​object te selecteren en te plaatsen, klik je erop. Hierdoor wordt ook automatisch het menu verlaten. Als je niets wilt selecteren, druk je nogmaals op Tab om het menu te verlaten.
+tutorial_4_4a_gpad=Om een ​​object te selecteren en te plaatsen, druk je er op @gamepad_editor_place. Hierdoor wordt ook automatisch het menu verlaten. Als je niets wilt selecteren, drukt je nogmaals op @gamepad_editor_currobjlist om het menu te verlaten.
+
+tutorial_4_5a=De game laat je kiezen tussen twee modi om je objectpalet weer te geven. In de eerste modus worden alle verschillende woorden en objecten samen weergegeven (zoals nu), en in de tweede worden objecten en hun woorden op elkaar gestapeld (wat betekent dat 'baba' het wezen en 'baba' het woord zich op dezelfde sleuf zullen bevinden.) Gebruik deze knop om tussen de twee modi te schakelen.
+
+tutorial_4_6a=Wanneer je de gestapelde weergave gebruikt, gebruik je het muiswiel (of de aangegeven knop) om te schakelen tussen objecten en woorden. Dit zorgt voor een compacter beeld, wat handig kan zijn. Laten we voor nu teruggaan naar de niet-gestapelde modus.
+tutorial_4_6a_gpad=Als je de gestapelde weergave gebruikt, gebruik je @gamepad_currobjlist_swap (of de aangegeven knop) om te wisselen tussen objecten en hun woorden. Dit zorgt voor een compacter beeld, wat handig kan zijn. Laten we voor nu teruggaan naar de niet-gestapelde modus.
+
+tutorial_4_7a=Standaard gezien is het objectenpalet vrij kaal. Gebruik de aangegeven knop om meer objecten aan je palet toe te voegen, tot een maximum van 150 per level!
+tutorial_4_7a_gpad=Standaard gezien is het objectenpalet vrij kaal. Gebruik de aangegeven knop of @gamepad_currobjlist_addnew om meer objecten aan je palet toe te voegen, tot een maximum van 150 per level!
+
+tutorial_4_8a=Dit is de objectenlijst, kort bezocht in de eerste tutorial. Hier staan ​​alle objecten vermeld die je eventueel aan je level kunt toevoegen. Er zijn er nogal wat! Sommige opties staan standaard gezien niet in deze lijst, zodat in het geval dat je het volledige spel nog niet hebt gespeeld, je enkele spoilers kunt vermijden. Je kunt dit wijzigen in de editorinstellingen.
+
+tutorial_4_9a=Om je te helpen bij het vinden van dingen die je nodig hebt, kun je de zoekknop gebruiken of tags toepassen om objecten te vinden die een bepaald thema volgen. Deze zelfde knoppen bestaan ​​ook in het objectpalet zelf, om het vinden van een specifiek object gemakkelijker te maken. Je kunt ook gewoon op lettertoetsen drukken om automatisch een zoekopdracht te starten.
+tutorial_4_9a_gpad=Om je te helpen bij het vinden van dingen die je nodig hebt, kun je de zoekknop gebruiken of tags toepassen om objecten te vinden die een bepaald thema volgen. Deze zelfde knoppen bestaan ​​ook in het objectpalet zelf, om het vinden van een specifiek object gemakkelijker te maken. Je kunt ook op @gamepad_editor_currobjlist drukken om snel een zoekopdracht te starten.
+
+tutorial_4_10a=Oké, we hebben 'Wall' gekozen; als je een object kiest, keer je onmiddellijk terug naar het objectpalet (tenzij je Control ingedrukt houdt). Je kunt zien dat de editor voor het gemak automatisch zowel Wall als de tekst-tegenhanger heeft toegevoegd.
+tutorial_4_10a_gpad=Oké, we hebben 'Wall' gekozen; als je @gamepad_editor_place gebruikt om een ​​object te kiezen, keer je onmiddellijk terug naar het objectenpalet, maar met @gamepad_editor_drag kun je in de objectenlijst blijven om meer objecten aan je objectpalet toe te voegen. Je kunt zien dat de editor voor het gemak automatisch zowel Wall als de tekst-tegenhanger heeft toegevoegd.
+
+tutorial_4_11a=Als je een object uit je palet wilt verwijderen, selecteert je de knop waarnaar wordt verwezen en klik je op het object dat je wilt verwijderen, of houd je de besturing ingedrukt en klik je met de rechtermuisknop op het object. Houd er rekening mee dat als je dit doet, alle instanties van dat object van je level worden verwijderd en dat als je een object verwijdert, ook de tekst-tegenhanger wordt verwijderd.
+tutorial_4_11a_gpad=Als je een object uit je palet wilt verwijderen, selecteert je de knop waarnaar wordt verwezen terwijl je de muisaanwijzer op het object houdt dat je wilt verwijderen, of druk op @gamepad_currobjlist_remove terwijl je de muisaanwijzer over het object beweegt. Houd er rekening mee dat als je dit doet, alle instanties van dat object van je level worden verwijderd en dat als je een object verwijdert, ook de tekst-tegenhanger wordt verwijderd.
+
+tutorial_4_12a=Naast de verwijderknop daarboven hebben we de knop 'Edit object'. Hiermee kun je bepaalde instellingen met betrekking tot de objecten bewerken, die we hierna zullen bespreken. Druk op de knop 'Edit object' en selecteer het object dat je wil bewerken, of klik met de rechtermuisknop op het object.
+tutorial_4_12a_gpad=Naast de verwijderknop daarboven hebben we de knop 'Edit object'. Hiermee kun je bepaalde instellingen met betrekking tot de objecten bewerken, die we hierna zullen bespreken. Druk op de knop 'Edit object' terwijl je de muisaanwijzer op het object houdt dat je wilt bewerken, of druk gewoon op @gamepad_currobjlist_edit terwijl je boven het object staat.
+
+tutorial_4_13a=Dit is de weergave die wordt geopend wanneer je begint met het bewerken van een object. Je kunt de kleur van het object, de sprite (dat wil zeggen, hoe het eruit ziet) en de Z-waarde wijzigen. De Z-waarde bepaalt welk object bovenaan wordt weergegeven als er meerdere objecten op dezelfde tegel staan. Hoe hoger het getal (oplopend tot 20), hoe hoger het object op de stapel ligt.
+
+tutorial_4_14a=Kortom, door de instellingen van een object te bewerken, kun je allerlei handige visuele trucs instellen!
+
+tutorial_4_15a=Ten slotte kun je objecten in het objectenpalet ook verplaatsen door ze te slepen. Houd Control ingedrukt en klik op een object en sleep het vervolgens rond. Zo zet je alles op de plekken waar je ze het makkelijkst kunt vinden!
+tutorial_4_15a_gpad=Ten slotte kun je objecten in het objectenpalet ook verplaatsen door ze te slepen. Druk @gamepad_currobjlist_drag en houd vast op een object en sleep het vervolgens rond. Zo zet je alles op de plekken waar je ze het makkelijkst kunt vinden!
+
+tutorial_4_16a=En hier zijn we weer; dit zijn de basisprincipes van het objectenpalet. Houd er rekening mee dat wanneer je begint met het maken van een nieuw level, je een kant-en-klaar thema kunt selecteren waarin thematisch geschikte objecten al aan het objectpalet zijn toegevoegd. Dit kan je een hoop tijd besparen.
+
+tutorial_5_1a=...En welkom terug!
+tutorial_5_1b=In deze tutorial zullen we kijken naar verschillende instellingen en andere opties die je kunt selecteren tijdens het maken van je level(s).
+
+tutorial_5_2a=Oke dan; in de hoofdeditor zie je daar beneden twee knoppen, 'Settings' en 'Menu'. In deze tutorial noemen we ze respectievelijk 'Level settings' en 'Editor menu'.
+tutorial_5_2a_gpad=Oke dan; druk in de hoofdeditor op @gamepad_editor_quickmenu om het snelmenu te openen en let op de twee knoppen onderaan. In deze tutorial noemen we ze respectievelijk 'Level settings' en 'Editor menu'.
+
+tutorial_5_3a=We bekijken eerst het menu 'Level settings'. Dit wordt gebruikt om verschillende details over het level te wijzigen, zoals muziek, kleuren, naam, enzovoort.
+
+tutorial_5_4a=Allereerst is er de knop om de naam van het level te wijzigen. Alsjeblieft geen vervelende namen of Baba wordt boos!!
+
+tutorial_5_5a=Ten tweede hebben we de knop om de auteur van het level te wijzigen. Dat ben jij! Zodra je de auteur van een level hebt ingesteld, zal het spel dezelfde naam voorstellen voor toekomstige niveaus.
+
+tutorial_5_6a=De volgende is de level-ondertitelknop. Hiermee kun je het level een korte slogan of motto geven die onder de naam verschijnt wanneer iemand het level speelt.
+
+tutorial_5_7a=Dan komt de muziekknop. Dit opent een menu waarin je kunt selecteren welk nummer je wilt spelen op de achtergrond van je level.
+
+tutorial_5_8a=En er is de deeltjesknop - hiermee kun je verschillende decoratieve achtergrondeffecten aan je level toevoegen, van regen tot knipperende sterren. Leuk!
+
+tutorial_5_9a=Met de paletten knop kun je het kleurenlandschap van het level wijzigen. Dit kan de stemming enorm beïnvloeden.
+
+tutorial_5_10a=De volgende is de knop voor de levelgrootte. Dit opent een submenu waar je de levelgrootte kunt aanpassen; de maximale grootte is 33 x 18 tegels.
+
+tutorial_5_11a=Onderaan zijn er verschillende extra instellingen zoals bijvoorbeeld de optie om alleen partikeleffecten van jouw level te verwijderen. En ook de schuifregelaar 'Level Is Auto'', een vreemde eend - daar komen we in een latere tutorial op terug.
+
+tutorial_5_12a=Oké, dat was het voor het 'level-instellingen' menu, laten we nu een kijkje nemen naar het 'Editor-menu'.
+
+tutorial_5_13a=Je zult dit menu niet vaak nodig hebben omdat deze opties wat algemener zijn.
+
+tutorial_5_14a=Hierboven hebben we de knop om je level te uploaden zodat anderen het kunnen spelen. Daar komen we later op terug.
+
+tutorial_5_15a=Met het themamenu kun je het thema van je level wijzigen en om het objectpalet van je huidige level of een nieuw thema op te slaan.
+
+tutorial_5_16a=Wees echter gewaarschuwd! Als je een nieuw thema selecteert, wordt voor de veiligheid eerst je hele level geleegd! Via dit submenu kun je ook oude thema's die je hebt gemaakt verwijderen.
+
+tutorial_5_17a=Terug in het Editor-menu hebben we vervolgens de knop voor het verwijderen van levels. Dit verwijdert je level. Vervelend is dat, maar soms moet het.
+
+tutorial_5_18a=...En tot slot hebben we op de lijst de knop voor het kopiëren van levels. Het creëert een identieke kopie van je level. Dit kan handig zijn als je meerdere niveaus wil maken met dezelfde basislay-out.
+
+tutorial_5_19a=Dat was het! Het is aan te raden om in het begin wat te spelen met de verschillende instellingen zodat je alle gereedschappen die je tot je beschikking hebt leert kennen.
+
+tutorial_6_1a=Hallo!
+tutorial_6_1b=Deze tutorial legt uit hoe je je eigen levels online uploadt zodat anderen ze kunnen spelen! Voordat je begint met lezen, kan het handig zijn om een ​​voltooid level te hebben waar je tevreden mee bent, zodat je de lessen van deze tutorial achteraf kunt testen.
+
+tutorial_6_2a=Om te beginnen met het uploaden van het level, ga naar het Editor-menu.
+
+tutorial_6_3a=Selecteer daar de knop 'Upload level'.
+
+tutorial_6_4a=De editor toont de huidige naam, auteur en ondertitel van het level. Zorg ervoor dat je het leuk vindt wat je ziet en dat je het level hebt opgeslagen, en selecteer 'Ja'!
+
+tutorial_6_5a=...Merk echter op dat voordat het level wordt geüpload, je het zelf moet verslaan. Dit is om levels te vermijden die onmogelijk op te lossen zijn.
+
+tutorial_6_6a=Zodra je het level hebt voltooid, zal de editor proberen het te uploaden. Als alles goed gaat, laat het spel je de 9-symbolen downloadcode voor het level zien, zodat je het level meteen met je vrienden kunt delen! Als in plaats daarvan een foutmelding verschijnt is er iets misgegaan.
+
+tutorial_6_7a=Als je de levelcode bent vergeten of deze later gewoon wilt zien, heeft het hoofdeditormenu de knop 'Level History' waarmee je de codes kunt zien van levels die je in het verleden hebt geüpload en/of gedownload.
+
+tutorial_6_8a=Dat is zo'n beetje alles! Niet te ingewikkeld. Een herinnering: upload geen levels die aanstootgevend of anderszins onaanvaardbaar zijn; die worden van de server verwijderd. Heilzame niveaus zijn je vrienden!
+
+tutorial_7_levelname=Voorbeeld level
+tutorial_7_author=Dat kan jij zijn!
+tutorial_7_subtitle=Voorbeeld ondertitel
+
+tutorial_7_1a=Oké!
+tutorial_7_1b=In deze tutorial leggen we de stappen van het downloaden van levels uit. Dit is relevant voor meer dan alleen de editor, maar vermoedelijk is dat geen probleem.
+
+tutorial_7_2a=Elk geüpload level krijgt een speciale 9-symbolige 'Level code' die wordt gebruikt om het level later in de leveldatabase te vinden. De code heeft twee wirwar van hoofdletters en cijfers, gescheiden door een lijn. Meestal ben je op zoek naar een level met een code als deze.
+
+tutorial_7_3a=Om nieuwe levels te downloaden, ga je naar het menu 'Play levels' of het hoofdeditormenu en selecteer je 'Get new levels'.
+
+tutorial_7_4a=In dit menu kun je kiezen hoe je nieuwe levels wilt downloaden. 'Use level code' vereist dat je de levelcode van een specifiek level kent, als je bijvoorbeeld een level wilt zien dat je vriend heeft gemaakt.
+
+tutorial_7_5a=Via 'Featured levels' kun je een lijst bekijken met levels die ons team heeft gekozen en waarvan we dachten dat ze interessant waren; deze lijst zal zo nu en dan veranderen om nieuwe vondsten te laten zien. Als je hier een level selecteert, ga je naar de weergave voor het invoeren van een code met de code van het level al ingevoerd.
+
+tutorial_7_6a=Als je downloadpoging is geslaagd, zie je dit menu. Hier kun je de basisgegevens van het level zien en kun je kiezen wat je ermee wilt doen.
+
+tutorial_7_7a=Met 'Play now, don't save' begin je met het spelen van het level dat je hebt gedownload en zodra je stopt met spelen, moet je het opnieuw downloaden om het opnieuw te kunnen spelen.
+
+tutorial_7_8a='Save level' slaat het level op in je levellijst, waarna je kunt kiezen om het level te spelen of terug te keren naar het hoofdmenu.
+
+tutorial_7_9a=Als je een level speelt dat je hebt gedownload, vind je een knop met het label 'Report level' in het pauzemenu. Als het level aanstootgevend is, je er ongemakkelijk bij voelt of je denkt dat het tegen de regels is, gebruik dan deze knop om het te melden. We zullen de meldingen doornemen en levels verwijderen die niet acceptabel zijn. Bedankt voor de hulp!
+
+tutorial_7_10a=Vrij eenvoudig, alles in aanmerking genomen!
+tutorial_7_10a_n=Vrij eenvoudig, alles in aanmerking genomen! Houd er echter rekening mee dat je een limiet van maximaal 100 levels op je apparaat hebt - inclusief levels die door jou zijn gemaakt.
+
+tutorial_8_1a=Hoi!
+tutorial_8_1b=In deze tutorial zullen we verschillende handige shortcuts en dergelijke doornemen die jouw level creatie proces efficienter kunnen maken. Merk op dat alle sneltoetsen die hier worden vermeld te vinden zijn in de helpsectie van de editor, te vinden boven deze tutorials!
+
+tutorial_8_2a=Laten we beginnen met de levellijst. Als je snel van een level af wilt, kun je het rechtstreeks uit dit menu verwijderen door er met de rechtermuisknop op te klikken. Je zult de verwijdering nog wel moeten bevestigen.
+tutorial_8_2a_gpad=Laten we beginnen met de levellijst. Als je snel van een level af wilt, kun je het rechtstreeks uit dit menu verwijderen door op @gamepad_editor_undo te drukken. Je zult de verwijdering nog wel moeten bevestigen.
+
+tutorial_8_3a=Ook in dit menu en in elk ander menu met zoekmogelijkheden kun je een zoekopdracht starten door simpelweg op een lettertoets te drukken!
+tutorial_8_3a_gpad=Ook in dit menu en in meerdere andere kun je een zoekopdracht starten door op @gamepad_editor_currobjlist te drukken en snel door pagina's te bladeren met @gamepad_editor_scrollleft_hotbar & @gamepad_editor_scrollright_hotbar en meerdere pagina's tegelijk met @gamepad_editor_scrollleft_tool & @gamepad_editor_scrollright_tool!
+
+tutorial_8_4a=De rest van de tutorial zal worden besteed in de daadwerkelijke editor. We beginnen met de weergave van de hoofdeditor.
+
+tutorial_8_5a=Als je F ingedrukt houdt, zie je in welke richting alle objecten op de laag die je aan het bewerken bent gericht zijn.
+tutorial_8_5a_gpad=Als je @gamepad_editor_altpress en @gamepad_editor_showdir vasthoudt, kun je de richtingen zien waarin alle objecten staan op de laag die je aan het bewerken bent.
+
+tutorial_8_6a=Met de WASD-knoppen kun je alle objecten in het level tegelijk verplaatsen. Handig als je bijvoorbeeld per ongeluk een constructie uit het midden hebt geplaatst en deze allemaal wilt verplaatsen.
+tutorial_8_6a_gpad=Door @gamepad_editor_moveall vast te houden en @gamepad_editor_rotate te gebruiken, kun je alle objecten in het level tegelijk verplaatsen. Handig als je bijvoorbeeld per ongeluk een constructie een paar tegels te veel naar rechts hebt staan en deze allemaal wilt verplaatsen.
+
+tutorial_8_7a=Als je Control ingedrukt houdt en met de middelste muisknop op een tegel klikt, wordt de tegel volledig gewist, inclusief alle lagen. En als je niet tevreden bent met een level in het geheel, kun je door Control ingedrukt te houden en op Delete te drukken het hele level in één keer wissen.
+tutorial_8_7a_gpad=Als je @gamepad_editor_altpress ingedrukt houdt en op @gamepad_editor_emptytile drukt, wordt een tegel volledig gewist, inclusief alle lagen.
+
+tutorial_8_8a=Als je op F3 drukt, kun je snel schakelen tussen het testen van een level en de editorweergave, en met R ga je direct naar het toevoegen van nieuwe objecten aan je objectpalet. Er zijn ook een paar handige knoppen om snel bepaalde woorden te selecteren: I selecteert Is, U selecteert And, Y selecteert Not en Q selecteert 'niets'. Houd Control ingedrukt en druk op S om het level op te slaan.
+tutorial_8_8a_gpad=Als je @gamepad_editor_altpress ingedrukt houdt en op @gamepad_editor_currobjlist drukt, kun je meteen beginnen met het testen van je level. En als je @gamepad_editor_altpress ingedrukt houdt en op @gamepad_editor_quickmenu drukt, wordt het snel opgeslagen. Ook kun je met @gamepad_editor_altpress + @gamepad_editor_emptytile snel 'niets' selecteren als je huidig gekozen object.
+
+tutorial_8_9a=Door in de hoofdeditor op F4 te drukken, kun je een zin invoeren, en het spel geeft je automatisch een selectie die de woorden bevat die je hebt ingevoerd (als ze in het spel voorkomen). Als u bijvoorbeeld op F4 drukt en 'Baba Is You' invoert, krijg je een selectie met de woordobjecten 'Baba', 'Is' en 'You'. Dit voegt zelfs de woorden toe aan je objectenpalet als ze er nog niet waren! Erg handig als je weet wat je zoekt.
+tutorial_8_9a_gpad=Als je @gamepad_editor_altpress ingedrukt houdt en op @gamepad_editor_autopick drukt in de hoofdeditor, kun je een zin schrijven, en het spel geeft je automatisch een selectie die de woorden bevat die je hebt ingevoerd (als ze in het spel voorkomen). Als je bijvoorbeeld 'Baba Is You' invoert, krijg je een selectie met de woordobjecten 'Baba', 'Is' en 'You'. Dit voegt zelfs de woorden toe aan je objectenpalet als ze er nog niet waren! Erg handig als je weet wat je zoekt.
+
+tutorial_8_9a_extra=De schuifregelaar 'Level Is Auto' werd genoemd in tutorial 5. Zo werkt het: als je de regel 'Level Is Auto' vormt tijdens het spelen van een level, gaat het spel in zijn eigen tempo vooruit, zelfs als je geen knoppen indrukt. Er zal een wachttijd zijn tussen elke 'update'; zo kun je bijvoorbeeld ritmische minigames en andere leuke dingen maken. De 'Level Is Auto'-schuifregelaar verandert de snelheid waarmee het spel wordt bijgewerkt. Hoe lager de schuifregelaar, hoe korter de wachttijd tussen updates en dus hoe sneller het level gaat. Probeer het!
+
+tutorial_8_10a=Er zijn ook een paar handige hulpmiddelen in de weergave van het objectpalet!
+
+tutorial_8_11a=Door met de rechtermuisknop op een object te klikken, worden de gegevens van dat object direct bewerkt. Als je echter Control ingedrukt houdt terwijl je dit doet, verwijder je in plaats daarvan het object uit het objectpalet. Als je de 'gekoppelde' modus hebt geselecteerd, zal het draaien van je muiswiel ook wisselen tussen objecten en hun woorden.
+tutorial_8_11a_gpad=Door op @gamepad_currobjlist_edit over een object te drukken, ga je direct naar het bewerken van de metadata van het object. Als je op @gamepad_currobjlist_remove drukt, wordt het object in plaats daarvan uit het objectpalet verwijderd.
+
+tutorial_8_12a=Door nogmaals op F4 te drukken in de weergave van het objectenpalet, kun je een zin invoeren; in dit geval worden de objecten in je zin echter alleen toegevoegd aan het objectpalet (als ze bestaan ​​en nog niet toegevoegd zijn).
+tutorial_8_12a_gpad=Als je @gamepad_editor_altpress ingedrukt houdt en op @gamepad_currobjlist_autoadd drukt in de weergave van het objectpalet, kun je opnieuw een zin schrijven; in dit geval worden de objecten in uw zin echter alleen toegevoegd aan het objectpalet (als ze bestaan ​​en nog niet toegevoegd zijn).
+
+tutorial_8_13a=Er zijn verschillende andere handige hulpmiddelen, maar we hebben nu de belangrijkste behandeld. Nogmaals, zorg ervoor dat je de volledige lijst met shortcuts in het helpmenu van de editor bekijkt als je het gebruiksgemak wil maximaliseren!
+
+tutorial_9_1a=Nou dan!
+tutorial_9_1b=Deze tutorial gaat minder over het gebruik van de editor en meer over (mogelijke) handige ontwerptips om je op weg te helpen met het maken van je eigen levels!
+
+tutorial_9_2a=Deze tips zijn vooral bedoeld om te helpen bij het maken van puzzellevels. Er zijn verschillende manieren om het ontwerp van een puzzel te benaderen, en de ene methode werkt beter voor de een dan de ander. Ik ga de methode uitleggen die voor mij werkte en die ik gebruikte bij het ontwerpen van veel van de originele levels in Baba Is You. Je bent echter vrij om automaten, kleine scènes die je mooi vindt en andere niet-puzzels te maken! Houd er echter rekening mee dat om je level naar het internet te uploaden, het op de een of andere manier te winnen moet zijn.
+
+tutorial_9_3a=Voordat we beginnen: het kan leuk zijn om een ​​level te maken waarbij het punt is dat het level frustrerend is, onaangenaam om naar te kijken, jumpscares heeft of iets dergelijks. Een goed uitgevoerde truc of grap kan legitiem leuk zijn, maar houd er rekening mee dat bijvoorbeeld snel knipperende kleuren schadelijk kunnen zijn voor sommige spelers, en dat als het gaat om simpele irritante gimmicks, iemand anders onvermijdelijk hetzelfde idee al gehad heeft. In ieder geval zullen levels die geen ander doel hebben dan andere spelers ongemakkelijk te maken, hoogstwaarschijnlijk worden verwijderd.
+
+tutorial_9_4a=Dat gezegd hebbende - een heel belangrijk ding is dat een puzzel meestal baat heeft bij een centraal thema; een soort van 'point' of twist waar het level omheen is gebouwd. Soms kan een enkel level meerdere hebben, maar het kan het beste zijn om je te concentreren op het zo goed mogelijk uitdrukken van één enkel idee. In veel van de originele puzzels probeerde ik de levels te ontwerpen rond een specifieke realisatie of 'a-ha moment' die ik de speler wilde laten ervaren. Dit helpt de puzzel structuur te geven, maar kan het ook gemakkelijker maken om te begrijpen en zo onnodige verwarring te voorkomen.
+
+tutorial_9_5a=Nu, hoe komt iemand met ideeën voor zo'n punt of draai? Het kan moeilijk zijn om een ​​geweldig idee naar je toe te laten komen, maar dingen uitproberen in je hoofd of in de editor kan een goede manier zijn om inspiratie op te doen. Ik denk meestal liever na over de woorden, mechanieken en andere componenten die ik heb en probeer die in mijn hoofd te combineren om interacties te bedenken die op de een of andere manier interessant of cool lijken; ideeën waarvan ik denk dat ze een speler kunnen amuseren als ze erachter komen. De beste interacties zijn meestal interacties die niet te obscuur zijn en achteraf logisch zijn, maar iets onverwachts doen.
+
+tutorial_9_6a=Een ander belangrijk aspect waarmee je rekening moet houden bij een puzzelidee is hoeveel woorden, regels en andere elementen er nodig zijn om op te zetten, dat wil zeggen, hoe 'elegant' het is. Wanneer ik een interactie bedenk die inspirerend lijkt, probeer ik een level te bouwen waarbij de oplossing vereist dat de speler die specifieke interactie gebruikt en andere oplossingen voorkomt. Het level laten testen door anderen is een betere manier om dit te doen, maar zelfs als ik het alleen doe, kan ik vaak opmerken wanneer het vereisen van de oplossing en voorkomen van alle onbedoelde oplossingen veel extra woorden vereist.
+tutorial_9_6b=Naar mijn mening is het vooral onelegant als een puzzel verschillende zeer specifieke beperkingen vereist om te werken. Het is veel netter als je een ongewenste oplossing kunt voorkomen met 'Baba Is Baba' of door de vorm van het level aan te passen in plaats van met bijvoorbeeld 'Baba Is Not Rock And Not Wall And Not Flag'
+
+tutorial_9_7a=Dit concept van elegantie kan ook worden toegepast op de structuur van het level. In een Baba Is You-puzzel moet de speler behoorlijk wat in zich opnemen omdat hij onder andere de daarin geschreven regels moet lezen en volledig begrijpen. Daarom kan het beleefd zijn om je level op te bouwen, zodat de speler gemakkelijk kan begrijpen wat er in gebeurt. Onderdeel hiervan is het eerder genoemde aspect van het hebben van zo min mogelijk extra woorden en regels.
+tutorial_9_7b=Een ander onderdeel hiervan is visuele chaos. Decoraties in je level plaatsen is uitstekend, maar het kan een goed idee zijn om je regelzinnen zo te plaatsen dat de speler ze niet tussen verschillende decoratieve stukken hoeft te zoeken, maar ze in plaats daarvan gemakkelijk kan onderscheiden. Ook het markeren van regels die nooit kunnen worden gewijzigd door ze duidelijk buiten bereik te plaatsen, is een beleefde gewoonte.
+
+tutorial_9_8a=Dit brengt ons bij het onderwerp van 'red herrings' - dat wil zeggen, elementen die er belangrijk uitzien, maar dat niet blijken te zijn. Mijn mening over dit soort puzzelelementen is in de loop van de tijd veel veranderd, maar op dit moment zou ik zeggen dat het niet erg elegant is om elementen in het level te hebben die puur bedoeld zijn om de speler te misleiden en voegt over het algemeen extra drukwerk, frustratie en gevoel van overweldigendheid toe tot het oplossen van puzzels. Het is misschien het beste om te proberen alleen dingen in je puzzel op te nemen die echt nodig zijn (behalve decoraties, natuurlijk!)
+tutorial_9_8b=Dat gezegd hebbende, een simpele 'red herring' kan leuk zijn als de speler op een beperkte manier misleidt wordt en de “red herring” na het oplossen een amusante grap bleek te zijn.
+
+tutorial_9_9a=Naarmate je meer inzicht krijgt in de mechanica van Baba Is You, kun je gemakkelijk vergeten dat interacties tussen woorden een zeer diepgaande kennis van de werking van het spel vereisen. Ik ben tegen het probleem aangelopen dat ik, omdat ik de logica van het spel heb geschreven, een puzzelidee krijg waarbij ik verwachtte dat de speler ook de hele logica van het spel zou begrijpen. Denk er bij het maken van je level aan voor wie je het level maakt; als je level voor ervaren spelers is bedoelt, is het prima om te verwachten dat ze de diepe nuances van de spellogica begrijpen, maar in andere gevallen kunnen te obscure mechanica ondoordringbaar lijken voor de speler.
+
+tutorial_9_10a=Tot slot nog wat extra woorden over decoratie. Zoals eerder vermeld, is het belangrijk om ervoor te zorgen dat de speler de puzzel gemakkelijk kan begrijpen ondanks de versieringen. Om hieraan toe te voegen, kan het toevoegen van veel decoraties in het gebied van het level waar de speler daadwerkelijk zal bewegen en de puzzel zal oplossen, erg verwarrend zijn voor de speler. Er zijn bijvoorbeeld bepaalde woorden (zoals Weak) waardoor zelfs decoratieve elementen dingen in de puzzel kunnen beïnvloeden en dus per ongeluk relevant kunnen lijken voor de puzzel.
+tutorial_9_10b=Het kan ook een goed idee zijn om structuren die belangrijk zijn voor de puzzel op een meer simplistische manier vorm te geven, zelfs als ze daardoor minder natuurlijk lijken. Een eenvoudige vierkante plas water kan de speler bijvoorbeeld helpen te zien welke elementen in het level relevant zijn voor het oplossen van de puzzel in vergelijking met een uitgestrekt meer. Je kunt dan de meer organische en wilde decoraties aan de randen van het level plaatsen om het een leuke uitstraling te geven.
+
+tutorial_9_11a=Dat is het! Nogmaals, dit zijn mijn persoonlijke meningen en observaties over het ontwerpen van puzzels; andere mensen kunnen (en zullen) her hier niet mee eens zijn en dat is helemaal prima. Uiteindelijk bepaal je zelf welk soort levels je wilt maken. Anderen je levels laten testen en feedback geven is vaak de beste manier om er zeker van te zijn dat wat je maakt de goede kant opgaat. Ik hoop echter dat deze punten nuttig waren! Veel plezier met ed editor!
+
+tutorial_10_1a=Welkom terug!
+tutorial_10_1b=Dit is een strategiegids om je te helpen de Red Dragon te verslaan, de geheime superbaas die je kunt vinden op de Fire Peaks aan het einde van schijf 4. De gids gaat ervan uit dat je bekend bent met de basisconcepten van het spel, evenals enkele meer geavanceerde technieken, zoals de Friendship Overload, Armour Juggling en de Sleep Time Skip.
+
+tutorial_10_2a=Voordat je naar Fire Peaks gaat, moet je ervoor zorgen dat je precies 45 Greater Tonics, ten minste één Earwig of Shielding en wat extra Fire Hydrant-spreukstenen hebt . Je team moet ook minimaal level 24 zijn, want Fire Peaks is een eindspelgebied. Het levelen van Keke tot level 25 kan gunstig zijn omdat ze de Float vaardigheid op dat niveau leren.
+
+tutorial_10_3a=De Red Dragon dwaalt willekeurig rond in een van de kamers in Fire Peaks; de kamer met de lavafontein is de beste keuze, omdat deze direct naast een save-punt ligt en je dus snel Allegiance Schemas kunt wisselen wanneer nodig. Als je de Red Dragon op het scherm ziet, laat Fofo Hide gebruiken op het hele gezelschap, en begin een verrassingsaanval met Baba's Dash vermogen. Houd er echter rekening mee dat de Red Dragon weerstand heeft tegen aanvallen van onderaf, dus benader hem alleen van bovenaf.
+
+tutorial_10_4a=Zodra het gevecht begint, gebruik je je verrassingsvoordeel om de Sneaking Crown van Baba te vervangen door een Fire Wig, en zet ze op de eerste rij. Als er voor Jiji nog Habaneros over is, gebruik dan de Cook mogelijkheid om Mango-Habanero Hot Sauce te bereiden voor later gebruik.
+
+tutorial_10_5a=De Red Dragon begint altijd met het uitvoeren van de Fiery Jig. Keke en Baba zullen waarschijnlijk altijd gecharmeerd zijn, maar Fofo is van nature bestand tegen dansachtige bewegingen en Jiji's Paper Plate Mask zou het effect moeten blokkeren. Keke kan voorlopig gecharmeerd blijven, maar haal Baba uit het effect door ze op het hoofd te aaien. Als het aaien mist, is het misschien handiger om gewoon te resetten en het opnieuw te proberen, alhoewel het nog steeds mogelijk is.
+
+tutorial_10_6a=Laat nu Fofo de Happy Song zingen, terwijl Baba en Jiji de Fire Hydrant spellstones kunnen gebruiken om de Dragon af te koelen. Keke mag Float gebruiken indien nodig als de Dragon de Floor Is Lava spreuk gebruikt. Ga door met deze strategie totdat de Dragon helemaal is afgekoeld, en drink de Greater Tonics indien nodig.
+
+tutorial_10_7a=Uiteindelijk zal de Red Dragon volledig zijn afgekoeld. Zodra de Dragon verandert van Angry Stomps naar Annoyed Slaps, verplaats je Keke naar de eerste rij en serveer je een Gourmet Dish aan de Draak. Als Jiji tijd heeft gehad om wat te bereiden, breng dan Hot Sauce aan op de Gourmet Dish om de kans op succes te vergroten. Opmerking! De Red Dragon is veganistisch, dus zorg ervoor dat je het gerecht op de juiste manier kiest. Bam! Vriendschap bereikt!
+
+tutorial_10_8a=En daar heb je het! Succes levert je niet alleen een coole nieuwe mount op, maar er is ook een kans van 80 procent om een ​​Dragonscale Gaming Mouse als drop te krijgen, wat vrijwel zeker een upgrade zal zijn ten opzichte van de muis die Fofo heeft.
+
+tutorial_10_9a=Bedankt voor het lezen van deze strategiegids en veel succes met de Red Dragon jacht!
+
+world_museum=Museum
+world_new_adv=Nieuwe avonturen
+
+museum_101level=Welkom in het museum!
+museum_102level=Fabrieksarbeider
+museum_103level=Backstage
+museum_104level=Trein 2
+museum_105level=Shuffle
+museum_106level=Ketelbouw 2
+museum_107level=Schimmel Test 2
+museum_108level=Kluis
+museum_109level=Meer ongebruikte levels
+museum_10level=Genegenheid
+museum_112level=Bedankt voor het spelen!
+museum_113level=Vurige kuil
+museum_114level=Kwetsbaar bestaan - oud
+museum_125level=Gevallen woorden
+museum_126level=Ketelbouw
+museum_12level=Gescheiden door vloeistoffen
+museum_134level=Dim signaal
+museum_13level=Babas are you
+museum_140level=Zware fortificatie
+museum_143level=Appartementencomplex
+museum_14level=De zeer afgesloten gang
+museum_152level=Schimmel Test
+museum_154level=Geheime tuin
+museum_15level=Beginnende slotenmaker
+museum_16level=Delicate doos
+museum_19level=Overwinnings kluisje
+museum_204level=Sleutel
+museum_20level=Bedekt met ijs
+museum_213level=Beweeg
+museum_24level=Begraafplaats
+museum_256level=Na Sluitingstijd
+museum_259level=Dubbele isolatie
+museum_25level=Bereik de vlag, alsjeblieft
+museum_267level=Fort 2
+museum_26level=Keke de bewaker
+museum_276level=Trein
+museum_27level=Bescherm
+museum_290level=Mobiel gazon
+museum_296level=Onrust in de wolken
+museum_300level=Kanon
+museum_311level=Sleutelhanger
+museum_321level=Veilig huisje
+museum_328level=Tunnel
+museum_34level=Baba reageert niet
+museum_35level=Wolkenkamer
+museum_36level=Skelet vrienden
+museum_38level=Regels van het openbaar park
+museum_39level=Perfecte misdaad A
+museum_40level=Gevaarlijke tuin
+museum_41level=Huis A
+museum_42level=Huis B
+museum_43level=Huis C
+museum_44level=Huis D
+museum_45level=Huis E
+museum_46level=Perfecte misdaad B
+museum_50level=Voorbij de rivier
+museum_52level=Tunnelvisie
+museum_53level=Fort
+museum_55level=Onveranderlijk A
+museum_56level=Onveranderlijk B
+museum_60level=Eenzaam schouwspel
+museum_61level=Vertrekken
+museum_62level=Telefoon
+museum_63level=Roestige deur
+museum_65level=Terug
+museum_66level=Bochtige wegen
+museum_68level=Draadloze verbinding
+museum_73level=Mos voor mijn deur
+museum_74level=Kruispunt
+museum_79level=Museum van ongebruikte levels
+museum_79level_mapid=<empty>
+museum_80level=Oud riool
+museum_81level=Kraan
+museum_82level=Veilig huisje inleiding
+museum_83level=Overwinning door te branden
+museum_84level=Museum van herzieningen
+museum_84level_mapid=<empty>
+museum_85level=Het museum
+museum_85level_mapid=<empty>
+museum_86level=Lift
+museum_87level=Basis!
+museum_88level=Basis?
+museum_92level=Ontdekkingsreizigers
+museum_94level=Nietsvermoedende menigte
+museum_95level=Muizenhol
+museum_96level=Harmonie
+museum_97level=Baba velden
+museum_d68level=Draadloze verbinding 2
+museum_spoilerlevel=Waarschuwing!
+museum_x103level=Lijfwachten
+museum_x135level=Eindeloze gang
+museum_x148level=Tour
+museum_x164level=Multi tool
+museum_x195level=Ongewenste gast
+museum_x20level=Ijskoude wateren
+museum_x59level=Voorwaarde
+museum_x70level=Klassieke val
+museum_x98level=Sleutel in het open
+museum_y103level=Onderhoudstunnel
+museum_y128level=Reünie
+museum_y138level=Nog minder daar
+museum_y139level=Gaatje
+museum_y246level=Gereedschapsschuur
+museum_y317level=Rietje
+museum_y322level=Majestueuze zuilen
+museum_y326level=Orkestbak
+museum_y39level=Nederzetting
+museum_y40level=Nederzetting 2
+museum_y50level=Bijna
+museum_y7level=Vang de dief!
+museum_y85level=Ravijn
+museum_y8level=Ingesloten
+museum_yylevel=Onverzettelijk vloeistoffen
+
+new_adv_100level=Op zoek naar holle plekken
+new_adv_101level=Onderhoudstunnels
+new_adv_102level=Smelt faciliteit
+new_adv_103level=Verborgen blauwdrukken
+new_adv_104level=Vruchtbare grond
+new_adv_105level=Elektriciteit
+new_adv_106level=Besneeuwde ochtend
+new_adv_107level=Snelle groei
+new_adv_108level=Alpenweide
+new_adv_109level=Blokhut
+new_adv_110level=Mijn huis staat in brand
+new_adv_111level=Testkamer
+new_adv_112level=Vergane glorie
+new_adv_113level=Te laat
+new_adv_114level=Kaal
+new_adv_115level=Lockpicken
+new_adv_116level=Terug naar huis
+new_adv_117level=Zonne energie
+new_adv_118level=Stand-by
+new_adv_119level=Stevige bloemen
+new_adv_120level=Boomhut
+new_adv_121level=Planeet Baba
+new_adv_122level=In steen geschreven
+new_adv_123level=Anti zwaartekracht
+new_adv_124level=Zeeziek
+new_adv_125level=Huis huis
+new_adv_127level=Gevaarlijk gevoel
+new_adv_128level=Gevaarlijk voelen
+new_adv_129level=Nog een keer met gevoel!
+new_adv_130level=Wie is het?
+new_adv_131level=Bergopwaarts duwen
+new_adv_132level=Hoe tijd vliegt...!
+new_adv_133level=Rondsluipen
+new_adv_134level=Seizoenen
+new_adv_135level=Parkietenuitsmijter
+new_adv_136level=Bekend land
+new_adv_136level_mapid=Bekend
+new_adv_137level=Sterrenland
+new_adv_137level_mapid=Ster
+new_adv_138level=Land van delicatessen
+new_adv_138level_mapid=Delicatesse
+new_adv_139level=Land van voertuigen
+new_adv_139level_mapid=Voertuigen
+new_adv_140level=Land Land Land
+new_adv_140level_mapid=Storing
+new_adv_141level=Land van eigenaardigheden
+new_adv_141level_mapid=Eigenaardigheid
+new_adv_142level=Wat is dat?
+new_adv_143level=Waar ga ik heen?
+new_adv_144level=Waarom dit allemaal?
+new_adv_145level=Middernacht bijeenkomst
+new_adv_146level=Privé tuin
+new_adv_147level=Geheime Tuin
+new_adv_148level=Daar en terug
+new_adv_149level=Oeps Deluxe
+new_adv_150level=Wandtapijten
+new_adv_151level=Referenties laten zien
+new_adv_152level=Lot voorkomen
+new_adv_153level=Baba de dirigent!
+new_adv_154level=Ophef
+new_adv_155level=Speelgoedfabriek
+new_adv_156level=Ventilatie schacht
+new_adv_157level=AAAA
+new_adv_158level=Haagdoolhof
+new_adv_160level=Baba indringers
+new_adv_161level=Baba uur
+new_adv_162level=Baba speelhal
+new_adv_162level_mapid=Speelhal
+new_adv_164level=Een eenvoudig doolhof
+new_adv_165level=Nog een eenvoudig doolhof
+new_adv_166level=Iewat donkere kerker
+new_adv_167level=Keke slang
+new_adv_168level=Teamwerk is noodzakelijk
+new_adv_168level_subtitle=Beweeg naar beneden om apparaat te schakelen
+new_adv_170level=Kleurrijke grot oud
+new_adv_171level=Muzikaal intermezzo
+new_adv_172level=Nieuwe vrienden!
+new_adv_173level=Privéclub
+new_adv_174level=Nieuwe leden
+new_adv_175level=Exclusief lidmaatschap
+new_adv_176level=Uurwerk spoken
+new_adv_177level=Klokwoorden
+new_adv_178level=Klokwereld
+new_adv_179level=Kleurrijke grot
+new_adv_17level=Verwarde doorgang
+new_adv_180level=Conclusie
+new_adv_181level=Hangar
+new_adv_182level=Verder reiken dan
+new_adv_183level=Tuin? Welke tuin?
+new_adv_18level=Maanopgang, zonsondergang
+new_adv_19level=Wat eet baba?
+new_adv_1blevel=OOOOO OO O OOO
+new_adv_20level=Ik was te hongerig...
+new_adv_21level=Blaas de kaarsjes
+new_adv_22level=Snelle Baba
+new_adv_23level=Beginner cursus
+new_adv_24level=Heerlijke woorden
+new_adv_25level=Ik ben onoverwinnelijk!
+new_adv_26level=Verontrustend
+new_adv_27level=Bunker
+new_adv_28level=Aanvoerroute
+new_adv_29level=Meer Angst
+new_adv_30level=Goochelaar's truc
+new_adv_31level=Baba tweelingen
+new_adv_32level=Pakhuis
+new_adv_33level=Mimicry
+new_adv_35level=Kluis
+new_adv_36level=Antieke zalen
+new_adv_37level=Bespookt kuuroord
+new_adv_38level=Duwtje
+new_adv_39level=Let op
+new_adv_40level=Geen duplicaten
+new_adv_41level=Nieuwe avonturen!
+new_adv_42level=Baba's huis
+new_adv_43level=Laatste hapje
+new_adv_44level=Baba heeft vrienden nodig
+new_adv_45level=Precies zoals het zegt
+new_adv_46level=Zwaartekracht kamer
+new_adv_47level=Schedel stapel
+new_adv_48level=Het einde
+new_adv_49level=Veiligheidssysteem
+new_adv_50level=Zet het podium
+new_adv_51level=Hemelpoort
+new_adv_52level=Glanzende ladder
+new_adv_53level=Diepe deuren
+new_adv_54level=Keldertoegang
+new_adv_55level=Onder de vloer
+new_adv_56level=Spring omhoog, Babaster
+new_adv_57level=Hoofdgerecht
+new_adv_58level=Voorafje
+new_adv_59level=Toetje
+new_adv_60level=Bunker 2
+new_adv_62level=Zijdelingse open haard
+new_adv_63level=Hemelpoort 2
+new_adv_64level=Mysterie kamer
+new_adv_65level=Gemengde identiteit
+new_adv_66level=Zonneboulevard
+new_adv_67level=Verraderlijke draslanden
+new_adv_69level=Laatste tussendoortje
+new_adv_70level=Veiligheidsvest
+new_adv_71level=Tijdreizen
+new_adv_72level=Lianen tunnel
+new_adv_73level=Wormenstudie
+new_adv_74level=Firewall
+new_adv_76level=Middernachtelijke bijeenkomst
+new_adv_77level=Droomgeheim
+new_adv_78level=Toeschouwer
+new_adv_79level=Matrix
+new_adv_80level=Schadelijke aanwezigheid
+new_adv_81level=Destructieve aanwezigheid
+new_adv_82level=Verborgen in het struikgewas
+new_adv_83level=Combinatieslot
+new_adv_84level=Achter slot en grendel
+new_adv_85level=Tropisch weer
+new_adv_86level=OOOOOOOO
+new_adv_87level=ABAB CD EFG
+new_adv_89level=(BABA)
+new_adv_90level=Fourageer
+new_adv_92level=BABABABABA
+new_adv_93level=Onaantastbaar
+new_adv_94level=Melkweg
+new_adv_95level=Wachtend op jou
+new_adv_96level=Verborgen in het struikgewas 2
+new_adv_97level=Oogstfeest
+new_adv_98level=Grot van Mirages
+new_adv_99level=Schatkist
+new_adv_a22level=Bewakende drieling
+new_adv_a30level=Psychokinese
+new_adv_x110level=Compact
+new_adv_y4level=Dwaze truc
+new_adv_y9level=Schijnwerpers
+
+world_new_adv_m=Nieuwe avonturen
+new_adv_m_100level=Op zoek naar holle plekken
+new_adv_m_101level=Onderhoudstunnels
+new_adv_m_102level=Smelt faciliteit
+new_adv_m_103level=Verborgen blauwdrukken
+new_adv_m_104level=Vruchtbare grond
+new_adv_m_105level=Elektriciteit
+new_adv_m_106level=Besneeuwde ochtend
+new_adv_m_107level=Snelle groei
+new_adv_m_108level=Alpenweide
+new_adv_m_109level=Blokhut
+new_adv_m_110level=Mijn huis staat in brand
+new_adv_m_111level=Testkamer
+new_adv_m_112level=Vergane glorie
+new_adv_m_113level=Te laat
+new_adv_m_114level=Kaal
+new_adv_m_115level=Lockpicken
+new_adv_m_116level=Terug naar huis
+new_adv_m_117level=Zonne energie
+new_adv_m_118level=Stand-by
+new_adv_m_119level=Stevige bloemen
+new_adv_m_120level=Boomhut
+new_adv_m_121level=Planeet Baba
+new_adv_m_122level=In steen geschreven
+new_adv_m_123level=Anti zwaartekracht
+new_adv_m_124level=Zeeziek
+new_adv_m_125level=Huis huis
+new_adv_m_127level=Gevaarlijk gevoel
+new_adv_m_128level=Gevaarlijk voelen
+new_adv_m_129level=Nog een keer met gevoel!
+new_adv_m_130level=Wie is het?
+new_adv_m_131level=Bergopwaarts duwen
+new_adv_m_132level=Hoe tijd vliegt...!
+new_adv_m_133level=Rondsluipen
+new_adv_m_134level=Seizoenen
+new_adv_m_135level=Parkietenuitsmijter
+new_adv_m_136level=Bekend land
+new_adv_m_136level_mapid=Bekend
+new_adv_m_137level=Sterrenland
+new_adv_m_137level_mapid=Ster
+new_adv_m_138level=Land van delicatessen
+new_adv_m_138level_mapid=Delicatesse
+new_adv_m_139level=Land van voertuigen
+new_adv_m_139level_mapid=Voertuigen
+new_adv_m_140level=Land Land Land
+new_adv_m_140level_mapid=Storing
+new_adv_m_141level=Land van eigenaardigheden
+new_adv_m_141level_mapid=Eigenaardigheid
+new_adv_m_142level=Wat is dat?
+new_adv_m_143level=Waar ga ik heen?
+new_adv_m_144level=Waarom dit allemaal?
+new_adv_m_145level=Middernacht bijeenkomst
+new_adv_m_146level=Privé tuin
+new_adv_m_147level=Geheime Tuin
+new_adv_m_148level=Daar en terug
+new_adv_m_149level=Oeps Deluxe
+new_adv_m_150level=Wandtapijten
+new_adv_m_151level=Referenties laten zien
+new_adv_m_152level=Lot voorkomen
+new_adv_m_153level=Baba de dirigent!
+new_adv_m_154level=Ophef
+new_adv_m_155level=Speelgoedfabriek
+new_adv_m_156level=Ventilatie schacht
+new_adv_m_157level=AAAA
+new_adv_m_158level=Haagdoolhof
+new_adv_m_160level=Baba indringers
+new_adv_m_161level=Baba uur
+new_adv_m_162level=Baba speelhal
+new_adv_m_162level_mapid=Speelhal
+new_adv_m_164level=Een eenvoudig doolhof
+new_adv_m_165level=Nog een eenvoudig doolhof
+new_adv_m_166level=Iewat donkere kerker
+new_adv_m_167level=Keke slang
+new_adv_m_168level=Teamwerk is noodzakelijk
+new_adv_m_168level_subtitle=Beweeg naar beneden om apparaat te schakelen
+new_adv_m_170level=Kleurrijke grot oud
+new_adv_m_171level=Muzikaal intermezzo
+new_adv_m_172level=Nieuwe vrienden!
+new_adv_m_173level=Privéclub
+new_adv_m_174level=Nieuwe leden
+new_adv_m_175level=Exclusief lidmaatschap
+new_adv_m_176level=Uurwerk spoken
+new_adv_m_177level=Klokwoorden
+new_adv_m_178level=Klokwereld
+new_adv_m_179level=Kleurrijke grot
+new_adv_m_17level=Verwarde doorgang
+new_adv_m_180level=Conclusie
+new_adv_m_181level=Hangar
+new_adv_m_182level=Verder reiken dan
+new_adv_m_183level=Tuin? Welke tuin?
+new_adv_m_18level=Maanopgang, zonsondergang
+new_adv_m_19level=Wat eet baba?
+new_adv_m_1blevel=OOOOO OO O OOO
+new_adv_m_20level=Ik was te hongerig...
+new_adv_m_21level=Blaas de kaarsjes
+new_adv_m_22level=Snelle Baba
+new_adv_m_23level=Beginner cursus
+new_adv_m_24level=Heerlijke woorden
+new_adv_m_25level=Ik ben onoverwinnelijk!
+new_adv_m_26level=Verontrustend
+new_adv_m_27level=Bunker
+new_adv_m_28level=Aanvoerroute
+new_adv_m_29level=Meer Angst
+new_adv_m_30level=Goochelaar's truc
+new_adv_m_31level=Baba tweelingen
+new_adv_m_32level=Pakhuis
+new_adv_m_33level=Mimicry
+new_adv_m_35level=Kluis
+new_adv_m_36level=Antieke zalen
+new_adv_m_37level=Bespookt kuuroord
+new_adv_m_38level=Duwtje
+new_adv_m_39level=Let op
+new_adv_m_40level=Geen duplicaten
+new_adv_m_41level=Nieuwe avonturen!
+new_adv_m_42level=Baba's huis
+new_adv_m_43level=Laatste hapje
+new_adv_m_44level=Baba heeft vrienden nodig
+new_adv_m_45level=Precies zoals het zegt
+new_adv_m_46level=Zwaartekracht kamer
+new_adv_m_47level=Schedel stapel
+new_adv_m_48level=Het einde
+new_adv_m_49level=Veiligheidssysteem
+new_adv_m_50level=Zet het podium
+new_adv_m_51level=Hemelpoort
+new_adv_m_52level=Glanzende ladder
+new_adv_m_53level=Diepe deuren
+new_adv_m_54level=Keldertoegang
+new_adv_m_55level=Onder de vloer
+new_adv_m_56level=Spring omhoog, Babaster
+new_adv_m_57level=Hoofdgerecht
+new_adv_m_58level=Voorafje
+new_adv_m_59level=Toetje
+new_adv_m_60level=Bunker 2
+new_adv_m_62level=Zijdelingse open haard
+new_adv_m_63level=Hemelpoort 2
+new_adv_m_64level=Mysterie kamer
+new_adv_m_65level=Gemengde identiteit
+new_adv_m_66level=Zonneboulevard
+new_adv_m_67level=Verraderlijke draslanden
+new_adv_m_69level=Laatste tussendoortje
+new_adv_m_70level=Veiligheidsvest
+new_adv_m_71level=Tijdreizen
+new_adv_m_72level=Lianen tunnel
+new_adv_m_73level=Wormenstudie
+new_adv_m_74level=Firewall
+new_adv_m_76level=Middernachtelijke bijeenkomst
+new_adv_m_77level=Droomgeheim
+new_adv_m_78level=Toeschouwer
+new_adv_m_79level=Matrix
+new_adv_m_80level=Schadelijke aanwezigheid
+new_adv_m_81level=Destructieve aanwezigheid
+new_adv_m_82level=Verborgen in het struikgewas
+new_adv_m_83level=Combinatieslot
+new_adv_m_84level=Achter slot en grendel
+new_adv_m_85level=Tropisch weer
+new_adv_m_86level=OOOOOOOO
+new_adv_m_87level=ABAB CD EFG
+new_adv_m_89level=(BABA)
+new_adv_m_90level=Fourageer
+new_adv_m_92level=BABABABABA
+new_adv_m_93level=Onaantastbaar
+new_adv_m_94level=Melkweg
+new_adv_m_95level=Wachtend op jou
+new_adv_m_96level=Verborgen in het struikgewas 2
+new_adv_m_97level=Oogstfeest
+new_adv_m_98level=Grot van Mirages
+new_adv_m_99level=Schatkist
+new_adv_m_a22level=Bewakende drieling
+new_adv_m_a30level=Psychokinese
+new_adv_m_x110level=Compact
+new_adv_m_y4level=Dwaze truc
+new_adv_m_y9level=Schijnwerpers

@@ -1,0 +1,2199 @@
+[general] 
+name=中文 (简体)
+customfont=1
+[texts]
+main_continue=继续游戏
+settings=设定
+main_custom=自定义关卡
+main_editor=关卡编辑器
+credits=制作者名单
+main_exit=结束游戏
+main_version=版本
+settings_colon=设置：
+
+ingame_victory=关卡通过！
+ingame_clear=区域目标已完成！
+ingame_complete=区域已完成！
+ingame_infiniteloop=无限循环
+ingame_toocomplex=过于复杂！
+
+resume=继续游戏
+restart=重新开始
+return=返回
+
+pause_returnmap=返回到大地图
+pause_returnmain=回到主菜单
+pause_returneditor=返回到编辑器
+pause_returnplaylevels=回到关卡列表
+pause_reportlevel=反馈/举报关卡
+
+settings_music=背景音乐音量：
+settings_sound=音效音量：
+settings_repeat=重复输入延迟：
+settings_repeat_m=连续移动延迟：
+controls=操作设定…
+settings_language=更改语言…
+lang_setup=请选择你想要显示的语言：
+settings_fullscreen=切换至全屏
+settings_grid=显示网格
+settings_wobble=禁用闲置动画
+settings_particles=禁用粒子效果
+settings_shake=关闭屏幕抖动
+settings_palette=强制使用高对比度颜色
+settings_blinking=规避高频颜色闪烁
+settings_restart=快速重开时无需确认
+settings_zoom=缩放模式：
+zoom1=禁用缩放
+zoom2=默认
+zoom3=最大化填充
+please_restart=*部分设置需要重新启动游戏以生效*
+
+lang_restart=更改语言需要重新启动游戏，确定重启吗？
+
+controls_setup=手柄设置状态
+controls_noconnectedgamepad=未检测到有效的手柄。
+controls_gamepadname=手柄名称
+controls_unknowngamepad=无法识别已连接的手柄。
+controls_detectgamepad=重新检测手柄
+controls_gamepadsetup=设定手柄键位…
+controls_defaultgamepad=重置手柄键位为默认设置
+controls_keysetup=设定键盘键位…
+controls_defaultkey=重置键盘键位为默认设置
+controls_disablegamepad_off=禁用手柄
+controls_disablegamepad_on=启用手柄
+controls_disablestick=禁用手柄摇杆
+move=移动
+move2=移动 2
+idle=等待
+undo=撤销
+controls_restart=快速重开
+confirm=确定
+pause=暂停
+right=右
+up=上
+left=左
+down=下
+controls_pressany=请按下你要更改的按键…
+
+restart_confirm=确定要重新开始这一关卡？
+restart_tip=（你可以在“设定”中关闭/开启本提示）
+no=否
+yes=是
+cancel=取消
+undefined=[无效值]
+none=none
+restart_confirm_m=是否重启？
+restart_tip_m_1=在设置页面中
+restart_tip_m_2=可以关闭/开启本提示
+
+enterlevel_multiple=请选择你想要游玩的关卡
+enterlevel_multiple_m=选择关卡
+
+slot=存档位
+slots_select=选择你要使用的存档
+slots_erase=删除存档
+erase_select=请选择你要删除的存档
+erase_confirm=你真的要删除这个存档吗？
+erase_tip=（存档内的所有数据都会被删除，不可撤销！）
+erase_confirm_mobile=真的要删除存档吗？
+erase_tip_mobile=（存档内的所有数据都会被删除，不可撤销！）
+intro_confirm=需要播放开场动画吗？
+
+main_start=开始游戏
+slot_current=当前存档：
+slot_change=切换存档
+world_unknown=未命名的世界
+
+mobile_tuto1a=用手指在屏幕上滑动即可移动。
+mobile_tuto1b=原地按住不放以等待。
+mobile_tuto1c=两指同时按住以撤销。
+
+mobile_tuto2a=滑动以移动光标
+mobile_tuto2b=来选择一个关卡。
+mobile_tuto2c=点击并按住以开始关卡。
+
+ending=感 谢 你 的 游 玩 ！
+
+rules=当前规则
+level=关卡
+rules_colon=当前规则：
+level_colon=关卡：
+
+customlevels_pack=请选择你要游玩的世界：
+customlevels_single=选择你要游玩的关卡：
+customlevels_play_singular=游玩自定义关卡
+customlevels_play_pack=游玩自定义世界
+customlevels_play_get=获取新关卡
+customlevels_play_getlist=关卡历史
+customlevels_play_changename=更改存档名
+customlevels_play_eraseslot=删除存档
+customlevels_play_eraseslot_tip=（这将清除存档内所有的游玩记录！）
+customlevels_pack_emptysave=没有数据
+customlevels_delete=删除
+customlevels_forget=删除存档
+customlevels_deleteconfirm_single=你真的要删除这个关卡吗？
+customlevels_deleteconfirm_pack=你真的要删除这个世界的游玩进度吗？
+customlevels_get=关卡已找到！
+customlevels_get_save=保存关卡
+customlevels_get_nosave=立即游玩(不进行保存)
+customlevels_get_cancel=还是算了
+customlevels_get_fail=获取关卡失败。
+customlevels_get_fail_reason=错误信息：
+customlevels_get_saved=关卡已保存！
+customlevels_get_play=游玩关卡
+customlevels_get_levellist=浏览玩家关卡
+customlevels_get_wait=正在获取中…
+customlevels_getlist=历史游览关卡
+customlevels_getlist2=（单击以下载&复制到剪贴板）
+customlevels_getlist_download=已下载的关卡：
+customlevels_getlist_upload=已上传的关卡：
+
+playlevels_get_featured=精选关卡
+playlevels_get_featured_colon=精选关卡：
+playlevels_get_new=新发布关卡
+playlevels_get_code=使用关卡代码
+playlevels_featured_fail=关卡列表获取失败
+playlevels_featured_fail_reason=错误信息：
+playlevels_featured_wait=正在获取关卡列表...
+
+reportlevel_confirm=你要反馈这个关卡吗?
+reportlevel_success=关卡报告已反馈！
+reportlevel_fail=反馈关卡失败。
+reportlevel_ok=返回
+
+credits_designetc=设计，程序编程
+credits_audio=音乐，音效
+credits_audioconsult=音频顾问
+credits_porting=游戏移植
+credits_testers=测试人员
+credits_translation=本地化人员
+credits_help=帮助与建议
+credits_thanks=特别鸣谢
+credits_gamejams=以及其他所有的GameJams
+credits_indies=其他的独立游戏社区
+credits_dogs=听话的狗狗们
+credits_dogs2=还有其他的狗狗们
+credits_specialthanks=特别鸣谢
+credits_anni1=对整个项目的
+credits_anni2=鼓励、反馈与支持
+credits_lukas1=多年以来的
+credits_lukas2=帮助与支持
+credits_mokesmoe1=反馈，设计支援，
+credits_mokesmoe2=以及热心帮助
+credits_alan1=独立业务与设计方面的
+credits_alan2=反馈和帮助
+credits_music=作曲使用
+credits_musicby=madeby
+credits_mmfby=madeby
+credits_sound=使用音效与乐器
+credits_audacity=theAudacityTeam
+credits_freesound=来自于freesound.org的免费音频：
+credits_extensions=使用的MMF2扩展：
+credits_madeusing=开发工具
+credits_words=词语创意
+pluralby=by
+singularby=by
+by=by
+
+credits_thankyou=感谢你的游玩！
+
+intro_mp2=由$4,1MP2Games移植
+intro_mmf2=使用Clickteam的$4,1MultimediaFusion2$0,3进行开发
+intro_madeby= $4,1ArviTeikari的作品
+intro_charity=$4,1作者10%$0,3的个人收入将捐赠给$2,4有效的慈善机构
+intro_hold=按住以跳过开场动画…
+
+image_desc_1=游戏非常早期的一个版本。
+image_desc_2=探索美术风格的时候制作的原型版本。
+image_desc_3=早期的画面颜色测试。
+image_desc_4=非常早期版本的世界地图。
+image_desc_5=早期的地图结构设想。
+image_desc_6=第一版的非抽象世界地图。
+image_desc_7=试图实现“拉”物件的机制。
+image_desc_8=水彩画：游戏标题
+image_desc_9=水彩画：太空
+image_desc_10=水彩画：Keke
+image_desc_11=突然来了灵感，画了一只三个眼睛的baba。
+image_desc_12=推动物件的系统很难制作。
+image_desc_13=用芬兰语写的事项清单。
+image_desc_14=大地图的原型。
+image_desc_15=试着整理出“默认”的物件。
+image_desc_16=一张流程图，用来整理关卡之间的相关关系。
+
+editor_start_title=欢迎来到关卡编辑器！
+editor_start_level=编辑关卡…
+editor_start_world=编辑世界…
+editor_start_settings=设置与帮助…
+
+editor_settings_controls=设置编辑器按键…
+editor_settings_advanced=使用进阶词语(剧透警告)
+editor_settings_mod=启用高级功能
+editor_settings_tips=手柄时禁用按钮提示
+editor_settings_tips_n=禁用按钮提示
+editor_settings_slide=禁用编辑器视觉效果
+editor_settings_help=教程和快捷键...
+editor_settings_music=禁用编辑器音乐
+editor_settings_hotkeys=查看编辑器快捷键...
+editor_settings_defaultpad=初始化手柄控制
+
+editor_tutorial1=课程1：入门速览
+editor_tutorial2=课程2：编辑关卡
+editor_tutorial3=课程3：编辑器工具
+editor_tutorial4=课程4：物件板
+editor_tutorial5=课程5：关卡设置
+editor_tutorial6=课程6：上传关卡
+editor_tutorial7=课程7：下载关卡
+editor_tutorial8=课程8：运用快捷键
+editor_tutorial9=课程9：关卡设计提示
+editor_tutorial10=课程10：打败巨龙
+
+editor_newworld=创建世界
+editor_editworld=选择要编辑的世界
+editor_editworld_none=未找到可用的世界
+editor_setfirstlevel=设定起始关卡
+editor_setdefaultlevel=设置默认关卡
+editor_entername=输入名字
+
+editor_levellist_return=回到编辑器菜单
+editor_levellist_returnworld=回到世界选择列表
+editor_levellist_new=创建新关卡
+editor_levellist_edit=选择你要编辑的关卡
+editor_levellist_page=页数：
+editor_levellist_setstart=设置起始关卡
+editor_levellist_setauthor=更改制作者
+editor_levellist_setname=更改世界名
+editor_levellist_setmap=设置大地图
+editor_levellist_levels=自制关卡
+editor_levellist_sort=名称排序
+editor_levellist_sorttypes=类型排序
+editor_levellist_search=搜索...
+editor_levellist_removesearch=移除搜索词
+
+editor_mainmenu=菜单
+editor_editormenu=编辑器菜单
+editor_objectlist=物件板
+editor_settingsmenu=设置
+editor_changelayer=变更图层
+editor_l1=L1
+editor_l2=L2
+editor_l3=L3
+editor_savelevel=保存
+editor_addlevel=添加关卡
+editor_setcursor=光标设定
+editor_addpath=放置道路
+editor_setpath=设定道路
+editor_undo=撤销
+editor_swap=切换
+editor_testlevel=测试关卡
+editor_test=测试
+
+editor_brush_normal=物件
+editor_brush_level=关卡
+editor_brush_path=道路
+editor_brush_special=特殊
+
+editor_objectlist_add=添加物件…
+editor_objectlist_remove=删除物件
+editor_objectlist_editobject=修改物件
+editor_objectlist_pairs_yes=显示全部
+editor_objectlist_pairs_no=显示通常
+
+tooltip_currobjlist_add=新增物件至物件板
+tooltip_currobjlist_remove=将物件从物件板移出
+tooltip_currobjlist_editobject=编辑物件的详细信息
+tooltip_currobjlist_dopairs=切换物件显示方式（词语/对应物件）
+tooltip_currobjlist_tool_normal=绘制工具
+tooltip_currobjlist_tool_line=直线工具
+tooltip_currobjlist_tool_rectangle=空心矩形工具
+tooltip_currobjlist_tool_fillrectangle=实心矩形工具
+tooltip_currobjlist_tool_fill=填充工具
+tooltip_currobjlist_tool_erase=橡皮擦
+tooltip_currobjlist_tool_select=选择工具
+tooltip_currobjlist_search_edit=按名称搜索物件...
+tooltip_currobjlist_search_remove=移除搜索
+tooltip_currobjlist_search_tags=按标签搜索物件...
+tooltip_currobjlist_return=退出该界面
+tooltip_currobjlist_swap=在物件和单词之间切换显示
+
+tooltip_currobjlist_dir_right=放置的物件朝向右侧
+tooltip_currobjlist_dir_up=放置的物件朝向上方
+tooltip_currobjlist_dir_left=放置的物件朝向左侧
+tooltip_currobjlist_dir_down=放置的物件朝向下方
+
+tooltip_quickmenu_editorsettingsmenu=调整关卡设置（关卡名，音乐，配色...)
+tooltip_quickmenu_editormenu=上传关卡，返回关卡列表，删除关卡等
+
+tooltip_editor_menu=上传关卡，返回关卡列表，删除关卡等
+tooltip_editor_settingsmenu=调整关卡设置（关卡名，音乐，配色...)
+tooltip_editor_objects=在物件表上选择、编辑、添加和删除物件
+tooltip_editor_save=保存关卡
+tooltip_editor_undo=撤销步骤
+tooltip_editor_swap=在物件和对应的单词之间切换
+tooltip_editor_layer=切换图层
+tooltip_editor_test=以当前状态立即测试关卡
+
+tooltip_editor_menu_test=以当前关卡状态开始测试
+tooltip_editor_menu_upload=上传关卡到网络上！你需要证明该关卡可通过才可上传！
+tooltip_editor_menu_theme=使用预设的主题来配置关卡。这将清除整个关卡！
+tooltip_editor_menu_return=返回关卡列表。任何未保存的更改将丢失！
+tooltip_editor_menu_returnfull=返回关卡编辑器的主菜单。任何未保存的更改将丢失！
+tooltip_editor_menu_delete=彻底删除关卡。该操作无法撤销！
+tooltip_editor_menu_copy=复制一份该关卡作为副本。（副本将添加数字后缀用于区分）
+
+buttons_editor_move=移动
+buttons_editor_rotate=旋转
+buttons_editor_place=放置
+buttons_editor_copy=复制
+buttons_editor_drag=拖动
+buttons_editor_undo=撤销
+buttons_editor_scrollleft_hotbar=<快捷栏
+buttons_editor_scrollright_hotbar=快捷栏>
+buttons_editor_scrollleft_tool=<工具
+buttons_editor_scrollright_tool=工具>
+buttons_editor_currobjlist=物件板
+buttons_editor_quickmenu=快速菜单
+buttons_editor_swap=切换
+buttons_editor_scrollleft_layer=<图层
+buttons_editor_scrollright_layer=图层>
+buttons_editor_moveall=移动全部
+buttons_editor_altpress=更多快捷键
+buttons_editor_cut=剪切
+buttons_editor_lock=锁定栏位
+buttons_editor_showdir=显示方向
+buttons_editor_autopick=使用语句选取
+buttons_editor_pickempty=选中空白
+buttons_editor_selection_rotate_right=右转 >
+buttons_editor_selection_rotate_left=< 左转
+buttons_editor_selection_mirror=镜像
+buttons_editor_selection_flip=翻转
+buttons_editor_selection_place=放置
+buttons_editor_selection_cancel=取消
+buttons_editor_selection_ignore=无视空白
+buttons_editor_emptytile=清除
+buttons_editor_empty_hotbar=空栏位
+buttons_editor_test=测试关卡
+buttons_editor_save=保存关卡
+
+editor_toolindicator_eraser=Q - 选取空白
+editor_saved=关卡保存完毕！
+
+buttons_currobjlist_move=移动
+buttons_currobjlist_select=选择
+buttons_currobjlist_swap=切换
+buttons_currobjlist_drag=拖动
+buttons_currobjlist_tooltip=提示框
+buttons_currobjlist_scrollleft=< 工具栏
+buttons_currobjlist_scrollright=工具栏 >
+buttons_currobjlist_closemenu=关闭菜单
+buttons_currobjlist_tags=标签
+buttons_currobjlist_remove=移除
+buttons_currobjlist_edit=编辑
+buttons_currobjlist_addnew=添加
+buttons_currobjlist_search=搜索
+buttons_currobjlist_autoadd=按文本添加
+buttons_currobjlist_removesearch=移除搜索词
+
+editor_objectlist_object=通常物件
+editor_objectlist_text=物件文本
+editor_objectlist_verb=动词
+editor_objectlist_quality=特征
+editor_objectlist_conditional=条件文本
+editor_objectlist_special=特殊文本
+editor_objectlist_objlist=物件板
+editor_objectlist_result=搜索词语：
+editor_objectlist_tag=标签：
+editor_objectlist_tags=标签：
+editor_objectlist_tags_select=标签
+editor_objectlist_tags_cleartags=清除标签
+editor_objectlist_search_edit=设定搜索词语
+editor_objectlist_search_remove=清除搜索词语
+editor_objectlist_search_none=未启用搜索
+editor_objectlist_page=页数：
+editor_objectlist_nothing=橡皮擦
+
+editor_level_levelsetup=配置界面
+editor_level_leveltarget=链接关卡至…
+editor_level_iconcolour=图标颜色：
+editor_level_setcolour=设置颜色
+editor_level_setclearcolour=设置颜色（通过后）
+editor_level_initialstate=关卡初始状态：
+editor_level_initialstate_hidden=隐藏
+editor_level_initialstate_normal=通常
+editor_level_initialstate_opened=开启
+editor_level_levelsymbol=图标样式
+editor_level_levelsymbol_none=无
+editor_level_levelsymbol_numbers=数字
+editor_level_levelsymbol_text=文字
+editor_level_levelsymbol_dots=点
+editor_level_levelsymbol_symbol=更多…
+editor_level_remove=删除
+
+editor_path_settings=道路配置...
+editor_path_pathstate=初始状态
+editor_path_pathstate_hidden=隐藏
+editor_path_pathstate_visible=可见
+editor_path_object=路径物件
+editor_path_locked=道路是否锁定？
+editor_path_locked_levels=关卡通过数
+editor_path_locked_maps=区域通过数
+editor_path_locked_orbs=orb数量
+editor_path_locked_loclevels=总计通过数
+
+editor_menu_close=关闭菜单
+editor_menu_return=回到关卡列表
+editor_menu_returnfull=返回编辑器主菜单
+editor_menu_test=测试关卡
+editor_menu_themes=主题…
+editor_menu_delete=删除关卡
+editor_menu_upload=上传关卡
+editor_menu_copy=复制关卡
+
+editor_unsaved_confirm=你尚未进行保存，确定要退出吗？
+
+editor_delete_confirm=你确定要删除这个关卡吗？
+
+editor_copy_confirm=你确定要复制本关卡吗？
+editor_copy_confirm_name=复制的新关卡将被命名为：
+editor_copy_done=成功复制关卡！
+
+editor_theme_edit=请选择你想要编辑的主题：
+editor_theme_use=请选择你想要使用的主题：
+editor_theme_warning=警告：变更主题将清空关卡的所有物件！
+editor_theme_return=返回关卡设置
+editor_theme_load=加载主题
+editor_theme_load_confirm=你确定要加载该主题吗？
+editor_theme_load_confirm_hint=警告：这将清空关卡的所有物件！
+editor_theme_load_confirm_newlevel=你要为新关卡使用主题吗？
+editor_theme_themeload=请选择你想要加载的主题
+editor_theme_save=保存当前配置为新的主题
+editor_theme_save_confirm=这个主题已经存在了。是否覆盖？
+editor_theme_delete=删除主题
+editor_theme_delete_confirm=你确定要删除这个主题吗？
+editor_theme_themedelete=请选择你要删除的主题
+editor_theme_none=没有可选择的主题…
+editor_theme_done=开始制作！
+
+editor_levelmenu_name=关卡名：
+editor_levelmenu_rename=重命名关卡
+editor_levelmenu_music=音乐：
+editor_levelmenu_changemusic=变更音乐
+editor_levelmenu_author=制作者：
+editor_levelmenu_changeauthor=变更制作者
+editor_levelmenu_subtitle=子标题：
+editor_levelmenu_subtitle_none=无
+editor_levelmenu_changesubtitle=更改子标题
+editor_levelmenu_particles=粒子效果：
+editor_levelmenu_changeparticles=变更效果
+editor_levelmenu_palette=配色方案：
+editor_levelmenu_changepalette=变更配色方案
+editor_levelmenu_levelsize=关卡尺寸：
+editor_levelmenu_levelwidth=宽度
+editor_levelmenu_levelheight=高度
+editor_levelmenu_changelevelsize=变更关卡尺寸…
+editor_levelmenu_disableparticles=禁用粒子效果
+editor_levelmenu_disableruleeffect=禁用规则特效
+editor_levelmenu_disableshake=禁用屏幕抖动
+editor_levelmenu_autodelay=自动关卡延迟：
+editor_levelmenu_mapsetup=地图设定…
+
+editor_music_select=请选择你要更换的音乐
+editor_music_none=没有找到可用的音乐…
+
+editor_particles_select=请选择你想要的粒子效果
+editor_particles_none=没有找到可用的粒子效果…
+
+editor_palette_select=请选择你要使用的配色方案
+editor_palette_none=未找到可用的方案…
+
+editor_levelsize_width=调整横向长度
+editor_levelsize_height=调整纵向长度
+editor_levelsize_quick=预设尺寸
+editor_levelsize_apply=应用此尺寸方案
+
+editor_upload_confirm=你确定要上传这个关卡吗？
+editor_upload_confirm_note=（你需要亲自完成一次该关卡）
+editor_upload_name=$2,4关卡名
+editor_upload_author=$2,4制作者
+editor_upload_subtitle=$2,4子标题
+editor_upload_uploading=正在上传…
+editor_upload_done=上传完成！该关卡ID是：
+editor_upload_failed=上传失败。原因：
+editor_upload_copy=关卡代码已复制到剪贴板
+editor_upload_copyhint=你可以在关卡历史中找到代码
+author=制作者
+noauthor=未知作者
+
+editor_map_leveltype=请选择关卡类型
+editor_map_level=关卡
+editor_map_map=地图
+editor_map_clearlimit=需求通过关卡数
+editor_map_clearlimit_hint=（0->无要求）
+editor_map_mapicon=图标设置
+editor_map_returnto=通关后返回的位置
+editor_map_parentlevel=回到上一层关卡
+editor_map_winlevel=宣布胜利
+editor_map_selectlevel=选择关卡…
+
+editor_objectsetup_palette=变更颜色
+editor_objectsetup_select=请选择你要编辑的物件
+
+editor_object_sprite=变更贴图…
+editor_object_name=重命名…
+editor_object_name_invalid=这个名字不可被使用。
+editor_object_type=变更类型…
+editor_object_colour=物件颜色选项：
+editor_object_colour_onlybase=更改颜色
+editor_object_colour_base=更改底色
+editor_object_colour_active=激活颜色
+editor_object_colour_select=物件要使用什么颜色？
+editor_object_animation=动画风格：
+editor_object_animation_none=无
+editor_object_animation_dirs=多方向
+editor_object_animation_anim=动画
+editor_object_animation_animdirs=多方向+动画
+editor_object_animation_character=角色
+editor_object_animation_tiled=连接型
+editor_object_text_type=文本类型：
+editor_object_text_manualtype=文字类型序号：
+editor_object_zlevel=Z等级（图层优先级）：
+editor_object_reset=重置为初始
+
+editor_spritelist_title=选择你想使用的贴图
+editor_spritelist_none=没有找到贴图！
+editor_spritelist_page=页数：
+
+editor_tool_normal=自由
+editor_tool_line=线
+editor_tool_rectangle=空心矩形
+editor_tool_fillrectangle=实心矩形
+editor_tool_fill=填充
+
+mapid_extra=额外
+
+tag_text=词语
+tag_text_verb=词语-动词
+tag_text_quality=词语-性质
+tag_text_condition=词语-条件
+tag_text_prefix=词语-前缀
+tag_text_special=词语-特殊
+tag_text_letter=字母
+
+particles_none=不使用效果
+particles_bubbles=气泡
+particles_soot=炭火
+particles_sparks=火花
+particles_dust=灰尘
+particles_snow=飘雪
+particles_clouds=云彩
+particles_smoke=烟雾
+particles_pollen=花粉
+particles_stars=星空
+particles_glitter=闪光
+particles_leaves=落叶
+particles_rain=雨季
+
+music_baba=Baba
+music_burn=晚秋
+music_cave=大洞穴
+music_crystal=水晶
+music_editor=修筑
+music_ending=终结
+music_factory=工厂
+music_float=水下
+music_forest=密林
+music_garden=花园
+music_map=大地图
+music_menu=主旋律
+music_mountain=落雪
+music_noise=虚无
+music_ruin=遗迹
+music_stars=太空
+music_editorsong=编辑器
+music_nothing=无
+music_rain=雨季
+music_scary=恐怖
+music_space=拥堵
+
+palettes_abstract=绿色
+palettes_autumn=秋收
+palettes_contrast=高对比度
+palettes_crystal=水晶
+palettes_default=默认
+palettes_factory=工厂
+palettes_garden=花园
+palettes_marshmallow=蓬松
+palettes_mono=灰度
+palettes_mountain=寒冷
+palettes_ocean=水下
+palettes_ruins=遗迹
+palettes_space=太空
+palettes_swamp=沼泽
+palettes_test=恶兆
+palettes_variant=鲜艳
+palettes_volcano=火热
+
+themes_underwater=水下
+themes_cavern=洞穴
+themes_autumn=秋收
+themes_factory=工厂
+themes_ruins=遗迹
+themes_forest=密林
+themes_space=太空
+themes_garden=花园
+themes_mountain=高山
+themes_default=默认
+themes_rainy=雨天
+themes_spooky=恐怖
+themes_crystal=水晶洞
+themes_town=城镇
+themes_abstract=抽象
+
+namegiving_newworldname=输入世界的名字：
+namegiving_changelevelname=输入关卡的新名字：
+namegiving_newlevelname=输入新关卡的名字：
+namegiving_changeunitname=输入物件的新名字：
+namegiving_changeunittype=输入物件的新类型：
+namegiving_newthemename=新主题的名字是：
+namegiving_objectsearchstring=在物件库内搜索：
+namegiving_levelauthor=输入关卡作者的名字：
+namegiving_worldauthor=输入世界作者的名字：
+namegiving_changeworldname=输入世界的新名字：
+namegiving_downloadcode=输入关卡代码（XXXX-YYYY）：
+namegiving_levelsearchstring=在关卡列表内搜索：
+namegiving_spritesearchstring=在贴图列表搜索：
+namegiving_slotname=输入本存档位的名字：
+namegiving_subtitle=输入你想使用的子标题：
+namegiving_editor_autopick=输入要选择的单词：
+namegiving_currobjlist_autoadd=输入要添加的单词：
+
+hotkeys_editor_category_editor=编辑器快捷键
+hotkeys_editor_category_currobjlist=物件板快捷键
+hotkeys_editor_category_levellist=关卡列表快捷键
+
+hotkeys_editor_keyboard=用于键盘
+hotkeys_editor_gamepad=用于手柄
+
+hotkeys_editor_rotate=方向键 ：指定物件方向
+hotkeys_editor_copy=右键/Shift+左键 ：复制物件
+hotkeys_editor_cut=鼠标中键 ：剪切物件
+hotkeys_editor_quickbar_scroll=鼠标滚轮 ：切换快捷栏
+hotkeys_editor_quickbar_lock=[悬浮在快捷栏时] 右键 ：锁定/解锁栏位
+hotkeys_editor_quickbar_reset=[悬浮在快捷栏时] 鼠标中键 ：清空栏位
+hotkeys_editor_swap=Ctrl+鼠标滚轮 ：在物件和单词之间切换显示
+hotkeys_editor_changetool=Shift+鼠标滚轮 ：更换工具
+hotkeys_editor_changelayer=Ctrl+1/2/3 ：变更图层
+hotkeys_editor_pickis=I ：选取“Is”
+hotkeys_editor_pickand=U ：选取“And”
+hotkeys_editor_picknot=Y ：选取“Not”
+hotkeys_editor_pickempty=Q ：选取“空白”
+hotkeys_editor_massdir=F ：显示物件朝向
+hotkeys_editor_moveall=WASD ：整体移动所有物件
+hotkeys_editor_rotateselection=[选择工具] 左/右方向键 ：旋转物件
+hotkeys_editor_flipselection=[选择工具] 上/下方向键 ：镜像/翻转物件
+hotkeys_editor_altselection=[选择工具] 按住Shift放置 ：忽视空白
+hotkeys_editor_opencurrobjlist=Tab ：打开物件板
+hotkeys_editor_openeditormenu=Escape ：打开关卡菜单
+hotkeys_editor_openeditorsettingsmenu=F1 ：打开关卡配置
+hotkeys_editor_testlevel=F3 ：测试关卡
+hotkeys_editor_undo=Ctrl+Z ：撤销
+hotkeys_editor_save=Ctrl+S ：保存
+hotkeys_editor_deleteall=Ctrl+Delete ：清空关卡
+hotkeys_editor_addobject=R ：新增物件到物件板
+hotkeys_editor_return=Backspace（退格键） ：返回关卡列表
+hotkeys_editor_drag=Ctrl+左键 ：拖动物件
+hotkeys_editor_editlevel=[关卡放置模式] E ：编辑该关卡
+hotkeys_editor_quickaddlevel=[关卡放置模式] 按住Ctrl ：不打开关卡设置
+hotkeys_editor_restart=Ctrl+F2 ：重启游戏
+hotkeys_editor_windowsize=Shift+1/2/3 ：变更窗口大小（窗口化限定）
+hotkeys_editor_resetmapicon=[关卡放置模式] 鼠标中键 ：重置地图图标
+hotkeys_editor_cleartile=Ctrl+鼠标中键 ：清除方格(作用所有图层)
+hotkeys_editor_autopick=F4 ：按语句添加词语
+
+hotkeys_editor_gpad_rotate=@gamepad_editor_rotate ：指定物件方向
+hotkeys_editor_gpad_copy=@gamepad_editor_copy ：复制物件
+hotkeys_editor_gpad_cut=@gamepad_editor_altpress + @gamepad_editor_cut ：剪切物件
+hotkeys_editor_gpad_swap=@gamepad_editor_altpress + @gamepad_editor_swap ：在单词和物件间切换
+hotkeys_editor_gpad_drag=按住 @gamepad_editor_drag ：拖动物件
+hotkeys_editor_gpad_emptytile=@gamepad_editor_altpress + @gamepad_editor_emptytile ：清除物件(全部图层)
+hotkeys_editor_gpad_changetool=@gamepad_editor_scrollleft_tool & @gamepad_editor_scrollright_tool ：切换工具
+hotkeys_editor_gpad_changelayer=@gamepad_editor_scrollleft_layer & @gamepad_editor_scrollright_layer ：变更图层
+hotkeys_editor_gpad_quickbar_scroll=@gamepad_editor_scrollleft_hotbar & @gamepad_editor_scrollright_hotbar ：切换快捷栏物件
+hotkeys_editor_gpad_quickbar_lock=@gamepad_editor_altpress + @gamepad_editor_lock ：锁定/解锁快捷栏物件
+hotkeys_editor_gpad_quickbar_empty=@gamepad_editor_altpress + @gamepad_editor_empty_hotbar ：清空快捷栏槽位
+hotkeys_editor_gpad_pickempty=@gamepad_editor_altpress + @gamepad_editor_pickempty ：选取空白
+hotkeys_editor_gpad_massdir=@gamepad_editor_altpress + @gamepad_editor_showdir ：显示物件朝向
+hotkeys_editor_gpad_moveall=@gamepad_editor_moveall + @gamepad_editor_rotate ：整体移动物件
+hotkeys_editor_gpad_rotateselection=[选择工具] @gamepad_editor_scrollleft_tool & @gamepad_editor_scrollright_tool ：旋转选定物件
+hotkeys_editor_gpad_flipselection=[选择工具] @gamepad_editor_scrollleft_hotbar & @gamepad_editor_scrollright_hotbar ：镜像/翻转选定物件
+hotkeys_editor_gpad_altselection=[选择工具] @gamepad_editor_undo ：无视空白
+hotkeys_editor_gpad_opencurrobjlist=@gamepad_editor_currobjlist ：打开物件板
+hotkeys_editor_gpad_openquickmenu=@gamepad_editor_quickmenu ：打开快速菜单
+hotkeys_editor_gpad_undo=@gamepad_editor_undo ：撤销
+hotkeys_editor_gpad_autopick=@gamepad_editor_altpress + @gamepad_editor_autopick ：以单词添加连续物件
+hotkeys_editor_gpad_save=@gamepad_editor_altpress + @gamepad_editor_quickmenu ：保存关卡
+hotkeys_editor_gpad_test=@gamepad_editor_altpress + @gamepad_editor_currobjlist ：测试关卡
+hotkeys_editor_gpad_altmove=@gamepad_editor_altpress + @gamepad_editor_rotate ：移动光标
+
+hotkeys_currobjlist_swap=[堆叠视图] 鼠标滚轮 ：在物件和单词之间切换显示
+hotkeys_currobjlist_drag=Ctrl+鼠标左键 ：拖动物件
+hotkeys_currobjlist_leave=Tab / Escape ：离开菜单
+hotkeys_currobjlist_edit=鼠标右键 ：修改物件数据
+hotkeys_currobjlist_remove=Ctrl+鼠标右键 ：移除物件
+hotkeys_currobjlist_search=输入单词 ：搜索功能
+hotkeys_currobjlist_autoadd=F4 ：以单词方式连续添加物件
+hotkeys_objlist_quickadd=[物件表] 按住Ctrl键 ：连续添加模式
+
+hotkeys_currobjlist_gpad_swap=[堆叠视图] @gamepad_currobjlist_swap ：在物件和单词之间切换显示
+hotkeys_currobjlist_gpad_drag=@gamepad_currobjlist_drag ：拖动物件
+hotkeys_currobjlist_gpad_leave=@gamepad_editor_currobjlist ：离开菜单
+hotkeys_currobjlist_gpad_edit=@gamepad_currobjlist_edit ：修改物件数据
+hotkeys_currobjlist_gpad_remove=@gamepad_currobjlist_remove ：移除物件
+hotkeys_currobjlist_gpad_search=@gamepad_currobjlist_search ：开始搜索
+hotkeys_currobjlist_gpad_add=@gamepad_currobjlist_addnew ：新增物件
+hotkeys_currobjlist_gpad_autoadd=@gamepad_currobjlist_autoadd ：以单词连续添加物件至物件板
+
+hotkeys_levellist_search=字母键 ：键入单词并搜索
+hotkeys_levellist_leave=Escape ：离开菜单
+hotkeys_levellist_delete=鼠标右键 ：删除关卡
+
+hotkeys_levellist_gpad_leave=@gamepad_editor_quickmenu ：离开菜单
+hotkeys_levellist_gpad_delete=@gamepad_editor_undo ：删除关卡
+
+hotkeys_objlist_gpad_quickadd=[物件表] 按住 @gamepad_editor_drag ：连续添加物件
+hotkeys_objlist_gpad_search=[物件表] @gamepad_editor_drag ：开始搜索
+hotkeys_levellist_gpad_search=@gamepad_editor_currobjlist ：开始搜索
+hotkeys_currobjlist_gpad_removesearch=[物件版中] @gamepad_editor_scrollright_tool ：清除搜索词语
+hotkeys_currobjlist_gpad_removesearch_alt=[非搜索视图] @gamepad_editor_copy ：清除搜索词语
+
+hotkeys_levellist_gpad_addnew=@gamepad_editor_currobjlist ：新增关卡
+hotkeys_levellist_gpad_removesearch=@gamepad_editor_copy ：清空搜索
+hotkeys_editor_gpad_altsave=@gamepad_editor_altpress + @gamepad_currobjlist_altsave ：保存
+hotkeys_editor_gpad_settings=@gamepad_currobjlist_settings ：打开关卡设置
+hotkeys_editor_gpad_menu=@gamepad_currobjlist_menu ：打开编辑器菜单
+hotkeys_currobjlist_gpad_tags=@gamepad_currobjlist_tags ：打开标签列表
+hotkeys_objlist_gpad_tags=[物件表] @gamepad_currobjlist_tags ：打开标签列表
+hotkeys_editor_category_misc=杂项
+
+0level=Baba Is You
+0level_subtitle=欢迎来到Baba Is You！
+100level=一见钟情
+101level=掠夺
+102level=工厂工人
+104level=板块运动
+105level=重新洗牌
+106level=大地图
+106level_mapid=大地图
+107level=组装队
+109level=加入俱乐部
+10level=爱情
+110level=溶岩洪流
+111level=登高望远
+112level=三人组
+115level=沉重的词
+116level=Baba是什么？
+117level=充满敌对的环境
+118level=漂浮平台
+119level=自动化
+11level=孤独的旗帜
+120level=连接器
+122level=隧道
+124level=放松地点
+125level=密云
+127level=秘密花园
+128level=重逢
+129level=进一步的领域
+130level=过度生长
+132level=一方通行
+134level=微弱信号
+135level=无限回廊
+136level=水母玉座
+137level=不在那里
+138level=那里更少
+139level=裂缝
+13level=BabasAreYou
+140level=要塞
+141level=天平
+142level=出海
+143level=公寓楼
+145level=陷阱门
+146level=四分五裂
+148level=迂回
+150level=封锁
+151level=具体目标
+155level=元认知
+156level=Keke和星星
+15level=见习锁匠
+160level=捕捉
+163level=自动门
+164level=多重工具
+165level=参观Baba
+166level=盗窃
+167level=小巷
+168level=超级迷宫
+169level=5.森林深处
+169level_mapid=森林深处
+16level=4.落秋之森
+16level_mapid=落秋之森
+171level=建造桥梁
+172level=建造桥梁？
+173level=……桥？
+174level=此路不通
+175level=破碎
+176level=被困
+177level=1.湖
+177level_mapid=湖
+178level=破灭的期望
+179level=9.火山洞窟
+179level_mapid=洞窟
+17level=遥不可及的海岸
+180level=7.花园
+180level_mapid=花园
+182level=8.深渊
+182level_mapid=深渊
+188level=三胞胎
+189level=这次是什么？
+18level=熵
+191level=移动地板
+192level=故障
+193level=破碎的地板
+194level=妖魔鬼怪
+195level=孤独
+196level=深褐色巢穴
+196level_subtitle=由Alan Hazelden制作
+197level=错误
+198level=终点
+198level_mapid=<empty>
+199level=脆弱性
+19level=心之追求
+1level=我到哪里去？
+200level=???
+200level_mapid=???
+201level=恐怖故事
+203level=出口？
+203level_mapid=终点
+205level=浮游
+206level=3.神殿遗迹
+206level_mapid=遗迹
+207level=2.孤岛
+207level_mapid=岛
+209level=锁
+20level=冰水
+210level=二扇门
+211level=沉没的遗迹
+212level=接手
+215level=蒸发的河
+216level=平台游戏
+217level=凭空拿取
+218level=温暖的河
+219level=沸腾的河
+21level=石制监狱
+220level=木箱方阵
+221level=大溪流
+222level=隐藏的遗迹
+223level=埋蔵的宝藏
+226level=深坑
+227level=邪恶栅栏
+230level=团队
+231level=VIP区域
+232level=10.山顶
+232level_mapid=山
+233level=小小牧场
+234level=胜利之泉水
+235level=石头路
+236level=不变
+238level=蹦！
+239level=跳！
+23level=但钥匙在哪里
+240level=金库
+241level=围攻
+242level=分拣设备
+243level=幻灯片
+245level=脆弱的存在
+246level=道具小屋
+247level=拐角处
+248level=超市
+250level=沉重的空气
+251level=健身房
+252level=BA
+253level=AB
+255level=月之回廊
+257level=不一致
+25level=阀门
+260level=跨越
+261level=清洁服务
+262level=共同努力
+263level=粉碎机
+264level=深层
+264level_mapid=深层
+265level=栖息地
+266level=支柱工程
+268level=绝缘
+269level=提取
+26level=幽灵守卫
+270level=后台
+271level=回收
+272level=游行
+274level=优先队列
+275level=安检
+276level=列车
+277level=跳出条框
+279level=队列
+280level=墙
+281level=陨石撞击
+282level=ABC
+282level_mapid=ABC
+283level=元
+283level_mapid=元
+284level=纠纷
+285level=管道
+286level=聚在一起
+286level_mapid=隐藏
+287level=冒险
+288level=烫手山芋
+289level=杂耍
+28level=工厂
+291level=雪崩
+292level=破门而入
+293level=哈？
+293level_mapid=隐藏
+294level=应得的奖品
+294level_mapid=隐藏
+295level=荆棘藤蔓
+297level=共同感情
+298level=容易破碎的星星们
+299level=隐藏路径
+29level=损坏的游乐场
+2level=仍遥不可及
+300level=巨炮
+302level=诱捕器
+303level=就是不行
+304level=中心
+304level_mapid=<empty>
+305level=画廊
+305level_mapid=<empty>
+306level=Orb
+306level_mapid=隐藏
+307level=观赏池
+308level=深水池
+309level=观赏池回来了
+30level=藏蟹室
+310level=诗
+313level=星宿
+314level=沉没的神殿
+315level=可爱的房子
+317level=吸管
+318level=地牢
+319level=研究设施
+31level=难以捉摸的情况
+320level=其他方法
+320level_mapid=隐藏
+321level=安全小屋
+322level=雄伟的柱子
+323level=发电机
+324level=存在危机
+325level=没有朋友
+326level=乐池
+327level=~哇哦~
+327level_mapid=隐藏
+33level=心就在那里
+34level=Baba没有回应
+35level=叶室
+36level=幽灵朋友
+37level=小小池塘
+39level=村落
+3level=遥不可及
+40level=危险庭园
+41level=小岛
+46level=重要组成
+47level=危机四伏
+48level=浮动平台
+4level=柱子庭园
+50level=差不多
+51level=加冕
+52level=井底之蛙
+54level=骨之屋
+56level=黄金之壁
+57level=巡逻
+58level=给你的礼物
+59level=条件
+5level=禁止入内
+60level=孤独的景象
+61level=四季
+62level=电话
+64level=海上冒险
+65level=监狱
+66level=翻新
+67level=锁上门
+68level=无线连接
+69level=待在外面！
+6level=草地
+70level=骷髅大门
+71level=危险团伙
+72level=两条护城河
+75level=壁炉
+77level=读与写
+78level=?
+78level_mapid=?
+79level=瓶颈
+7level=抓住小偷！
+80level=请拿好钥匙
+82level=守护者
+84level=诶呦
+85level=峡谷
+86level=升降机
+87level=6.火箭旅行
+87level_mapid=太空
+89level=损坏的果园
+8level=锁在里面
+90level=火山
+91level=横行霸道
+92level=冒险者
+93level=砖墙
+94level=灌木丛
+95level=老鼠洞
+96level=和谐
+97level=Baba的领域
+98level=广为人知的胜利
+99level=寻求接受
+9level=empty
+n1level=BabaHasKeke
+n1level_subtitle=由Nicklas Nygren制作
+n2level=城堡灾难
+n2level_subtitle=由Nicklas Nygren制作
+t1level=另一边
+t1level_subtitle=由Corey Martin制作
+
+editorbeta_warning_1a=重要信息：
+editorbeta_warning_1b=这个程序是为了让那些无法访问官方关卡编辑器的人能够测试即将到来的官方关卡编辑器。它将只支持到2021年初的官方编辑器发布;在那之后，它将停止更新，并最终将无法上传关卡到官方服务器。
+editorbeta_warning_1c=请注意，编辑器包含剧透！如果你想避免剧透的话，建议你至少在原版游戏上完成大地图上的全部关卡。
+editorbeta_warning_1d=总之对着有点笨拙的访问方式表示歉意，请享受玩弄编辑器的乐趣!
+
+newadv_42level_1a=欢迎！
+newadv_42level_1b=新的旅程将为你提供全新的体验，规则与惊喜。
+newadv_42level_1c=玩的开心！
+
+newadv_42level_2a=请注意，这些关卡的难度偏高，
+newadv_42level_2b=这是建立在你已经理解游戏的运作机制的前提下的，
+newadv_42level_2c=我们已经警告过你了。
+
+newadv_31level_1a=小贴士：
+newadv_31level_1b=下移动键可以切换
+newadv_31level_1c=你所控制的角色！
+
+newadv_180level_1a=感谢你的游玩
+newadv_180level_1b=以及对这个游戏的喜爱和支持！
+newadv_180level_1c=希望你旅途愉快！
+
+levelpack_museum_intro1a=欢迎来到博物馆！
+levelpack_museum_intro1b=在这里你可以找到游戏开发中
+levelpack_museum_intro1c=被废弃/未使用的游戏内容。
+
+levelpack_museum_intro2a=像这样的标牌
+levelpack_museum_intro2b=会告诉你关于这些关卡
+levelpack_museum_intro2c=和游戏设计之间的有趣细节！
+
+levelpack_museum_intro3a=祝你游戏愉快！
+levelpack_museum_intro3b=如果你仍未通关游戏，
+levelpack_museum_intro3c=则此处可能会包含剧透内容。
+
+museum_10level_1a=最早制作的关卡之一。
+museum_10level_1b=我想我最终感觉到
+museum_10level_1c=这个关卡过于混乱了。
+
+museum_12level_1a=这是来自于Nordic Game Jam的版本！
+museum_12level_1b=它相当混乱并且漫无目的，而且我不得不改动一下，
+museum_12level_1c=因为游戏的底层逻辑和当时已有改变。
+
+museum_13level_1a=这是另一个来自 jam 版本的关卡。
+museum_13level_1b=这个概念对我来说真的很有趣，
+museum_13level_1c=但我从来没有想出一个好的谜题来运用它。
+
+museum_13level_2a=在最初的版本中，“Empty is Win”是打算
+museum_13level_2b=作为解决方案的，我花了一些时间才意识到
+museum_13level_2c=这个词的全部含义，哈哈。
+
+museum_14level_1a=在关于 More 的关卡里，这大概是第一个我觉得
+museum_14level_1b=还比较满意，可以添加到游戏里的关卡。
+museum_14level_1c=不过最后我还是觉得它目的性太弱，于是砍掉了。
+
+museum_15level_1a=非常非常早期的关卡。
+museum_15level_1b=我想我最初要用这个关卡介绍 Shut 和 Open，
+museum_15level_1c=但是最终有太多和这两个词无关的解法了。
+
+museum_16level_1a=这个关卡最终变成了“遥不可及的海岸”。
+museum_16level_1b=基本想法已经成型，但这个时候我很急于往关卡添加内容，
+museum_16level_1c=而缺少对这个关卡的思考。
+
+museum_16level_2a=在Nordic Game Jam的版本里，我很随意的选择固定20x20
+museum_16level_2b=作为游戏的地图尺寸。但是开始进一步开发游戏时，
+museum_16level_2c=我花了很长时间将正方形扩展成自由矩形。
+
+museum_20level_1a=这一关最后变成了“冰水”的设计方案。
+museum_20level_1b=有趣的是，这个关卡是开放式的，
+museum_20level_1c=但我还是希望能够写一个更紧凑的 and 的教程。
+
+museum_x20level_1a=考虑到这个关卡难度很低，出现的也很早。
+museum_x20level_1b=这个关卡还是经过了很多修改，
+museum_x20level_1c=这也是个重要的教训！
+
+museum_24level_1a=在早期，控制 All 的方法要少得多。
+museum_24level_1b=如你所见，我需要添加不少的限制，
+museum_24level_1c=才能让这个关卡发挥点作用。
+
+museum_25level_1a=这个关卡最终成为了“围攻”……好像。
+museum_25level_1b=关卡的结局蛮搞笑的，但是我应该再自信点，
+museum_25level_1c=不多加混淆用的障碍。
+
+museum_35level_1a=我通常会尽量避免只是为了推积木而制作的关卡。
+museum_35level_1b=但 Pull 常常把我带往那个方向。
+museum_35level_1c=对了，那些手曾经是云，因此得名，哈哈。
+
+museum_39level_1a=我刚做出这两个关卡的时候，自我感觉很骄傲。
+museum_39level_1b=大概三年之后回头来看，它们并没有那么好。
+museum_39level_1c=（甚至还有些糟！）
+
+museum_46level_1a=这两个关卡大概是关卡的变种
+museum_46level_1b=具有实际意义的最早的例子之一。
+museum_46level_1c=其实效果并不好，但至少是个开始！
+
+museum_55level_1a=我曾试图在这个教学关添加有关“X is X”的额外内容，
+museum_55level_1b=最后我决定采用更为直截了当的设计，
+museum_55level_1c=因为后续证明了“X is X”比想象中更难把握。
+
+museum_61level_1a=我在开发的早期常有的一个大问题：
+museum_61level_1b=经常会把元素强塞进关卡里，而对核心概念考虑不周。
+museum_61level_1c=结果常常是一个非常复杂而又缺乏逻辑的关卡。
+
+museum_62level_1a=这个关卡本来是要引入 Tele 这个词。
+museum_62level_1b=尽管谜题很简单，但关卡还是很混乱。
+museum_62level_1c=我当初为什么想要阻止“Grass Is You”的解法？
+
+museum_63level_1a=我最初对这个关卡非常满意。
+museum_63level_1b=但我把它放置了一段时间后，
+museum_63level_1c=我对它的解决过程开始感到非常...繁重？要反复试错？
+
+museum_82level_1a=注意！这一关并不是废弃关卡，
+museum_82level_1b=我把它放在这里是为了展示一个蛮有意思的特例情况，
+museum_82level_1c=这个特例在紧随其后的关卡里会用到。
+
+museum_97level_1a=进一步的领域，一开始是“BABA领域”的变种。
+museum_97level_1b=这在原版是被认为很高难度的关卡。
+museum_97level_1c=因为没有提供太多新内容，所以这关就被砍掉了。
+
+museum_113level_1a=我很喜欢这些关卡，并保持了很长一段时间。
+museum_113level_1b=最终我还是对“深坑”中
+museum_113level_1c=更优雅的想法感到高兴。
+
+museum_126level_1a=规则太多了！我一直很喜欢这些规则，
+museum_126level_1b=但是最终还是因为太杂乱了所以删掉了这一关。
+museum_126level_1c=希望 Fall 让你穿过危险的特性还算合乎逻辑。
+
+museum_143level_1a=我好像是用同一个点子做了两三个关卡，
+museum_143level_1b=然后花了很长时间才意识到他们如此的相像。
+museum_143level_1c=不过，我喜欢这关！
+
+museum_x148level_1a=这关的设计让人感觉很不优雅，甚至像是凑数，
+museum_x148level_1b=但我还是想给它的风格打个不错的分数。
+museum_x148level_1c=如果你还没有见过 Eat，知道岩浆对钥匙有害就够了。
+
+museum_50level_1a=当我制作这一关的时候，我开始思考：
+museum_50level_1b=如果你把一个能 Swap 的物件进行 Tele ，
+museum_50level_1c=那么负责 Tele 的物件是不是会和这个物件 swap？
+
+museum_50level_2a=我自己测试这个关卡的时候，我真的觉得
+museum_50level_2b=这个关卡还算合乎逻辑的！我记得是测试者指出
+museum_50level_2c=这有多么糟糕，我才放弃了这个想法。
+
+museum_50level_3a=有时我会担心解法过于明显，
+museum_50level_3b=于是会添加一些障碍，就像这个关卡这样。
+museum_50level_3c=一般来说这么做不但没什么意义，甚至还有负面影响。
+
+museum_yylevel_1a=有时候，当你回到一个你很久很久
+museum_yylevel_1b=都没回来看过的关卡的时候，你怎么都
+museum_yylevel_1c=想不起来这个关卡背后究竟是什么想法。
+
+museum_80level_1a=我觉得这关里的小技巧很可爱。
+museum_80level_1b=它并没有太多的控制规则的成分，
+museum_80level_1c=所以感觉有点太一般了，不想把它放到游戏里。
+
+museum_87level_1a=有一段时间我特别喜欢关卡差分，
+museum_87level_1b=有的时候考虑到要不要给第一关也设计一个变种。
+museum_87level_1c=从结果上看，并不是很优雅。
+
+museum_41level_1a=有时候几个关卡会基于同一个想法来设计，
+museum_41level_1b=但是通过小调整来逐步迭代难度。
+museum_41level_1c=我觉得这样的设计方法很有趣。
+
+museum_42level_1a=我看到有些解谜游戏
+museum_42level_1b=在关卡上的设计过程能很好地
+museum_42level_1c=迎合和引导人们思维的方向。
+
+museum_43level_1a=在 《Baba Is You》 的开发早期，
+museum_43level_1b=我想尝试使用类似的设计。
+museum_43level_1c=但是出于一些原因，我的方法还是不够满意。
+
+museum_44level_1a=为了给一个关卡设计新的变种，我需要从外界寻求意见，
+museum_44level_1b=也就是从一个新的角度来获得全新的看法，
+museum_44level_1c=为了理解人们一般是怎么解决这个谜题的。
+
+museum_45level_1a=我虽然明白这一点，但是还是一己之力试着“强行”设计出一组有趣的谜题。
+museum_45level_1b=最终结果就是这组“房子”系列的关卡。
+museum_45level_1c=为了博物馆的展览，我也好好地润色了一下这些关卡。
+
+museum_68level_1a=在整个游戏的开发过程中，我始终遵循着这里展示的基本思想。
+museum_68level_1b=我试图以各种方式增加它的复杂度，
+museum_68level_1c=但最终多余的部分成为了绊脚石。
+
+museum_d68level_1a=当我翻阅这些远古的想法的时候，
+museum_d68level_1b=我有了好几个关卡的新变种的想法。
+museum_d68level_1c=所以，这里的一些变种关卡能算是因为这个博物馆而出现的。
+
+museum_x70level_1a=当我给关卡起名的时候，我常让我的脑洞自由飘荡。
+museum_x70level_1b=说实话，有时候我想出来的名字和关卡没什么联系。
+museum_x70level_1c=例如这一关一点也不“经典”！
+
+museum_73level_1a=我很努力地试着在这关结尾添加一个转折，
+museum_73level_1b=但是并没有太好的方法。
+museum_73level_1c=有一说一，现在这样也可以作为 On 这个词的入门关卡。
+
+museum_86level_1a=这一层感觉过于平平无奇而被被忽略。
+museum_86level_1b=不过，我真的很喜欢这个解决方案背后的总体思路！
+museum_86level_1c=
+
+museum_86level_2a=我一般会避免让关卡名字和关卡的解法直接相关。
+museum_86level_2b=我想在关卡名字里给提示会不会太直接了？
+museum_86level_2c=会失去通关的成就感？
+
+museum_92level_1a=事实证明，Shift 这个词出人意料地强大。
+museum_92level_1b=我一直忘记在 Shift 的路径上摆放障碍只会
+museum_92level_1c=让障碍也跟着被 Shift 掉。因此这些关卡经过了许多修改。
+
+museum_96level_1a=这个关卡的最开始的核心其实就是关卡中间房间里的那点东西。
+museum_96level_1b=剩下的都是“额外”加进去的辅助内容。
+museum_96level_1c=呃，唔，也许这么做并不是很好。
+
+museum_102level_1a=有时候，脑袋里似乎出来了很酷的想法，
+museum_102level_1b=但实际做出来其实并不出彩，这里就是个很好的例子。
+museum_102level_1c=这里的“工厂流水线”说是个解谜关卡但更适合做成自动关卡。
+
+museum_x103level_1a=另一个早期的关卡，试图通过叠加元素来解决一个难题。
+museum_x103level_1b=我认为,尤其是我游戏开发早期与
+museum_x103level_1c=与“has”有关的关卡往往是这样！
+
+museum_112level_1a=作为最后一个小展示，
+museum_112level_1b=这里有一个在游戏展示版本中使用的大地图的变体，
+museum_112level_1c=例如在2018年德国GamesCom节上。
+
+museum_114level_1a=你在这里没有看到的是一大堆可以互动的物件。
+museum_114level_1b=我清理了其设计，这样子才能看一些；
+museum_114level_1c=原本的设计过于复杂，也非常笨拙。
+
+museum_114level_2a=许多包含 Level 的关卡都要小心处理它的破坏能力。
+museum_114level_2b=因此，这个关卡的关卡名最终加入到了游戏里，
+museum_114level_2c=尽管对应的关卡设计完全不同！
+
+museum_134level_1a=我试过好多次再做一次“微弱信号”，
+museum_134level_1b=通过限制能用的物件，让关卡的难度再更进一层，
+museum_134level_1c=但都没能成功；这便是其中一次尝试。
+
+museum_x135level_1a=啧！这个关卡的想法在最初的版本里也能看见，
+museum_x135level_1b=但是这个想法的实现还需要*很多*的调整。
+museum_x135level_1c=这并不理想。抱歉。
+
+museum_140level_1a=Not 这个词概念上很简单，但实际上很强大。
+museum_140level_1b=一个词的用途越简单易用，设计关卡的时候
+museum_140level_1c=就越难避免使用过于针对性的限制。
+
+museum_259level_1a=可以猜到，Swap 是最难设计关卡的词之一。
+museum_259level_1b=我加了一层绝缘层，但没能实现我的想法，
+museum_259level_1c=于是又套了第二层。
+
+museum_259level_2a=但是，这样的布局不是很好看，而且很笨重。
+museum_259level_2b=最后我还是回到了原来的关卡概念本身，
+museum_259level_2c=并且只用一层绝缘层就实现了（我觉得）这个想法。
+
+museum_276level_1a=我回来制作博物馆的时候发现自己还是很喜欢这个关卡的解法的。
+museum_276level_1b=最终不采用的的主要原因是：当使用物件重叠时，
+museum_276level_1c=设计会变得很复杂，可读性也会变得很差。
+
+museum_290level_1a=当我制作这一关的时候，我发现了 Word 这个词的一个bug。
+museum_290level_1b=当时我没有时间和精力去修复这个bug，
+museum_290level_1c=所以我当时只能把这个关卡暂且搁置，留待日后修复。
+
+museum_296level_1a=随着设计逐渐成熟，原版游戏的最终区域结构变化了很多。
+museum_296level_1b=这一关本来是“元”区域的谜题之一，
+museum_296level_1c=但是感觉有点漫无目的，也有点混乱。
+
+museum_300level_1a=另一个为终局游戏设计的关卡；我觉得他没有适合的地方
+museum_300level_1b=能把它放进去了。不过，有几位玩家评论说他们很喜欢，
+museum_300level_1c=所以我很高兴在这展示给大家！
+
+museum_321level_1a=这一关差点就进入游戏中了。我很喜欢它，
+museum_321level_1b=但是测试员的反馈让我意识到
+museum_321level_1c=这一关的解法的其中一个核心要点太深奥了。
+
+museum_328level_1a=这个关卡在游戏刚发布的时候是在游戏里的！但我最终把它撤了下来，
+museum_328level_1b=因为它所在的区域本来应该出现并使用Facing这个词，
+museum_328level_1c=但是这关成为了例外。而且这关也确实比较混乱。
+
+museum_47ylevel_1a=Hold 是我最早测试的一批词语之一。
+museum_47ylevel_1b=它背后的想法很有趣，但我想不出很多好用的情况。
+museum_47ylevel_1c=于是这个词被砍掉了。
+
+museum_spoilerlevel_1a=警告！
+museum_spoilerlevel_1b=接下来的关卡会剧透一些重要的游戏机制。
+museum_spoilerlevel_1c=我们建议你先通关原版游戏的大地图。
+
+tutorial_skip=跳过教程
+tutorial_continue=继续
+tutorial_end=结束教程
+
+tutorial_intro_1a=欢迎来到关卡编辑器！
+tutorial_intro_1b=这个编辑器相当复杂，所以这些教程值得一看。^如果你想跳过它们，请选择“跳过教程”。^你稍后可以在编辑器菜单中的“帮助和设置”菜单中查看所有教程。^这篇教程将向你展示如何创建一个简单的关卡，而其他教程将更深入地解释编辑器的各种功能。
+tutorial_intro_1c=请注意，编辑器包含剧透：某些容易剧透的词语在默认情况下是禁用的，（你可以在编辑器设置中启用它们）^但在游玩其他人的关卡时，你仍然可能遇到它们。如果你不想被剧透，建议完成原版游戏的大地图关卡。
+
+tutorial_intro_2a=当你第一次打开编辑器时，你将看到这个编辑器主菜单。从这里你可以编辑关卡，下载新关卡，更改编辑器相关的设置，等等。现在，我们只需选择“编辑关卡”并继续。
+
+tutorial_intro_3a=这里是关卡界面。在这里你可以看到发你所制作或下载的所有关卡。选择“创建新关卡”创建新的关卡。
+tutorial_intro_3a_n=这里是关卡界面。在这里你可以看到你所制作或下载的所有关卡。你能够同时存储100个关卡。选择“创建新关卡”创建新的关卡。
+
+tutorial_intro_4a=首先要设定关卡名称。不用担心，你稍后可以更改它。在这之后，如果你想制作关卡前确定风格，你可以选择一个预设的主题。^预设主题并不是必要的。
+
+tutorial_intro_5a=这里就是主要的关卡编辑界面。这里有很多东西，但别担心，我们现在先从基本的东西开始。
+
+tutorial_intro_6a=首先，在这里选择“物件板”按钮来查看可以放入你的关卡的内容。
+tutorial_intro_6a_gpad=首先，按下 @gamepad_editor_currobjlist 查看可以放入你的关卡中的内容。
+
+tutorial_intro_7a=这是物件板。你暂时也不用担心这里的按钮是做什么的。现在，让我们从列表中选择 Baba。
+
+tutorial_intro_8a=选择物件后，你可以将其放置在关卡内的任何位置。同时可以使用方向键旋转物件。嗨，Baba！
+tutorial_intro_8a_gpad=选择物件后，你可以将其放置在关卡内的任何位置。你可以使用 @gamepad_editor_rotate 旋转物件。嗨，Baba！
+
+tutorial_intro_9a=当前可以选择的物件非常少。^让我们添加一个新的物件到我们的物件板——从这个按钮开始添加！
+
+tutorial_intro_10a=这是所有可以使用的物件的列表。你可以搜索和添加标签来找到有趣的东西。在本教程中，我们将查找物件“Wall”并选择它。
+
+tutorial_intro_11a=…现在我们继续，墙（和它对应的单词）现在是我们物件板的一部分！让我们从物件板中选择墙，并在我们的关卡中放置一些。
+
+tutorial_intro_12a=如果你不小心把东西放在不该放的地方，你有几个选择：^你可以撤消放置；按 Q 键选择“空白”并将其放置在错误的位置上；^在空白区域单击右键以替换要放置的物件^（也相当于选择“空白”），然后替换放错位置的物件。
+tutorial_intro_12a_gpad=如果你不小心把东西放在不该放的地方，你有几个选择：^你可以用 @gamepad_editor_undo 撤消放置；按 @gamepad_editor_altpress + @gamepad_editor_pickempty 选择“空白”并将其放置在错误的位置上，^在空白区域按 @gamepad_editor_copy 以替换要放置的物件（也相当于选择“空白”），然后替换放错位置的物件。
+
+tutorial_intro_13a=这就是编辑关卡的基本工作方式！^从物件板中放置物件；在需要时从物件表中添加更多物件，并放置在关卡中。^为了简短起见，我们快进到一个已经完成的关卡。
+
+tutorial_intro_14a=记住要经常保存！按下面的按钮（或 Ctrl+S）保存。这样你以后也可以回到你的关卡。你需要先保存你的关卡才能与其他人分享。
+tutorial_intro_14a_gpad=记住要经常保存！按 @gamepad_editor_quickmenu 转到快速菜单并进行保存，或者按 @gamepad_editor_altpress + @gamepad_editor_quickmenu 快速保存。这样你以后也可以回到你的关卡。你需要保存你的关卡才能与其他人分享。
+
+tutorial_intro_15a=如果你想测试你的关卡，只需按下面的“测试”按钮（或 F3）。测试时，可以通过暂停菜单（或 F3）返回编辑器。
+tutorial_intro_15a_gpad=如果你想测试你的关卡，只需在快速菜单里测试或者按下 @gamepad_editor_altpress + @gamepad_editor_currobjlist 。测试时，可以通过暂停菜单返回编辑器。
+
+tutorial_intro_16a=其他教程将更全面地解释所有的小细节！但使用这里所讲的方式，应该足够制作一个关卡了。基本教程就到这里！玩得高兴！
+
+tutorial_2_1a=欢迎回来！
+tutorial_2_1b=在本教程中，我们将更深入地了解编辑器本身是如何工作的。本教程主要介绍放置物件和相关的功能。
+
+tutorial_2_2a=好的，我们先回到关卡编辑器。
+
+tutorial_2_3a=第一个教程简要介绍了放置物件。它非常简单：^进入物件板（按下“物件板”按钮或按下 Tab 键），在那里选择一个物件，然后用鼠标左键单击将其放置在所需的位置。^物件放置时一角上的小箭头将告诉你物件朝向哪个方向。
+tutorial_2_3a_gpad=第一个教程简要介绍了物件放置。这很简单：^按 @gamepad_editor_currobjlist 进入物件板，在那里选择一个物件，然后用 @gamepad_editor_place 将其放置在你想要的位置。物件放置时角上的小箭头将告诉你物件朝向哪个方向。
+
+tutorial_2_4a=如果你用鼠标右键单击一个已经放置的物件，你将“复制”该物件并能够放置它而非之前所选的物件。类似地，用鼠标中键点击一个物件，它会被“剪切”掉，清空它所在的位置，同时能让你再次将这个物件放在其他地方。
+tutorial_2_4a_gpad=如果你在一个已经放置的物件上按 @gamepad_editor_copy ，你将“复制”该物件并能够放置它，而不是之前选择的任何物件。类似地，对物件按 @gamepad_editor_altpress + @gamepad_editor_cut 时，会将物件“剪切”出去，清空物件所在的位置，同时让你再次将相同的物件放置在其他位置。
+
+tutorial_2_4b=如果选择了 Baba 或 Flag 之类的物件，则可以使用 Ctrl+鼠标滚轮 在它们和对应的单词之间切换。这能够方便快速建立规则！
+tutorial_2_4b_gpad=如果选择了 Baba 或 Flag 之类的物件，则可以按 @gamepad_editor_swap 在它们和对应的单词之间切换。这能够方便快速建立规则！
+
+tutorial_2_5a=如果要更改已放置物件的位置，使用光标将悬停在该物件上按下 Ctrl 键。然后，在保持按住的同时移动光标，物件便会随之移动。松开 Ctrl 键时将物件将被放下（如果下面有空位）。
+tutorial_2_5a_gpad=如果要更改已放置物件的位置，请将光标悬停在该物件上，按住 @gamepad_editor_drag 。然后，在保持按住的同时移动光标，物件便会随之移动。松开 @gamepad_editor_drag 时便能将物件放下（如果下面有空位）。
+
+tutorial_2_5b=光标选中一个已经放置的物件上时，光标一角的小箭头将告诉你该物件当前的朝向方向。光标悬停在物件上时按方向键可以更改其方向。
+tutorial_2_5b_gpad=光标选中一个已经放置的物件上时，光标一角的小箭头将告诉你该物件当前的朝向方向。光标悬停在物件上时使用 @gamepad_editor_rotate 可以更改其方向。
+
+tutorial_2_6a=如果要选择“空白”以清除已放置的物件，你可以使用复制功能复制空地，或按Q键快速选择“空白”物件。
+tutorial_2_6a_gpad=如果要选择“空白”以清除已放置的物件，你可以使用复制功能复制空地，或按 @gamepad_editor_altpress + @gamepad_editor_pickempty 快速选择“空白”物件。
+
+tutorial_2_7a=你也可以一次放置多个物件！你可以使用此处列出的不同“工具”来完成此操作。但是，它们需要足够的篇幅来解释，我们将在之后的教程中解释它们。
+
+tutorial_2_8a=Baba Is You 的每个关卡均有3个图层，这意味着在制作一个关卡时，最多可以有3个物件相互重叠。按下这些按钮可更改你所在的图层。^或者，你可以按住 Ctrl 键并按数字键1/2/3。不在所在层上的物件会自动暗化，所以请注意！
+tutorial_2_8a_gpad=Baba Is You 的每个关卡均有3个图层，这意味着在制作一个关卡时，最多可以有3个物件相互重叠。你可以按下 @gamepad_editor_scrollleft_layer 和 @gamepad_editor_scrollright_layer 来更改你所在的图层。^不在所在层上的物件会自动暗化，所以请注意！
+
+tutorial_2_9a=这上面便是“快捷栏”！它允许你快速选择最近使用过的物件，并将你认为最重要的物件保存在手边。
+
+tutorial_2_10a=使用数字键或鼠标滚轮以遍历快捷栏。绿色光标显示当前选择的槽位。你也可以直接单击槽位来选择它们。
+tutorial_2_10a_gpad=使用 @gamepad_editor_scrollleft_hotbar 和 @gamepad_editor_scrollright_hotbar 以遍历快捷栏。绿色光标显示当前选择的槽位。
+
+tutorial_2_11a=如果你最近拾取的物件不在快捷栏中，则快捷栏会自动更新。如果要确保特定物件永远不会离开快捷栏，请用鼠标右键单击它。槽位的轮廓稍有变化，表示槽位已“锁定”。再次右键单击以将其解锁。启动编辑器时，默认情况下会锁定单词“Is”。
+tutorial_2_11a_gpad=如果你最近拾取的物件不在快捷栏中，则快捷栏会自动更新。如果要确保特定物件永远不会离开快捷栏，请使用 @gamepad_editor_altpress + @gamepad_editor_lock 。槽位的轮廓稍有变化，表示槽位已“锁定”。再次右键单击以将其解锁。启动编辑器时，默认情况下会锁定单词“Is”。
+
+tutorial_2_12a=如果要从快捷栏中删除特定物件，只需使用鼠标中键单击该槽位即可。
+tutorial_2_12a_gpad=如果要从快捷栏中删除特定物件，只需在选中对应槽位时按下 @gamepad_editor_altpress + @gamepad_editor_empty_hotbar 即可。
+
+tutorial_2_13a=编辑关卡时，请记住要经常测试和保存！下面的按钮可以执行这两个操作。如果需要，你还可以使用 Ctrl+S 的组合键保存，按 F3 键测试关卡。
+tutorial_2_13a_gpad=编辑关卡时，请记住要经常测试和保存！使用快速菜单（ @gamepad_editor_quickmenu ）来执行这两种操作，或者按 @gamepad_editor_altpress + @gamepad_editor_quickmenu 快速保存，并按 @gamepad_editor_altpress + @gamepad_editor_currobjlist 来测试关卡。
+
+tutorial_2_14a=好吧，到此为止！有各种额外的技巧可以使你的关卡创作更流畅，但我们将在后面的教程中继续学习这些技巧。
+
+tutorial_3_1a=欢迎回来！
+tutorial_3_1b=本教程将更深入地探讨如何使用关卡编辑器；^具体地说，我们将学习上一课中被跳过的各种物件放置工具。
+
+tutorial_3_2a=于是我们又来到了编辑器界面。你可以在右边看到工具列表。
+
+tutorial_3_3a=你的默认工具是绘制工具。它的工作方式与你预期的一样：^单击一个方块，就会出现一个物件。
+tutorial_3_3a_gpad=你的默认工具是绘制工具。它的工作方式与你预期的一样：^移动光标后按下 @gamepad_editor_place ，就会出现一个物件。
+
+tutorial_3_4a=下一个工具，这个基本工具是橡皮擦。它的工作原理和笔一样，只是它是移除物体。其效果实际上与使用笔放置“空白”物件的效果相同。
+
+tutorial_3_5a=接下来是直线工具。选择一个位置，从中拖出一条线，沿途的每个格子上都会绘制物件。线工具有时不太准确，但对于快速放置一行或者一列物件时非常方便。
+
+tutorial_3_6a=就像这样。我们选择了右边的一个格子，然后向左拖动一条线来放置了几个旗子。
+
+tutorial_3_7a=然后是空心矩形工具。它的使用方式与线工具相同；^选择一个格子并拖出一个空心矩形来同时放置多个物件。
+
+tutorial_3_8a=不错！
+
+tutorial_3_9a=下一个工具，实心矩形工具，它是空心矩形工具的变种，和空心矩形的工作方式一致，但区别是其内部是填充的。
+
+tutorial_3_10a=我们将继续讲下一个工具，是填充工具。它的工作原理很直接——用同一个物体填充一个连续的区域。这个情况下是由同一个物体组成的连续块来定义为区域，比如一组相连的 Baba，或者一片空白。
+
+tutorial_3_11a=好吧，现在来看看最复杂的一个——选择工具！使用它可以快速移动和旋转关卡内的多个不同的物件。
+
+tutorial_3_12a=基本功能类似于矩形工具：选择一个平铺并拖动一个矩形区域。如图所示，被选中的区域将被剪切，并被方框框选。
+
+tutorial_3_13a=选定区域后，移动光标也会移动该区域中的所有物件。如果你按下鼠标左键，你可以将所选的区域放置下来。放置物件时，其中的空格子将覆盖下面的任何物件，但是你可以通过在放置时按住 Shift 来阻止覆盖。
+tutorial_3_13a_gpad=选定区域后，移动光标也会移动该区域中的所有物件。如果你按下 @gamepad_editor_place ，你可以将所选物件放置在任何位置为副本。通常，放置物件时，其中的空白格子将覆盖下面的任何物件。用 @gamepad_editor_undo 可以放置选区中的物件而不让空白格子覆盖下面的物件。
+
+tutorial_3_14a=可以使用方向键键旋转、镜像和翻转所选的区域： 左/右方向键进行旋转，上方向键镜像，下方向键则是翻转。
+tutorial_3_14a_gpad=你可以旋转，镜像，和反转的区域： @gamepad_editor_scrollleft_tool 和 @gamepad_editor_scrollright_tool 进行旋转； @gamepad_editor_scrollright_hotbar 进行镜像； @gamepad_editor_scrollleft_hotbar 进行翻转。
+
+tutorial_3_15a=只需按鼠标右键即可清空被选择的内容。以便重新选择新的区域并变换。请注意，在选择物件时选择的物件是被剪切的，它们不会被保存！
+tutorial_3_15a_gpad=只需按 @gamepad_editor_drag 即可清除选择的内容。以便重新选择新的区域并变换。请注意，在选择物件时选择的物件是被剪切的，它们不会被保存！
+
+tutorial_3_16a=就到此为止了！有了这些工具，你在编辑关卡时应该会更加的得心应手。
+
+tutorial_4_1a=欢迎再次回来！
+tutorial_4_1b=在这一次教程中，我们将注意力转向物件板。^它是能管理放置到关卡的物件的列表。
+
+tutorial_4_2a=这一次，我们从一个空白的关卡开始。
+
+tutorial_4_3a=在下面的选项里找到“物件版”按钮以进入物件板。
+tutorial_4_3a_gpad=按下 @gamepad_editor_currobjlist 以进入物件板。
+
+tutorial_4_4a=要选择要放置的物件，只需单击它。这会自动离开菜单。如果不想选择任何内容，按 Tab 键也能够退出菜单。
+tutorial_4_4a_gpad=要选择要放置的物件，只需单击它。这会自动离开菜单。如果不想选择任何内容，按下 @gamepad_editor_currobjlist 也能够退出菜单。
+
+tutorial_4_5a=编辑器允许你使用两种模式显示物件板。使用此按钮在两种模式之间切换。^在第一种模式（非堆叠模式）中，所有不同的单词和物件都显示在一起。
+
+tutorial_4_6a=在第二种模式（堆叠模式）中，物件与对应的单词将会合并。（“baba”这个生物与“baba”这个单词在同一个槽位中）使用鼠标滚轮（或箭头所指的按钮）来切换可见的物件是物体或其文字。这使得表格更加紧凑，但最终这取决于你自己的喜好。
+tutorial_4_6a_gpad=在第二种模式（堆叠模式）中，物件与对应的单词将会合并。（“baba”这个生物与“baba”这个单词在同一个槽位中）使用 @gamepad_currobjlist_swap （或箭头所指的按钮）来切换可见的物件是物体或其文字。这使得表格更加紧凑，但最终这取决于你自己的喜好。
+
+tutorial_4_7a=默认情况下，物件板非常干净。通过物件表向物件板添加物件（使用箭头所指的按钮），每个关卡最多可添加150个不同的物件！
+tutorial_4_7a_gpad=默认情况下，物件板非常干净。通过物件表向物件板添加物件（使用箭头所指的按钮，或者 @gamepad_currobjlist_addnew ），每个关卡最多可添加150个不同的物件！
+
+tutorial_4_8a=这是物件表，在第一个教程中简要介绍过。下面列出了能够添加到关卡的所有物件。这里有很多！默认情况下，如果你还没有完整的体验主线游戏，一些物件会从列表中隐藏。这能够避免一些剧透，如果你愿意，可以转到编辑器设置来更改此设置。
+
+tutorial_4_9a=为了帮助你查找需要或可能需要的内容，使用“搜索”功能或使用标签能够查找遵循特定主题的物件。这些按钮也存在于物件板中，让查找特定物件更容易。你也可以直接键入单词自动开始搜索。
+tutorial_4_9a_gpad=为了帮助你查找需要或可能需要的内容，使用“搜索”按钮或应用标签来查找遵循特定主题的物件。这些按钮也存在于物件板中，让查找特定物件更容易。你也可以按下 @gamepad_editor_currobjlist 开始搜索。
+
+tutorial_4_10a=我们选择了“Wall”；拾取一个物件后会立即返回到物件板（除非你按住 Ctrl 键）。你可以看到，为了方便，编辑器会自动添加对应的词语。
+tutorial_4_10a_gpad=我们选择了“Wall”；使用 @gamepad_editor_place 拾取物件后会立即返回到物件板，或者使用 @gamepad_editor_drag 留在物件表来继续添加物件。你可以看到，为了方便，编辑器会自动添加对应的词语。
+
+tutorial_4_11a=如果要从物件板中删除物件，按下所指的按钮后单击要删除的物件，或者按住 Ctrl 键并用鼠标右键直接单击该物件。请记住：这样做将从你的关卡中删除这些相同的物件，并且如果删除某个物件，其对应的词语也将被删除。
+tutorial_4_11a_gpad=如果要从物件板中删除物件，请选择光标悬停在要删除的物件上时按下所指的按钮，或是将光标悬停在目标物件时按下 @gamepad_currobjlist_remove 。^请记住：这样做将从你的关卡中删除相同的物件，并且如果删除某个物件，其对应的词语也将被删除。
+
+tutorial_4_12a=在删除按钮旁边有“编辑物件”按钮。这允许你编辑与这个物件相关的某些设置，我们将在下面介绍这些设置。按“编辑物件”按钮并选择要编辑的物件，或在物件上单击鼠标右键。
+tutorial_4_12a_gpad=在删除按钮旁边有“编辑物件”按钮。这允许你编辑与这个物件相关的某些设置，我们将在下面介绍这些设置。光标悬停在你想要编辑的物件后按下“编辑物件”按钮，或在物件上按下 @gamepad_currobjlist_edit 。
+
+tutorial_4_13a=这是开始编辑物件时的视图。^你可以改变物体的颜色，它的贴图（也就是看起来的样子）和它的Z值(图层优先级)。^当多个物件位于同一个格子上时，Z 值用来确定哪个物件显示在顶部。数字越大（上限20），物件在堆叠时的显示优先级就越高。
+
+tutorial_4_14a=以上就是全部内容了。通过编辑物件设置，你可以设置各种不错的视觉效果！
+
+tutorial_4_15a=最后，你还可以在物件板移动并整理物件。只要按住 Ctrl 并选择一个物件，然后拖动它。^这样你就可以把所有的东西放在最适合自己找到它们的地方！
+tutorial_4_15a_gpad=最后，还可以在物件板移动并整理物件。只要选择需要的物件，按住 @gamepad_currobjlist_drag 来拖动它。^这样你就可以把所有的东西放在最适合自己找到它们的地方！
+
+tutorial_4_16a=总而言之，这些便是物件板的基础知识。^顺带一说，在开始创建新关卡时，你可以选择一个预设的主题，^预设主题会将主题上合适的物件提前添加到物件板中。这可以帮你节省很多时间。
+
+tutorial_5_1a=那么……欢迎回来！
+tutorial_5_1b=本教程将介绍各种设置和其他选项，你可以在制作关卡时选择。
+
+tutorial_5_2a=在关卡窗口中，你可以看到右下角的两个按钮，“设置”和“菜单”。^在本教程中，我们将分别称它们为“关卡设置”和“编辑器菜单”。
+tutorial_5_2a_gpad=在关卡窗口中，按下 @gamepad_editor_quickmenu 打开快速菜单后能够使用接下来的两个按钮：^“设置”和“菜单”。^在本教程中，我们将分别称它们为“关卡设置”和“编辑器菜单”。
+
+tutorial_5_3a=我们先看看“关卡设置”菜单。它用于更改关卡的各种细节，如音乐、颜色、名称等。
+
+tutorial_5_4a=首先是更改关卡名称的按钮。这个就不用过多解释了吧！^请不要起任何糟糕的名字，否则 Baba 会生气的！！
+
+tutorial_5_5a=其次，这个按钮能更改关卡的制作者。作者通常都是你自己！当你设置了关卡的作者，之后制作的关卡都会填入相同的名称。
+
+tutorial_5_6a=接下来是关卡副标题按钮。这可以让你给关卡设置一个简短的描述或座右铭，当别人游玩关卡时会显示在关卡名下方。
+
+tutorial_5_7a=然后是音乐按钮。如你所料，这将打开一个菜单，^你可以在菜单中选择你希望在关卡里播放的背景音乐。
+
+tutorial_5_8a=还有“粒子”按钮——^这可以让你添加各种装饰性的背景效果到你的关卡：^从下雨到闪烁的星空。很漂亮！
+
+tutorial_5_9a=“配色方案”按钮可用于更改关卡的颜色搭配。这会极大地影响关卡的氛围。
+
+tutorial_5_10a=接下来是关卡尺寸按钮。^你可以使用通过里面的菜单调整关卡的大小。^最大能够创建33x18大小的关卡。
+
+tutorial_5_11a=下面有各种附加设置，比如你想从你的关卡移除粒子效果。在后面的教程中，我们会介绍什么是“自动关卡”。
+
+tutorial_5_12a=好的，这就是“关卡设置”菜单，^接下来让我们看看“编辑器菜单”。
+
+tutorial_5_13a=通常你不会经常访问这个菜单，因为这些选项虽然重要但并不常用。
+
+tutorial_5_14a=在这里有一个按钮，可以将你的关卡上传到网络上供其他人游玩。我们下个课程会讲到。
+
+tutorial_5_15a=如果最开始创建关卡时没有选择正确的主题，则可以使用“主题”菜单更改关卡的主题。不过，要小心！
+
+tutorial_5_16a=出于安全考虑，如果你选择了一个新的主题，你的整个关卡会被清空，物件板将被重置为主题预设的状态！^你也可以在这里以当前配置建立新主题或者删除预设的主题。
+
+tutorial_5_17a=回到编辑器菜单，接下来这里有一个删除关卡按钮。它会删除你的关卡。^使用这个按钮的代价很大，但有时你会需要它。
+
+tutorial_5_18a=…最后在列表中还有复制关卡按钮。它将创建一个一致的关卡作为副本。如果要使用相似的基本布局制作多个关卡，这将非常方便。
+
+tutorial_5_19a=就这样！建议你在开始的时候，用各种各样的设置来体验一下，这样你就知道你可以使用的所有工具了。
+
+tutorial_6_1a=你好！
+tutorial_6_1b=本教程介绍了上传自己的关卡给其他人玩的过程！在阅读前，最好你有一个你满意的已完成关卡，这样你就可以在阅读后立即实践本教程所讲的内容了。
+
+tutorial_6_2a=要开始上传关卡，请转到编辑器菜单。
+
+tutorial_6_3a=在这里，选择“上传关卡”按钮。
+
+tutorial_6_4a=编辑器将显示该关卡的当前名称、作者和子标题。确保这是你想看到的以及你已经保存了关卡，然后选择“是”！
+
+tutorial_6_5a=…不过，请注意。为了避免出现无法完成的关卡，在上传关卡之前，你必须自己能够通过它。
+
+tutorial_6_6a=一旦你完成了关卡，编辑器会尝试上传。如果一切顺利，游戏会向你显示该关卡的下载代码，以便你可以立即与你的朋友共享关卡！如果出现错误，则会出现错误消息。
+
+tutorial_6_7a=如果你忘记了关卡代码或只是想稍后查看，编辑器菜单中有“关卡历史”按钮，可以让你查看过去上传和下载的关卡的关卡代码。
+
+tutorial_6_8a=差不多就这些了！不太复杂。^提醒：请不要上传令人感到冒犯或其他难以接受的关卡；这只会让它们从服务器中被删除。^合理健康游戏，它们是你的朋友！
+
+tutorial_7_levelname=示例关卡
+tutorial_7_author=可能是你！
+tutorial_7_subtitle=示例的子标题
+
+tutorial_7_1a=好吧!
+tutorial_7_1b=在本教程中，我们将介绍下载关卡的步骤。这个课程会涉及编辑器之外的功能，但想必这不是问题。
+
+tutorial_7_2a=每个上传的关卡都有一个独特的“关卡代码”，用于以后在关卡数据库中查找关卡。代码由大写字母和数字组成。大多数情况下，你将使用这样的代码来查找关卡。
+
+tutorial_7_3a=要下载新关卡，请来到“游玩关卡”菜单或编辑器菜单，然后选择“获取新关卡”。
+
+tutorial_7_4a=在此菜单中，你可以选择下载新关卡的方式。^“使用关卡代码”要求你知道特定关卡的关卡代码，^例如，朋友制作并想分享给你游玩的关卡代码。
+
+tutorial_7_5a=“特色关卡”允许你查看我们团队挑选的、我们觉得有趣的关卡列表；^此列表会不定期更改以展示新发现。^选择一个关卡将带你进入代码输入界面，你此前选中的关卡的代码会自动输入。
+
+tutorial_7_6a=如果关卡下载成功，你将看到此菜单。^在这里你可以看到有关关卡的基本数据，并可以选择要做什么。
+
+tutorial_7_7a=“立即游玩(不进行保存)”——如它所说；你将立刻开始游玩该关卡，一旦退出该关卡，你想要游玩该关卡便需要再次寻找。
+
+tutorial_7_8a=“保存关卡”会将关卡保存到你的关卡列表中，之后你可以选择游玩关卡或返回主菜单。
+
+tutorial_7_9a=游玩下载的关卡时，你可以在暂停菜单中找到一个标有“报告关卡”的按钮。如果关卡可能冒犯他人，会让你感到不适，或者你觉得它违反了规章制度，你可以用这个按钮来举报它。^我们会仔细复核你的举报，把违规的关卡下架。^感谢你的帮助！
+
+tutorial_7_10a=除此之外没什么大不了的。很简单，这便是全部！
+tutorial_7_10a_n=除此之外没什么大不了的。很简单，这便是全部！^但是请注意，你的设备上有100个关卡的储存限制；包括你自己制作的关卡。
+
+tutorial_8_1a=你好！
+tutorial_8_1b=在本教程中，我们将介绍各种有用的快捷键，这些快捷键能够让你的关卡制作过程更顺利。请注意，这里列出的所有快捷键都可以在编辑器的快捷键一览部分找到，就在教程按钮的上方！
+
+tutorial_8_2a=让我们从关卡列表开始。如果你需要快速删除一个关卡，你可以用鼠标右键直接从菜单中删除它。^当然，为了保险起见你依然要二次确认。
+tutorial_8_2a_gpad=让我们从关卡列表开始。如果你需要快速删除一个关卡，你可以对关卡按下 @gamepad_editor_undo 将其删除。当然，为了保险起见你依然要二次确认。
+
+tutorial_8_3a=此外，在这个菜单以及任何其他具有搜索功能的菜单中，你只需输入任何单词就可以开始搜索！
+tutorial_8_3a_gpad=此外，在这个菜单以及任何其他具有搜索功能的菜单中，你只需输入任何词语就可以进行搜索！此外，在这个菜单以及其他多个菜单中，你可以通过按 @gamepad_editor_currobjlist 开始搜索，并使用 @gamepad_editor_scrollleft_hotbar 和 @gamepad_editor_scrollright_hotbar 进行翻页，以及 @gamepad_editor_scrollleft_tool 和 @gamepad_editor_scrollright_tool 翻动多个页面！
+
+tutorial_8_4a=本教程的其余部分将在各自的界面中使用。我们将从关卡窗口界面开始。
+
+tutorial_8_5a=按住F可以看到当前正在编辑的图层上的所有物件当前的朝向。
+tutorial_8_5a_gpad=按住 @gamepad_editor_altpress 和 @gamepad_editor_showdir 可以看到当前正在编辑的图层上的所有物件的当前朝向。
+
+tutorial_8_6a=WASD键允许你整体移动图层中的所有物件。例如，如果你不小心把一大片物件放偏了，则这个功能会非常有用。
+tutorial_8_6a_gpad=按住 @gamepad_editor_moveall 时使用 @gamepad_editor_rotate 允许你整体移动图层中的所有物件。^例如，如果你不小心把一大片物件放偏了，则这个功能会非常有用。
+
+tutorial_8_7a=按住 Ctrl 并用鼠标中键单击一个方格，将完全清除这个格子所有图层的物件。如果你对当前的整个关卡不满意，按住 Ctrl 并按 Delete 键便能清空整个关卡。
+tutorial_8_7a_gpad=按住 @gamepad_editor_altpress 并按 @gamepad_editor_emptytile 可完全清除单个方格，这个清除作用于所有图层。
+
+tutorial_8_8a=按F3键可以在测试关卡和编辑关卡之间快速切换，R键将直接可以向物件板添加新物件。^还有几个方便的按钮可以快速选择特定的单词：^I选择is，U选择and，Y选择not，Q选择空白。按 Ctrl+S 可保存关卡。
+tutorial_8_8a_gpad=按住 @gamepad_editor_altpress 并按下 @gamepad_editor_currobjlist 以开始测试关卡; 按住 @gamepad_editor_altpress 并按下 @gamepad_editor_quickmenu 进行快速保存; 以及, @gamepad_editor_altpress + @gamepad_editor_emptytile 能让你随时选取"空白"物件进行编辑。
+
+tutorial_8_9a=在关卡窗口界面按下 F4 可以输入词语，^游戏会给你一个包含你输入的单词的选择（如果它们存在于游戏中）。例如，如果按F4键并输入“Baba Is you”，^你将得到一个包含物件“Baba”、“Is”和“you”的选择。^如果它们未被添加到物件板的话，这可以自动将物件添加到物件板中！如果你知道你要找什么，那就会特别方便。
+tutorial_8_9a_gpad=在关卡窗口界面中按下 @gamepad_editor_altpress 和 @gamepad_editor_autopick 可以输入单词，游戏会自动给你一个包含你输入的单词的选择（如果它们存在于游戏中）。^例如，如果输入“Baba Is you”，你将得到一个包含物件“Baba”、“Is”和“you”的选择。^如果它们未被添加到物件板的话，这可以自动将物件添加到物件板中！^如果你知道你要找什么，那就会特别方便。
+
+tutorial_8_9a_extra=我们在教程5中有提到"自动关卡"。它的工作原理是：^如果正在游玩的关卡形成了规则“level is auto”，那么关卡将以自己的速度运行，即使你未进行任何动作。^每次关卡运行都有一小段的延迟，你可以用滑条来调整运行的频率。延迟越小，运行的间隔时间会越短，关卡的运行速度便会越快。^这个功能可以让做一些节奏游戏或者更有趣的东西，试试看！
+
+tutorial_8_10a=在物件板中也有一些有用的工具！
+
+tutorial_8_11a=用鼠标右键单击物件将直接开始编辑该物件的数据。但是，如果在执行此操作时按住 Ctrl ，则会从物件板中删除物件。另外，如果你选择了“堆叠视图”模式，滚动鼠标滚轮将在物件和它们的单词之间交换。
+tutorial_8_11a_gpad=在物件上按下 @gamepad_currobjlist_edit 将直接开始编辑该物件的数据。按下 @gamepad_currobjlist_remove 将在物件和它们的单词之间交换。
+
+tutorial_8_12a=在物件板视图中按 F4 也可以输入单词；^这种情况下，句子中的语句只会添加到物件板中。^（如果它们存在于物件表但还未被加入到物件板）
+tutorial_8_12a_gpad=在物件板视图中按下 @gamepad_editor_altpress 和 @gamepad_editor_autopick 也可以输入一句词语。^这种情况下，句子中的语句只会添加到物件板中。^（如果它们存在于物件表但还未被加入到物件板）
+
+tutorial_8_13a=还有其他一些方便的快捷键，但我们应该已经讲解了最重要的几个。同样，如果你真的想最大限度地提高易用性，一定要检查编辑器帮助菜单中快捷键的完整列表！
+
+tutorial_9_1a=那好吧...既然你读到了这里！
+tutorial_9_1b=这篇教程和编辑器关系不太大，更主要的内容是^（可能会）有用的设计技巧。希望能够帮到你开始制作自己的关卡！
+
+tutorial_9_2a=这些技巧主要是为了帮助你设计解谜关卡。^设计一个谜题有很多种方式，不同的人会更喜欢用不同的方式（至少我是这么认为的）。我会在这里解释我在设计许多Baba is You的原创关卡的时候使用的方法。^除了解谜关卡，你也可以创作自动关卡、风景/图画关卡或者其他非解谜关卡，不过要记得关卡必须可以以某种方式完成才能上传到服务器：把胜利条件放到一个角落里就可以了。
+
+tutorial_9_3a=丑话说在前头：有些人会喜欢制作一些令人气恼、难看、吓人的或者其他类似感觉的关卡。^如果实施得当，这样的内容也可以是有趣的，但是也要注意玩家的体验，例如有些人对高频闪烁很敏感，例如不少简单但恼人的小技巧很可能已经被其他人用烂了。^无论如何，如果你的关卡的目的只是让玩家不舒服，那么这个关卡很可能会被移除。
+
+tutorial_9_4a=那么——很重要的一点，一个好的谜题通常会有一个中心主题，或者说，这个关卡围绕着一个“中心思想”建造。有时候一个关卡可能会有很多个中心主题，但是也许最好能专注于尽可能好地诠释一个中心主题。^在我设计的原创谜题中，我会围绕一个我希望玩家体验的一个特定的“恍然大悟的时刻”来建造关卡。这么做会让谜题更有结构，也会让关卡更容易理解，避免不必要的混淆。
+
+tutorial_9_5a=那么这样的中心主题要怎么想出来呢？要强迫自己想出一个好主意并不简单，但是在脑袋里或编辑器里尝试一下是个获得灵感的好方法。^我喜欢考虑我手上有的词语、游戏机制和其他游戏元素，然后试图在脑袋里整合这些元素，找到这些元素之间有趣的交互方式，或者说我认为玩家发现的时候会觉得有趣的点子。^优秀的点子通常不太隐蔽，并且出人意料而又合情合理。
+
+tutorial_9_6a=另一个需要考虑的方面是你的想法需要多少个词语、规则和其他元素来实现，换言之，你的想法有多“优雅”。当我有一个想法的时候，我会试着使用这个想法建造一个关卡并防止关卡能用其他的方法解决。^让其他人测试关卡是个更好的方法，不过即使是我自己在测试的时候，我也能发现要求目标解法并阻止其他解法是否需要加上一大堆的词语。
+tutorial_9_6b=我认为如果一个关卡需要许多非常特定的限制条件才可以运作的话，这个关卡非常不“优雅”。^如果你可以用 Baba Is Baba 或者更改关卡的布局来避免不想要的解法，那么这么做比 Baba Is Not Rock And Not Wall And Not Flag 要干净得多。
+
+tutorial_9_7a=“优雅”的概念也适用于关卡的结构。^在一个Baba is You 的关卡里，玩家需要处理很多信息，^因为他们需要阅读并完全理解关卡中的规则和其他元素。因此，如果你的关卡能让玩家容易理解关卡中的元素，那么对玩家来说是件好事。^这一点在前面也提到过了：尽量不要用过多的词语和规则。
+tutorial_9_7b=另一点是关卡不要看上去像是乱堆的。在关卡里放置装饰物件是件好事，但是最好把规则放在明显的位置，这样玩家就不用在一堆装饰图块里去找你的规则文字了。此外，也推荐把不能被更改的规则放到明显够不到的地方。
+
+tutorial_9_8a=说到这里，我们不妨再提一下“干扰项”的问题，^也就是看上去很重要但是其实和关卡的解法没什么关系的元素。^我对这种元素的看法其实也有过变化，但是我现在的看法是，如果这些干扰项在关卡里纯粹是为了误导玩家，那么这么做并不优雅，也为解谜增添了许多无用功和受挫、被难倒的感觉。^也许最好的做法是除非必要，否则不要谜题中包含这些干扰项。（当然了，除了装饰！）
+tutorial_9_8b=不过，有时候一个简单的干扰项也可以很有趣，前提是误导不要太过头，干扰的方式也最好能让人感到很聪明。
+
+tutorial_9_9a=有时候，有些词语的交互可能需要玩家对游戏的逻辑有深层次的理解。当你对游戏机制的了解加深的时候，有时你很容易忘记这一点。^我也遇到过这个问题：我自己编写了游戏的逻辑，^而我想出来的谜题的点子可能会要求玩家对游戏的整个逻辑有所理解。当创作你的关卡时，记得考虑你的关卡是为谁创作的。如果你的关卡是面向高手的，你可以假定玩家对游戏细节有深层次的了解，^但是如果你的目标受众是一般玩家，^那么使用太过隐蔽的游戏机制的关卡可能在这些玩家来看是完全没法通过的。
+
+tutorial_9_10a=最后，关于装饰物的几句话。我前面也说过，关卡的设计应该让玩家容易理解关卡的结构，而装饰物不应牺牲这一点。此外，在玩家会移动并解谜的区域放置大量装饰物可能会让玩家感到迷惑。^例如，游戏中有些词语（例如Weak）会让原本无关的装饰物影响谜题中的元素，从而造成这些装饰物和关卡有关的假象。
+tutorial_9_10b=用简单的形状摆放和关卡相关的元素也会让关卡更易于理解。比方说，相比一个不规则形状的湖泊，一个简单的方形水池更能让玩家看清哪些元素和解谜相关。如果你希望你的关卡看上去更美观，一些不规则的装饰可以放到关卡的边缘附近。
+
+tutorial_9_11a=就是这样了！我需要再强调一次，这些只是我个人的针对设计谜题的观点和观察，其他人可能会（或者说，难免会）不同意我的观点，而这也很正常。最终决定你要制作什么关卡的人是你自己。让其他人测试你的关卡并给出反馈也是保证你的关卡设计路线正确的一个好方法。我希望我给出的意见对你有帮助！祝你在编辑器玩得愉快！
+
+tutorial_10_1a=欢迎回来！
+tutorial_10_1b=这是一个帮助你击败红龙的攻略，他是在第四章节末尾的火峰能找到的隐藏超级 boss。^本指南建立在你已熟悉游戏的基本概念，以及一些更进阶的技巧，如友谊过载、多重盔甲和快速睡眠。
+
+tutorial_10_2a=在你前往火峰之前，确保你准备了正好45瓶大型回复药，至少一个护盾耳环和一些消防栓石以作备用。^同时你的队伍至少应该达到24级，因为火峰是一个最终区域。将 Keke 提升到25级是不错的选择，因为它在那个等级习得漂浮技能。
+
+tutorial_10_3a=红龙在火峰的一个房间里随机游荡；有熔岩喷泉的房间是你最好的选择，因为这类房间的旁边便是存档点，因此可以根据需要快速切换效忠模式。当你在屏幕上看到红龙时，让 Fofo 在整个队伍中施展隐形术，并用 Baba 的冲刺能力发起一场先手奇袭。^注意，红龙有抵抗来自下方的攻击，所以只能从顶部接近它。
+
+tutorial_10_4a=一旦战斗开始，利用你的奇袭的优势加成，^用火焰假发替换 Baba 的潜行王冠，并将它移动到前锋位。^如果 Jiji 有剩下的哈瓦那辣椒，战斗时提前用烹饪技能准备一些临时的芒果哈瓦那辣酱以作备用。
+
+tutorial_10_5a=红龙总是从火热的吉格舞作为开场技能。Keke 和 Baba 可能会被施加魅惑状态，Fofo 的天赋对舞蹈类行为有状态抗性，Jiji 的纸版面具能阻挡这种效果。通过队友拍头，来解除 Baba 的异常，Keke 可以继续处于魅惑。如果无法解除 Baba 的魅惑，更稳妥的做法是撤退并重新开始准备 buff，尽管你可以不进行这个策略。
+
+tutorial_10_6a=此时让 Fofo 开始释放快乐之歌，Baba 和 Jiji 可以用消防栓石来将龙施加潮湿。如果龙使用了熔岩地板法术，Keke 可以根据需要使用漂浮技能。继续这个策略直到龙完全冷却下来，必要时喝下大型回复药。
+
+tutorial_10_7a=最终红龙会完全冷却下来。一旦龙从愤怒跺脚转向恼怒拍打，把 Keke 移动到前锋位，给龙端上一道美食。^如果此前 Jiji 有时间准备，便可以在美食上涂上辣酱以增加成功率。^注意！红龙是素食主义者，所以一定要选择适当的菜肴。^砰！友谊实现了！
+
+tutorial_10_8a=这就是你的结果！^这次成功的特殊遭遇战不仅让你获得了一个酷炫的新坐骑，而且有80%的几率能掉落一个龙鳞电竞鼠标为额外奖励，这几乎是目前为止 Fofo 所能装备的最优秀的鼠标。
+
+tutorial_10_9a=感谢你阅读本攻略，祝你在红龙狩猎中好运！
+
+world_museum=博物馆
+world_new_adv=全新冒险
+
+museum_101level=欢迎来到博物馆!
+museum_102level=工厂流水线
+museum_103level=后台
+museum_104level=火车 2
+museum_105level=洗牌
+museum_106level=锅炉厂 2
+museum_107level=真菌实验 2
+museum_108level=安全
+museum_109level=更多的废弃关卡
+museum_10level=感情
+museum_112level=感谢你的游玩!
+museum_113level=火红坑
+museum_114level=脆弱的存在-旧版
+museum_125level=下落的词
+museum_126level=锅炉厂
+museum_12level=液体分离
+museum_134level=微弱信号
+museum_13level=Baba们是你
+museum_140level=重型防御工事
+museum_143level=公寓大楼
+museum_14level=紧锁的走廊
+museum_152level=真菌试验
+museum_154level=秘密花园
+museum_15level=新手锁匠
+museum_16level=精致盒子
+museum_19level=胜利储物柜
+museum_204level=钥匙
+museum_20level=被冰覆盖
+museum_213level=移动
+museum_24level=墓地
+museum_256level=事后
+museum_259level=双重绝缘
+museum_25level=来旗子这，谢谢
+museum_267level=堡垒 2
+museum_26level=Keke警卫
+museum_276level=火车
+museum_27level=保护
+museum_290level=移动草坪
+museum_296level=云中之乱
+museum_300level=炮弹
+museum_311level=钥匙链
+museum_321level=安全屋
+museum_328level=隧道
+museum_34level=Baba未响应
+museum_35level=云房间
+museum_36level=骷髅朋友
+museum_38level=公园规则
+museum_39level=完美犯罪 A
+museum_40level=危险花园
+museum_41level=房子 A
+museum_42level=房子 B
+museum_43level=房子 C
+museum_44level=房子 D
+museum_45level=房子 E
+museum_46level=完美犯罪 B
+museum_50level=河对岸
+museum_52level=井底之蛙
+museum_53level=堡垒
+museum_55level=不变 A
+museum_56level=不变 B
+museum_60level=孤独的景象
+museum_61level=四等分
+museum_62level=电话
+museum_63level=绣门
+museum_65level=返回
+museum_66level=拐弯抹角
+museum_68level=无线连接
+museum_73level=门前苔藓
+museum_74level=十字路口
+museum_79level=博物馆-废案关卡
+museum_79level_mapid=<empty>
+museum_80level=旧下水道
+museum_81level=水龙头
+museum_82level=安全屋-序言
+museum_83level=胜利来自燃烧
+museum_84level=博物馆-改版关卡
+museum_84level_mapid=<empty>
+museum_85level=博物馆
+museum_85level_mapid=<empty>
+museum_86level=电梯
+museum_87level=基础知识！
+museum_88level=基础知识？
+museum_92level=探险家
+museum_94level=毫无戒心者
+museum_95level=老鼠洞
+museum_96level=和谐
+museum_97level=Baba领域
+museum_d68level=无线连接2
+museum_spoilerlevel=警告！
+museum_x103level=保镖
+museum_x135level=无尽回廊
+museum_x148level=旅行
+museum_x164level=多功能工具
+museum_x195level=不速之客
+museum_x20level=冰冷水域
+museum_x59level=条件
+museum_x70level=经典陷阱
+museum_x98level=正在开启
+museum_y103level=隧道维护
+museum_y128level=团聚
+museum_y138level=那里更少
+museum_y139level=裂隙
+museum_y246level=工具棚
+museum_y317level=吸管
+museum_y322level=雄伟石柱
+museum_y326level=乐团席
+museum_y39level=解决方案
+museum_y40level=解决方案2
+museum_y50level=几乎
+museum_y7level=抓住小偷!
+museum_y85level=峡谷
+museum_y8level=反锁
+museum_yylevel=坚韧的液体
+
+new_adv_100level=寻找空洞
+new_adv_101level=隧道维护
+new_adv_102level=冶炼设备
+new_adv_103level=隐藏的蓝图
+new_adv_104level=沃土
+new_adv_105level=电子学
+new_adv_106level=雪夜晨曦
+new_adv_107level=快速增长
+new_adv_108level=高山草甸
+new_adv_109level=小木屋
+new_adv_110level=我家着火了
+new_adv_111level=实验间
+new_adv_112level=昔日荣耀
+new_adv_113level=为时已晚
+new_adv_114level=荒芜
+new_adv_115level=正在开锁
+new_adv_116level=回家
+new_adv_117level=太阳能
+new_adv_118level=待命
+new_adv_119level=坚固花朵
+new_adv_120level=树屋
+new_adv_121level=Baba星球
+new_adv_122level=亘古不变
+new_adv_123level=反重力
+new_adv_124level=晕船
+new_adv_125level=房中房
+new_adv_127level=危险预感
+new_adv_128level=感到危险
+new_adv_129level=又有感觉了!
+new_adv_130level=是谁？
+new_adv_131level=向上推
+new_adv_132level=时光飞逝…！
+new_adv_133level=鬼鬼祟祟
+new_adv_134level=四季
+new_adv_135level=鹦鹉保镖
+new_adv_136level=熟悉之地
+new_adv_136level_mapid=熟悉
+new_adv_137level=星辰之地
+new_adv_137level_mapid=星
+new_adv_138level=美食之乡
+new_adv_138level_mapid=美食
+new_adv_139level=火车之居
+new_adv_139level_mapid=火车
+new_adv_140level=地地地地
+new_adv_140level_mapid=漏洞
+new_adv_141level=古怪之地
+new_adv_141level_mapid=怪异
+new_adv_142level=那是什么?
+new_adv_143level=我要去哪里?
+new_adv_144level=这里要做什么？
+new_adv_145level=深宵密会
+new_adv_146level=私人花园
+new_adv_147level=隐藏花园
+new_adv_148level=往返
+new_adv_149level=豪华版
+new_adv_150level=挂毯
+new_adv_151level=请出示证件
+new_adv_152level=扭转命运
+new_adv_153level=Baba售票员！
+new_adv_154level=嗡嗡声
+new_adv_155level=玩具工厂
+new_adv_156level=通风管道
+new_adv_157level=AAAA
+new_adv_158level=树篱迷宫
+new_adv_160level=Baba侵略者
+new_adv_161level=Baba时光
+new_adv_162level=Baba街机
+new_adv_162level_mapid=街机
+new_adv_164level=简单的迷宫
+new_adv_165level=另一个简单的迷宫
+new_adv_166level=微暗地牢
+new_adv_167level=贪吃Keke
+new_adv_168level=团队合作是必须的
+new_adv_168level_subtitle=下键来切换单位
+new_adv_170level=老旧的七彩洞穴
+new_adv_171level=音乐插曲
+new_adv_172level=新的朋友!
+new_adv_173level=私人俱乐部
+new_adv_174level=新成员
+new_adv_175level=独家会员
+new_adv_176level=发条鬼魂
+new_adv_177level=发条词
+new_adv_178level=世界时钟
+new_adv_179level=五彩洞穴
+new_adv_17level=纠结通道
+new_adv_180level=推论
+new_adv_181level=机库
+new_adv_182level=外域
+new_adv_183level=花园? 什么花园?
+new_adv_18level=月升日落
+new_adv_19level=Baba吃什么?
+new_adv_1blevel=○○○○○ ○○ ○ ○○○
+new_adv_20level=我太饿了…
+new_adv_21level=吹蜡烛
+new_adv_22level=快速Baba
+new_adv_23level=开胃菜
+new_adv_24level=可口单词
+new_adv_25level=我不可阻挡!
+new_adv_26level=未设定
+new_adv_27level=地堡
+new_adv_28level=补给线
+new_adv_29level=更多恐惧
+new_adv_30level=魔术戏法
+new_adv_31level=倾覆
+new_adv_32level=仓库
+new_adv_33level=模仿
+new_adv_35level=保险箱
+new_adv_36level=古典大厅
+new_adv_37level=鬼魂温泉
+new_adv_38level=微动
+new_adv_39level=留心
+new_adv_40level=不重复
+new_adv_41level=新的冒险！
+new_adv_42level=Baba的家
+new_adv_43level=最后的零食
+new_adv_44level=Baba需要朋友
+new_adv_45level=如他所说
+new_adv_46level=重力室
+new_adv_47level=骨头堆
+new_adv_48level=结束
+new_adv_49level=安全系统
+new_adv_50level=制造条件
+new_adv_51level=天空之门
+new_adv_52level=闪亮梯子
+new_adv_53level=深门
+new_adv_54level=地窖访问
+new_adv_55level=地板之下
+new_adv_56level=跳起来，Babastar
+new_adv_57level=主菜
+new_adv_58level=入门课程
+new_adv_59level=甜点
+new_adv_60level=地堡2
+new_adv_62level=横向壁炉
+new_adv_63level=天空之门2
+new_adv_64level=神秘房间
+new_adv_65level=混合身份
+new_adv_66level=阳光大道
+new_adv_67level=危险的湿地
+new_adv_69level=全新的零食
+new_adv_70level=安全背心
+new_adv_71level=时间旅行
+new_adv_72level=荆棘小道
+new_adv_73level=蠕虫研究
+new_adv_74level=防火墙
+new_adv_76level=绑架！
+new_adv_77level=梦的秘密
+new_adv_78level=观众
+new_adv_79level=矩阵
+new_adv_80level=有害的存在
+new_adv_81level=破坏级的存在
+new_adv_82level=藏在灌木丛中
+new_adv_83level=密码锁
+new_adv_84level=妥善保管
+new_adv_85level=热带气候
+new_adv_86level=○○○○○○○○
+new_adv_87level=ABAB CD EFG
+new_adv_89level=(BABA)
+new_adv_90level=野果
+new_adv_92level=BABABABABA
+new_adv_94level=银河系
+new_adv_95level=等待着你
+new_adv_96level=藏在灌木丛里 2
+new_adv_97level=收获日
+new_adv_98level=洞穴的海市蜃楼
+new_adv_99level=百宝箱
+new_adv_a22level=联结三守卫
+new_adv_a30level=意志力
+new_adv_x110level=紧凑
+new_adv_y4level=愚蠢的把戏
+new_adv_y9level=聚光灯
+new_adv_93level=铁面无私
+new_adv_ph8level=实验
+new_adv_ph17level=去钓鱼
+
+new_adv_ph7level=快乐舞步
+new_adv_208level=进入无限
+new_adv_201level=太空军校生
+new_adv_202level=太空军校生 2
+new_adv_207level=太空军校生 3
+new_adv_203level=诅咒之泉
+new_adv_204level=进阶语言学 1
+new_adv_205level=进阶语言学 2
+new_adv_206level=进阶语言学 3
+new_adv_192level=嘭!
+new_adv_193level=拆除工作
+new_adv_197level=险境之胜
+new_adv_194level=清晰愿景
+new_adv_195level=自我幻视
+new_adv_199level=可怕的自我
+new_adv_196level=课程之间
+new_adv_198level=盒子在哪里?
+new_adv_200level=云房间
+
+museum_89level=这些东西都在这里
+
+new_adv_190level=Baba Is Empty
+new_adv_209level=巨兽之壁
+new_adv_210level=险路勿近
+new_adv_211level=被侵蚀的文字
+
+new_adv_25level=我不可阻挡!
+
+world_new_adv_m=全新冒险
+new_adv_m_100level=寻找空洞
+new_adv_m_101level=隧道维护
+new_adv_m_102level=冶炼设备
+new_adv_m_103level=隐藏的蓝图
+new_adv_m_104level=沃土
+new_adv_m_105level=电子学
+new_adv_m_106level=雪夜晨曦
+new_adv_m_107level=快速增长
+new_adv_m_108level=高山草甸
+new_adv_m_109level=小木屋
+new_adv_m_110level=我家着火了
+new_adv_m_111level=实验间
+new_adv_m_112level=昔日荣耀
+new_adv_m_113level=为时已晚
+new_adv_m_114level=荒芜
+new_adv_m_115level=正在开锁
+new_adv_m_116level=回家
+new_adv_m_117level=太阳能
+new_adv_m_118level=待命
+new_adv_m_119level=坚固花朵
+new_adv_m_120level=树屋
+new_adv_m_121level=Baba星球
+new_adv_m_122level=亘古不变
+new_adv_m_123level=反重力
+new_adv_m_124level=晕船
+new_adv_m_125level=房中房
+new_adv_m_127level=危险预感
+new_adv_m_128level=感到危险
+new_adv_m_129level=又有感觉了!
+new_adv_m_130level=是谁？
+new_adv_m_131level=向上推
+new_adv_m_132level=时光飞逝…！
+new_adv_m_133level=鬼鬼祟祟
+new_adv_m_134level=四季
+new_adv_m_135level=鹦鹉保镖
+new_adv_m_136level=熟悉之地
+new_adv_m_136level_mapid=熟悉
+new_adv_m_137level=星辰之地
+new_adv_m_137level_mapid=星
+new_adv_m_138level=美食之乡
+new_adv_m_138level_mapid=美食
+new_adv_m_139level=火车之居
+new_adv_m_139level_mapid=火车
+new_adv_m_140level=地地地地
+new_adv_m_140level_mapid=漏洞
+new_adv_m_141level=古怪之地
+new_adv_m_141level_mapid=怪异
+new_adv_m_142level=那是什么?
+new_adv_m_143level=我要去哪里?
+new_adv_m_144level=这里要做什么？
+new_adv_m_145level=深宵密会
+new_adv_m_146level=私人花园
+new_adv_m_147level=隐藏花园
+new_adv_m_148level=往返
+new_adv_m_149level=豪华版
+new_adv_m_150level=挂毯
+new_adv_m_151level=请出示证件
+new_adv_m_152level=扭转命运
+new_adv_m_153level=Baba售票员！
+new_adv_m_154level=嗡嗡声
+new_adv_m_155level=玩具工厂
+new_adv_m_156level=通风管道
+new_adv_m_157level=AAAA
+new_adv_m_158level=树篱迷宫
+new_adv_m_160level=Baba侵略者
+new_adv_m_161level=Baba时光
+new_adv_m_162level=Baba街机
+new_adv_m_162level_mapid=街机
+new_adv_m_164level=简单的迷宫
+new_adv_m_165level=另一个简单的迷宫
+new_adv_m_166level=微暗地牢
+new_adv_m_167level=贪吃Keke
+new_adv_m_168level=团队合作是必须的
+new_adv_m_168level_subtitle=下键来切换单位
+new_adv_m_170level=老旧的七彩洞穴
+new_adv_m_171level=音乐插曲
+new_adv_m_172level=新的朋友!
+new_adv_m_173level=私人俱乐部
+new_adv_m_174level=新成员
+new_adv_m_175level=独家会员
+new_adv_m_176level=发条鬼魂
+new_adv_m_177level=发条词
+new_adv_m_178level=世界时钟
+new_adv_m_179level=五彩洞穴
+new_adv_m_17level=纠结通道
+new_adv_m_180level=推论
+new_adv_m_181level=机库
+new_adv_m_182level=外域
+new_adv_m_183level=花园? 什么花园?
+new_adv_m_18level=月升日落
+new_adv_m_19level=Baba吃什么?
+new_adv_m_1blevel=○○○○○ ○○ ○ ○○○
+new_adv_m_20level=我太饿了…
+new_adv_m_21level=吹蜡烛
+new_adv_m_22level=快速Baba
+new_adv_m_23level=开胃菜
+new_adv_m_24level=可口单词
+new_adv_m_25level=我不可阻挡!
+new_adv_m_26level=未设定
+new_adv_m_27level=地堡
+new_adv_m_28level=补给线
+new_adv_m_29level=更多恐惧
+new_adv_m_30level=魔术戏法
+new_adv_m_31level=倾覆
+new_adv_m_32level=仓库
+new_adv_m_33level=模仿
+new_adv_m_35level=保险箱
+new_adv_m_36level=古典大厅
+new_adv_m_37level=鬼魂温泉
+new_adv_m_38level=微动
+new_adv_m_39level=留心
+new_adv_m_40level=不重复
+new_adv_m_41level=新的冒险！
+new_adv_m_42level=Baba的家
+new_adv_m_43level=最后的零食
+new_adv_m_44level=Baba需要朋友
+new_adv_m_45level=如他所说
+new_adv_m_46level=重力室
+new_adv_m_47level=骨头堆
+new_adv_m_48level=结束
+new_adv_m_49level=安全系统
+new_adv_m_50level=制造条件
+new_adv_m_51level=天空之门
+new_adv_m_52level=闪亮梯子
+new_adv_m_53level=深门
+new_adv_m_54level=地窖访问
+new_adv_m_55level=地板之下
+new_adv_m_56level=跳起来，Babastar
+new_adv_m_57level=主菜
+new_adv_m_58level=入门课程
+new_adv_m_59level=甜点
+new_adv_m_60level=地堡2
+new_adv_m_62level=横向壁炉
+new_adv_m_63level=天空之门2
+new_adv_m_64level=神秘房间
+new_adv_m_65level=混合身份
+new_adv_m_66level=阳光大道
+new_adv_m_67level=危险的湿地
+new_adv_m_69level=全新的零食
+new_adv_m_70level=安全背心
+new_adv_m_71level=时间旅行
+new_adv_m_72level=荆棘小道
+new_adv_m_73level=蠕虫研究
+new_adv_m_74level=防火墙
+new_adv_m_76level=绑架！
+new_adv_m_77level=梦的秘密
+new_adv_m_78level=观众
+new_adv_m_79level=矩阵
+new_adv_m_80level=有害的存在
+new_adv_m_81level=破坏级的存在
+new_adv_m_82level=藏在灌木丛中
+new_adv_m_83level=密码锁
+new_adv_m_84level=妥善保管
+new_adv_m_85level=热带气候
+new_adv_m_86level=○○○○○○○○
+new_adv_m_87level=ABAB CD EFG
+new_adv_m_89level=(BABA)
+new_adv_m_90level=野果
+new_adv_m_92level=BABABABABA
+new_adv_m_94level=银河系
+new_adv_m_95level=等待着你
+new_adv_m_96level=藏在灌木丛里 2
+new_adv_m_97level=收获日
+new_adv_m_98level=洞穴的海市蜃楼
+new_adv_m_99level=百宝箱
+new_adv_m_a22level=联结三守卫
+new_adv_m_a30level=意志力
+new_adv_m_x110level=紧凑
+new_adv_m_y4level=愚蠢的把戏
+new_adv_m_y9level=聚光灯
+new_adv_m_93level=铁面无私
+new_adv_m_ph8level=实验
+new_adv_m_ph17level=去钓鱼
+
+new_adv_m_ph7level=快乐舞步
+new_adv_m_208level=进入无限
+new_adv_m_201level=太空军校生
+new_adv_m_202level=太空军校生 2
+new_adv_m_207level=太空军校生 3
+new_adv_m_203level=诅咒之泉
+new_adv_m_204level=进阶语言学 1
+new_adv_m_205level=进阶语言学 2
+new_adv_m_206level=进阶语言学 3
+new_adv_m_192level=嘭!
+new_adv_m_193level=拆除工作
+new_adv_m_197level=险境之胜
+new_adv_m_194level=清晰愿景
+new_adv_m_195level=自我幻视
+new_adv_m_199level=可怕的自我
+new_adv_m_196level=课程之间
+new_adv_m_198level=盒子在哪里?
+new_adv_m_200level=云房间
+
+new_adv_m_190level=Baba Is Empty
+new_adv_m_209level=巨兽之壁
+new_adv_m_210level=险路勿近
+new_adv_m_211level=被侵蚀的文字
+
+new_adv_m_25level=我不可阻挡!
