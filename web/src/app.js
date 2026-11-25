@@ -93,7 +93,6 @@ class Runtime {
     this.keysDown = new Set();
     this.world = 'baba';
     this.level = '0level';
-    this.levelMeta = null;
     this.width = 35; this.height = 20;
     this.tile = 24;
     this.tick = 0;
@@ -376,6 +375,10 @@ end
     this.store.setFile('level', `Data/Worlds/${world}/${level}.ld`);
     this.store.setFile('world', `Data/Worlds/${world}/world_data.txt`);
     this.store.setFile('lang', 'Data/Languages/lang_en.txt');
+    localStorage.setItem('baba-wasm-current', JSON.stringify({world, level}));
+    this.parentMapCache={};
+    this.mapData=null;
+    this.mapMode=false;
 
     const factory = new wasmoon.LuaFactory('web/vendor/glue.wasm');
     this.lua = await factory.createEngine({ enableProxy: true, injectObjects: false });
@@ -419,12 +422,145 @@ end
     this.callLua('effectblock');
     if ((this.store.read('level','general','music') || '') !== '') this.playMusic(this.store.read('level','general','music'),0);
     else this.playMusic('baba',0);
+    this.mapData=this.readMapData();
+    this.mapMode=!!this.mapData;
+    if(this.mapMode) this.refreshMapUnlocks();
     this.started = true;
     const selector=document.getElementById('level-select');
     if (selector) selector.value=this.world+'/'+this.level;
     this.transitioning = false;
     this.setStatus('');
     this.canvas.focus();
+  }
+
+  levelMeta(world, level) {
+    return this.store.files[`Data/Worlds/${world}/${level}.ld`]?.general || {};
+  }
+
+  readMapData() {
+    const meta=this.levelMeta(this.world,this.level);
+    if (Number(meta.leveltype)!==1) return null;
+    const data={nodes:[],paths:[],selector:[Number(meta.selectorX)||1,Number(meta.selectorY)||1]};
+    const read=(sec,i,key)=>this.store.files[`Data/Worlds/${this.world}/${this.level}.ld`]?.[sec]?.[`${i}${key}`];
+    const levels=Number(meta.levels)||0;
+    for(let i=0;i<levels;i++) {
+      const file=read('levels',i,'file');
+      if (!file) continue;
+      data.nodes.push({
+        file,x:Number(read('levels',i,'X'))||0,y:Number(read('levels',i,'Y'))||0,
+        state:Number(read('levels',i,'state'))||0,number:Number(read('levels',i,'number'))||0,
+        style:Number(read('levels',i,'style'))||0,
+      });
+    }
+    const paths=Number(meta.paths)||0;
+    for(let i=0;i<paths;i++) data.paths.push({x:Number(read('paths',i,'X'))||0,y:Number(read('paths',i,'Y'))||0});
+    data.nodeAt=new Map(data.nodes.map(n=>[n.x+','+n.y,n]));
+    data.pathSet=new Set(data.paths.map(p=>p.x+','+p.y));
+    data.edges=new Map(data.nodes.map(n=>[n.file,new Set()]));
+    const dirs=[[1,0],[-1,0],[0,1],[0,-1]];
+    for(const start of data.nodes) {
+      const seen=new Set([start.x+','+start.y]);
+      const queue=[[start.x,start.y]];
+      while(queue.length) {
+        const [x,y]=queue.shift();
+        for(const [dx,dy] of dirs) {
+          const nx=x+dx,ny=y+dy,key=nx+','+ny;
+          if(seen.has(key)) continue;
+          seen.add(key);
+          const other=data.nodeAt.get(key);
+          if(other) {
+            if(other!==start) data.edges.get(start.file).add(other.file);
+            continue;
+          }
+          if(data.pathSet.has(key)) queue.push([nx,ny]);
+        }
+      }
+    }
+    return data;
+  }
+
+  completion(file) {
+    return Number(this.store.saveData[this.world]?.[file] || 0);
+  }
+
+  refreshMapUnlocks() {
+    const data=this.mapData;
+    if(!data) return;
+    data.unlocked=new Set();
+    for(const n of data.nodes) if(n.state>=2 || this.completion(n.file)>0) data.unlocked.add(n.file);
+    let changed=true;
+    while(changed) {
+      changed=false;
+      for(const n of data.nodes) {
+        if(this.completion(n.file)>=3) {
+          for(const next of data.edges.get(n.file)||[]) {
+            if(!data.unlocked.has(next)) { data.unlocked.add(next); changed=true; }
+          }
+        }
+      }
+    }
+    if(!data.unlocked.size && data.nodes[0]) data.unlocked.add(data.nodes[0].file);
+    if(!this.mapCursor || !data.nodes.some(n=>n.file===this.mapCursor && data.unlocked.has(n.file))) {
+      const current=data.nodes.find(n=>n.file===this.previousPuzzle && data.unlocked.has(n.file));
+      const initial=data.nodes.find(n=>n.x===data.selector[0]&&n.y===data.selector[1]&&data.unlocked.has(n.file));
+      this.mapCursor=(current||initial||data.nodes.find(n=>data.unlocked.has(n.file))||data.nodes[0])?.file;
+    }
+  }
+
+  findParentMap(world, level) {
+    if(this.parentMapCache?.[world+'/'+level]) return this.parentMapCache[world+'/'+level];
+    if(!this.parentMapCache) this.parentMapCache={};
+    let found=null;
+    for(const candidate of Object.keys(this.bundle.levels[world]||{})) {
+      const meta=this.store.files[`Data/Worlds/${world}/${candidate}.ld`];
+      if(Number(meta?.general?.leveltype)!==1) continue;
+      const count=Number(meta.general.levels)||0;
+      for(let i=0;i<count;i++) {
+        if(meta.levels?.[`${i}file`]===level) { found=candidate; break; }
+      }
+      if(found) break;
+    }
+    this.parentMapCache[world+'/'+level]=found;
+    return found;
+  }
+
+  moveMapCursor(name) {
+    const data=this.mapData;
+    if(!data||!this.mapCursor) return;
+    const cur=data.nodes.find(n=>n.file===this.mapCursor);
+    if(!cur) return;
+    const vec={right:[1,0],up:[0,-1],left:[-1,0],down:[0,1]}[name];
+    if(!vec) return;
+    const linked=[...(data.edges.get(cur.file)||[])].map(f=>data.nodes.find(n=>n.file===f)).filter(n=>n&&data.unlocked.has(n.file));
+    let best=null,bestScore=-Infinity;
+    for(const n of linked) {
+      const dx=n.x-cur.x,dy=n.y-cur.y;
+      const forward=dx*vec[0]+dy*vec[1];
+      if(forward<=0) continue;
+      const sideways=Math.abs(dx*vec[1]-dy*vec[0]);
+      const score=forward*10-sideways*4-Math.abs(dx)-Math.abs(dy);
+      if(score>bestScore){best=n;bestScore=score}
+    }
+    if(!linked.length) {
+      const candidates=data.nodes.filter(n=>data.unlocked.has(n.file)&&n!==cur);
+      for(const n of candidates) {
+        const dx=n.x-cur.x,dy=n.y-cur.y;
+        const forward=dx*vec[0]+dy*vec[1];
+        if(forward<=0) continue;
+        const sideways=Math.abs(dx*vec[1]-dy*vec[0]);
+        const score=forward*4-sideways*8-Math.abs(dx)-Math.abs(dy);
+        if(score>bestScore){best=n;bestScore=score}
+      }
+    }
+    if(best){this.mapCursor=best.file; this.render();}
+  }
+
+  enterMapCursor() {
+    const data=this.mapData;
+    const node=data?.nodes.find(n=>n.file===this.mapCursor);
+    if(node&&data.unlocked.has(node.file)&&this.bundle.levels[this.world]?.[node.file]) {
+      this.bootLevel(this.world,node.file).catch(e=>this.reportLuaError(e,'enter level'));
+    }
   }
 
   playMusic(song, local) {
@@ -446,11 +582,19 @@ end
       await this.bootLevel(this.world,this.level);
     } else if (ev === 'win') {
       this.setStatus('level complete');
-      const m = /^(\d+)level$/.exec(this.level);
-      let next = null;
-      if (m) {
-        const n = String(Number(m[1]) + 1) + 'level';
-        if (this.bundle.levels[this.world]?.[n]) next = n;
+      this.store.store('save',this.world,this.level,'3');
+      const completed=this.level;
+      const parent=this.findParentMap(this.world,completed);
+      let next=null;
+      if(parent) {
+        this.previousPuzzle=completed;
+        next=parent;
+      } else {
+        const m = /^(\d+)level$/.exec(this.level);
+        if (m) {
+          const n = String(Number(m[1]) + 1) + 'level';
+          if (this.bundle.levels[this.world]?.[n] && Number(this.levelMeta(this.world,n).leveltype)!==1) next=n;
+        }
       }
       setTimeout(() => { if (next) this.bootLevel(this.world,next).catch(e=>this.reportLuaError(e,'transition')); else this.setStatus('level complete'); }, 700);
     }
@@ -458,6 +602,12 @@ end
 
   input(name) {
     if (!this.started || this.transitioning || this.events.length) return;
+    if (this.music && this.music.paused) this.music.play().catch(() => {});
+    if (this.mapMode) {
+      if (name === 'idle') this.enterMapCursor();
+      else this.moveMapCursor(name);
+      return;
+    }
     try {
       if (name === 'undo') {
         this.callLua('undo');
@@ -551,6 +701,25 @@ end
       ctx.drawImage(img,Math.round(x-w/2),Math.round(y-h/2),w,h);
       ctx.globalAlpha=1;
     }
+    if(this.mapMode&&this.mapData) {
+      const data=this.mapData;
+      ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='bold 8px monospace';
+      for(const p of data.paths) {
+        ctx.fillStyle='rgba(150,120,70,.45)';
+        ctx.fillRect(p.x*this.tile+8,p.y*this.tile+10,8,4);
+      }
+      for(const n of data.nodes) {
+        const unlocked=data.unlocked?.has(n.file),done=this.completion(n.file)>=3,selected=n.file===this.mapCursor;
+        const cx=(n.x+.5)*this.tile,cy=(n.y+.5)*this.tile;
+        ctx.fillStyle=done?'#e6d264':unlocked?'#b88746':'#292929';
+        ctx.strokeStyle=selected?'#ffffff':unlocked?'#806040':'#151515';
+        ctx.lineWidth=selected?2:1;
+        ctx.fillRect(cx-9,cy-9,18,18);
+        ctx.strokeRect(cx-9,cy-9,18,18);
+        ctx.fillStyle=done?'#5a4b00':unlocked?'#201000':'#666';
+        ctx.fillText(String(n.number),cx,cy+1);
+      }
+    }
   }
 
   async loadPalette() {
@@ -573,6 +742,10 @@ end
     this.setStatus('loading data…');
     window.addEventListener('resize', () => this.resizeCanvas());
     await this.loadPalette();
+    try {
+      const saved=JSON.parse(localStorage.getItem('baba-wasm-current')||'null');
+      if(saved&&this.bundle.levels[saved.world]?.[saved.level]) { this.world=saved.world; this.level=saved.level; }
+    } catch (_) {}
     await this.bootLevel(this.world,this.level);
     const loop=()=>{
       this.tick++;
