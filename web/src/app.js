@@ -387,6 +387,7 @@ end
       this.lua.global.set('__native_dofile', this.lua.global.get('dofile'));
       this.lua.doStringSync('function dofile(path) return nil end');
       await this.loadScripts();
+      this.lua.doStringSync('if math.atan2 == nil then math.atan2 = function(y,x) return math.atan(y,x) end end');
       this.lua.doStringSync('function __safecall(name, ...) local f = _G[name]; if type(f) ~= \"function\" then return false, \"missing function \" .. tostring(name) end; return pcall(f, ...) end');
       this.lua.doStringSync(this.luaBootstraps());
     }
