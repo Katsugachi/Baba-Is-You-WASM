@@ -444,6 +444,7 @@ end
     this.world = world; this.level = level;
     this.transitioning = true;
     this.setStatus('loading ' + level + '…');
+    if (this.lua) this.lua.doStringSync('__objectcache = {}');
     this.objects.clear(); this.nextFixed = 10; this.classSprites = {};
     this.stopMusic();
     const info = this.bundle.levels[world]?.[level];
