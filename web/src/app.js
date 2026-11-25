@@ -202,8 +202,12 @@ class Runtime {
       MF_specialcreate: cls => { const o = R.makeObject('special_' + cls); o.visible = false; return o.fixed; },
       MF_effectcreate: cls => { const o = R.makeObject('effect_' + cls); o.visible = false; return o.fixed; },
       MF_remove: id => R.removeObject(id),
-      MF_cleanremove: id => { const o=R.obj(id); const n=o?.strings?.[3]||''; R.removeObject(id); return n; },
+      MF_cleanremove: id => { const o=R.obj(id); const n=o?.strings?.[0]||''; R.removeObject(id); return n; },
       MF_cleanspecialremove: id => { R.removeObject(id); return ''; },
+      MF_delete: () => {}, MF_clearcontrolicons: () => {}, MF_findunit_editor: () => null,
+      MF_getlevelcount: () => 0, MF_getprofileID: () => 0, MF_pickobject: () => null,
+      MF_removecounter: () => {}, MF_setbuttongrid: () => {}, MF_tutorialbackgroundfade: () => {},
+      MF_deletesave_group: group => { if (R.store.saveData) delete R.store.saveData[String(group||'')]; },
       MF_specialremove: id => R.removeObject(id),
       MF_findfixed: id => R.obj(id) ? Number(id) : null,
       MF_findunit_fixed: id => !!R.obj(id),
@@ -218,7 +222,7 @@ class Runtime {
       MF_findpaths: () => [], MF_findgates: () => [], MF_findlevelunit: () => [], MF_findpath_id: () => null,
       MF_findspecial: () => [], MF_finddecor: () => null, MF_cleandecors: () => {},
       MF_update: () => {
-        for (const n of ['doupdate','smallclear','code','fallblock','doupdate','code','conversion','fallblock','doupdate','code','levelblock','block','dolevelconversions','doupdate','smallclear','code','findplayer','effectblock','diceblock']) call(n);
+        for (const n of ['doupdate','smallclear','code','fallblock','doupdate','code','conversion','fallblock','doupdate','code','levelblock','block','dolevelconversions','doupdate','smallclear','code','findplayer','effectblock','diceblock','newundo']) call(n);
       },
       MF_win: () => R.queueEvent('win'),
       MF_restart: immediate => R.queueEvent('restart'),
@@ -368,6 +372,7 @@ end
     this.tilemap = this.makeTilemap(info.w, info.h);
     this.canvas.width = info.w * this.tile;
     this.canvas.height = info.h * this.tile;
+    this.resizeCanvas();
     this.store.setFile('level', `Data/Worlds/${world}/${level}.ld`);
     this.store.setFile('world', `Data/Worlds/${world}/world_data.txt`);
     this.store.setFile('lang', 'Data/Languages/lang_en.txt');
@@ -405,6 +410,7 @@ end
     for (const p of placements) {
       const o=this.makeObject(p.cls);
       o.values[0]=1; o.values[3]=p.x; o.values[4]=p.y; o.values[5]=p.d; o.values[20]=-1;
+      o.direction = p.d * 8;
       this.callLua('addunit',o.fixed,false,true);
     }
     this.callLua('levelborder');
@@ -414,6 +420,8 @@ end
     if ((this.store.read('level','general','music') || '') !== '') this.playMusic(this.store.read('level','general','music'),0);
     else this.playMusic('baba',0);
     this.started = true;
+    const selector=document.getElementById('level-select');
+    if (selector) selector.value=this.world+'/'+this.level;
     this.transitioning = false;
     this.setStatus('');
     this.canvas.focus();
@@ -449,10 +457,12 @@ end
   }
 
   input(name) {
-    if (!this.started || this.transitioning) return;
+    if (!this.started || this.transitioning || this.events.length) return;
     try {
-      if (name === 'undo') this.callLua('undo');
-      else this.callLua('command', name);
+      if (name === 'undo') {
+        this.callLua('undo');
+        for (const n of ['doupdate','smallclear','code','doupdate','code','doupdate','smallclear','code','findplayer','effectblock','diceblock']) this.callLua(n);
+      } else this.callLua('command', name);
     } catch (e) { this.reportLuaError(e, name); }
   }
 
@@ -553,8 +563,15 @@ end
     this.paletteReady=true;
   }
 
+  resizeCanvas() {
+    const scale = Math.min(window.innerWidth / this.canvas.width, window.innerHeight / this.canvas.height);
+    this.canvas.style.width = Math.floor(this.canvas.width * scale) + 'px';
+    this.canvas.style.height = Math.floor(this.canvas.height * scale) + 'px';
+  }
+
   async start() {
     this.setStatus('loading data…');
+    window.addEventListener('resize', () => this.resizeCanvas());
     await this.loadPalette();
     await this.bootLevel(this.world,this.level);
     const loop=()=>{
@@ -567,6 +584,29 @@ end
   }
 }
 
+function populateLevelSelect(rt) {
+  const select=document.getElementById('level-select');
+  const natural=(a,b)=>a.localeCompare(b,undefined,{numeric:true});
+  for (const world of Object.keys(rt.bundle.levels).sort()) {
+    const group=document.createElement('optgroup');
+    group.label=world;
+    for (const level of Object.keys(rt.bundle.levels[world]).sort(natural)) {
+      const option=document.createElement('option');
+      option.value=world+'/'+level;
+      const meta=rt.store.files[`Data/Worlds/${world}/${level}.ld`]?.general || {};
+      option.textContent=level+(meta.name?` — ${meta.name}`:'');
+      if (world===rt.world&&level===rt.level) option.selected=true;
+      group.appendChild(option);
+    }
+    select.appendChild(group);
+  }
+  select.addEventListener('change',()=>{
+    const [world,level]=select.value.split('/');
+    rt.bootLevel(world,level).catch(e=>rt.reportLuaError(e,'level select'));
+    rt.canvas.focus();
+  });
+}
+
 async function main() {
   const status=document.getElementById('status');
   try {
@@ -574,6 +614,7 @@ async function main() {
     const bundle=await bundleResp.json();
     const rt=new Runtime(document.getElementById('game'),status,bundle);
     window.babaRuntime=rt;
+    populateLevelSelect(rt);
     const keymap={ArrowRight:'right',ArrowUp:'up',ArrowLeft:'left',ArrowDown:'down',z:'undo',Z:'undo',r:'restart_instant',R:'restart_instant',' ':'idle',Enter:'idle'};
     window.addEventListener('keydown',e=>{
       const k=keymap[e.key];

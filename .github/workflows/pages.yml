@@ -23,8 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Prepare static site
+        run: |
+          mkdir -p "_site/Base Files"
+          cp index.html .nojekyll _site/
+          cp -r web _site/
+          cp -r "Base Files/Data" "_site/Base Files/Data"
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
