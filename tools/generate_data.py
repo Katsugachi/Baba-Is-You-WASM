@@ -1,4 +1,4 @@
-import os,re,json,struct,zlib,sys
+import os,re,json,struct,zlib
 repo=os.path.abspath(os.path.join(os.path.dirname(__file__),'..'))
 base=os.path.join(repo,'Base Files','Data')
 outdir=os.path.join(repo,'web')
@@ -80,14 +80,14 @@ for world in sorted(os.listdir(wroot)):
 for rel in ['levels.m','map0.m','endingflowers.txt']:
     p=os.path.join(base,rel)
     if os.path.exists(p): texts['Data/'+rel]=open(p,encoding='utf-8',errors='replace').read()
-for fn in os.listdir(os.path.join(base,'Languages')):
+for fn in sorted(os.listdir(os.path.join(base,'Languages'))):
     if fn.endswith('.txt'):
         p=os.path.join(base,'Languages',fn)
         texts['Data/Languages/'+fn]=open(p,encoding='utf-8',errors='replace').read()
 # themes are small ini-like data used by custom levels/menu
 for sub in ['Themes']:
     d=os.path.join(base,sub)
-    for fn in os.listdir(d):
+    for fn in sorted(os.listdir(d)):
         p=os.path.join(d,fn)
         if os.path.isfile(p): texts[f'Data/{sub}/{fn}']=open(p,encoding='utf-8',errors='replace').read()
 bundle={'tiles':tiles,'nameToClass':nameToClass,'levels':levels,'texts':texts}
