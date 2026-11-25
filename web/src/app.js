@@ -287,7 +287,7 @@ class Runtime {
       MF_loadtilemap: () => {}, MF_pickedtile: () => 0, MF_movetileplacer: () => {}, MF_showtileplacer: () => {},
       MF_currobjlist_back: () => {}, MF_currobjlist_backdel: () => {}, MF_updateobjlistname_hack: () => {}, MF_updateobjlistname_byname: () => {},
       MF_positioncurrobjselector: () => {}, MF_setobjlisttopleft: () => {}, MF_getobjbuttonid: () => 0,
-      MF_leveldata: () => {}, MF_savelevel: () => {}, MF_savepath: () => {}, MF_massdir: () => {}, MF_sublayer: () => {}, MF_setsublayer: () => {},
+      MF_leveldata: () => {}, MF_savelevel: () => {}, MF_savepath: () => {}, MF_massdir: () => {}, MF_sublayer: (layer,x,y) => R.tilemap.layers[Number(layer)||0]?.get_x(null,x,y) ?? 255, MF_setsublayer: (layer,x,y,value,dir) => R.tilemap.layers[Number(layer)||0]?.set(null,x,y,value,dir),
       MF_clearborders: () => {}, MF_limitsize: () => {}, MF_loadcolourselector: () => {}, MF_loadpackicon: () => {},
       MF_loop: () => {}, MF_unfinished: () => false, MF_hack_movecredit: () => {}, MF_hack_removecredit: () => {},
       MF_setart: () => {}, MF_setnamegiving: () => {}, MF_tutorialbackground: () => {},
@@ -375,20 +375,22 @@ end
     this.store.setFile('level', `Data/Worlds/${world}/${level}.ld`);
     this.store.setFile('world', `Data/Worlds/${world}/world_data.txt`);
     this.store.setFile('lang', 'Data/Languages/lang_en.txt');
-    localStorage.setItem('baba-wasm-current', JSON.stringify({world, level}));
+    try { localStorage.setItem('baba-wasm-current', JSON.stringify({world, level})); } catch (_) {}
     this.parentMapCache={};
     this.mapData=null;
     this.mapMode=false;
 
-    const factory = new wasmoon.LuaFactory('web/vendor/glue.wasm');
-    this.lua = await factory.createEngine({ enableProxy: true, injectObjects: false });
-    this.expose();
-    this.lua.global.set('__native_dofile', this.lua.global.get('dofile'));
-    this.lua.doStringSync('function dofile(path) return nil end');
-    await this.loadScripts();
+    if (!this.lua) {
+      const factory = new wasmoon.LuaFactory('web/vendor/glue.wasm');
+      this.lua = await factory.createEngine({ enableProxy: true, injectObjects: false });
+      this.expose();
+      this.lua.global.set('__native_dofile', this.lua.global.get('dofile'));
+      this.lua.doStringSync('function dofile(path) return nil end');
+      await this.loadScripts();
+      this.lua.doStringSync('function __safecall(name, ...) local f = _G[name]; if type(f) ~= \"function\" then return false, \"missing function \" .. tostring(name) end; return pcall(f, ...) end');
+      this.lua.doStringSync(this.luaBootstraps());
+    }
     this.setupObjects();
-    this.lua.doStringSync('function __safecall(name, ...) local f = _G[name]; if type(f) ~= \"function\" then return false, \"missing function \" .. tostring(name) end; return pcall(f, ...) end');
-    this.lua.doStringSync(this.luaBootstraps());
     const s=this.system;
     const args=[0,info.w,info.h,12,0,0,s.generaldata.fixed,s.generaldata2.fixed,s.generaldata3.fixed,s.generaldata4.fixed,s.generaldata5.fixed,s.spritedata.fixed,s.vardata.fixed,info.w*this.tile,info.h*this.tile];
     this.callLua('init',...args);
@@ -439,7 +441,7 @@ end
 
   readMapData() {
     const meta=this.levelMeta(this.world,this.level);
-    if (Number(meta.leveltype)!==1) return null;
+    if (Number(meta.leveltype)!==1 || (Number(meta.levels)||0)===0) return null;
     const data={nodes:[],paths:[],selector:[Number(meta.selectorX)||1,Number(meta.selectorY)||1]};
     const read=(sec,i,key)=>this.store.files[`Data/Worlds/${this.world}/${this.level}.ld`]?.[sec]?.[`${i}${key}`];
     const levels=Number(meta.levels)||0;
@@ -483,6 +485,17 @@ end
     return Number(this.store.saveData[this.world]?.[file] || 0);
   }
 
+  mapProgress(mapFile) {
+    const meta=this.store.files[`Data/Worlds/${this.world}/${mapFile}.ld`]?.general || {};
+    const required=Number(meta.unlockcount)||0;
+    if(!required) return false;
+    const levels=this.store.files[`Data/Worlds/${this.world}/${mapFile}.ld`]?.levels || {};
+    const total=Number(meta.levels)||0;
+    let cleared=0;
+    for(let i=0;i<total;i++) if(this.completion(levels[`${i}file`])>=3) cleared++;
+    return cleared>=required;
+  }
+
   refreshMapUnlocks() {
     const data=this.mapData;
     if(!data) return;
@@ -492,7 +505,7 @@ end
     while(changed) {
       changed=false;
       for(const n of data.nodes) {
-        if(this.completion(n.file)>=3) {
+        if(this.completion(n.file)>=3 || this.mapProgress(n.file)) {
           for(const next of data.edges.get(n.file)||[]) {
             if(!data.unlocked.has(next)) { data.unlocked.add(next); changed=true; }
           }
@@ -541,7 +554,7 @@ end
       const score=forward*10-sideways*4-Math.abs(dx)-Math.abs(dy);
       if(score>bestScore){best=n;bestScore=score}
     }
-    if(!linked.length) {
+    if(!best) {
       const candidates=data.nodes.filter(n=>data.unlocked.has(n.file)&&n!==cur);
       for(const n of candidates) {
         const dx=n.x-cur.x,dy=n.y-cur.y;
