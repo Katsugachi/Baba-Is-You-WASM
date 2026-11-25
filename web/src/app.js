@@ -356,6 +356,87 @@ function __import_level_changes()
     end
   end
 end
+
+__objectcache = {}
+local function __mirrorobjecttable(backing, limit)
+  local data = {}
+  local mirrored = {}
+  for i=0,limit do
+    data[i] = backing[i]
+  end
+  setmetatable(mirrored, {
+    __index = function(_, key)
+      return data[key]
+    end,
+    __newindex = function(_, key, value)
+      data[key] = value
+      backing[key] = value
+    end
+  })
+  return mirrored
+end
+
+local function __mirrorobject(backing)
+  local data = {}
+  local mirrored = {}
+  data.values = __mirrorobjecttable(backing.values, 80)
+  data.strings = __mirrorobjecttable(backing.strings, 80)
+  data.flags = __mirrorobjecttable(backing.flags, 80)
+  local scalarkeys = {"fixed","className","x","y","scaleX","scaleY","direction","layer","visible","sprite","root","dead","frame","active","system"}
+  for _,key in ipairs(scalarkeys) do
+    data[key] = backing[key]
+  end
+  setmetatable(mirrored, {
+    __index = function(_, key)
+      local value = data[key]
+      if (value ~= nil) then return value end
+      return backing[key]
+    end,
+    __newindex = function(_, key, value)
+      data[key] = value
+      if (type(value) ~= "table") and (key ~= "values") and (key ~= "strings") and (key ~= "flags") then
+        backing[key] = value
+      end
+    end
+  })
+  return mirrored
+end
+
+if (mmf ~= nil) and (type(mmf.newObject) == "function") then
+  local nativenewobject = mmf.newObject
+  mmf = {
+    newObject = function(fixed)
+      local cached = __objectcache[fixed]
+      if (cached ~= nil) then return cached end
+      local backing = nativenewobject(fixed)
+      if (backing == nil) then return nil end
+      local mirrored = __mirrorobject(backing)
+      __objectcache[fixed] = mirrored
+      return mirrored
+    end
+  }
+end
+
+if (type(clearunits) == "function") then
+  local nativeclearunits = clearunits
+  clearunits = function(...)
+    local preserved = {}
+    for fixed,unit in pairs(__objectcache) do
+      if unit.system then preserved[fixed] = unit end
+    end
+    local result = nativeclearunits(...)
+    __objectcache = preserved
+    return result
+  end
+end
+
+if (type(MF_remove) == "function") then
+  local nativemfremove = MF_remove
+  MF_remove = function(fixed)
+    __objectcache[fixed] = nil
+    return nativemfremove(fixed)
+  end
+end
 `;
   }
 
