@@ -225,7 +225,7 @@ class Runtime {
         for (const n of ['doupdate','smallclear','code','fallblock','doupdate','code','conversion','fallblock','doupdate','code','levelblock','block','dolevelconversions','doupdate','smallclear','code','findplayer','effectblock','diceblock','newundo']) call(n);
       },
       MF_win: () => R.queueEvent('win'),
-      MF_restart: immediate => R.queueEvent('restart'),
+      MF_restart: immediate => R.queueEvent(immediate ? 'restart_instant' : 'restart'),
       MF_end: () => R.queueEvent('win'), MF_end_single: () => R.queueEvent('win'), MF_done_single: () => R.queueEvent('win'),
       MF_allisdone: () => R.queueEvent('win'), MF_intro: () => {}, MF_levelconversion: () => {}, MF_credits: () => {},
       MF_animframe: (id, f) => { const o=R.obj(id); if(o)o.frame=f; },
@@ -746,7 +746,9 @@ end
   async handleEvents() {
     if (!this.events.length || this.transitioning) return;
     const ev = this.events.shift();
-    if (ev === 'restart') {
+    if (ev === 'restart_instant') {
+      await this.bootLevel(this.world,this.level);
+    } else if (ev === 'restart') {
       await this.visualTransition(()=>this.bootLevel(this.world,this.level));
     } else if (ev === 'win') {
       this.setStatus('level complete');
