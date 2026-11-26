@@ -830,9 +830,16 @@ end
   }
 
   imagePath(obj, dir, frame) {
-    const base = obj.root === false ? `${DATA_ROOT}Worlds/${this.world}/Sprites/` : `${DATA_ROOT}Sprites/`;
     const sprite = obj.className === 'edge' ? 'wall' : obj.sprite;
-    return encodeURI(`${base}${sprite}_${dir}_${frame}.png`);
+    const file=`${sprite}_${dir}_${frame}.png`;
+    let base = obj.root === false ? `${DATA_ROOT}Worlds/${this.world}/Sprites/` : `${DATA_ROOT}Sprites/`;
+    if(obj.root!==false) {
+      this.rootSpriteFiles=this.rootSpriteFiles||new Set(this.bundle.spriteFiles?.root||[]);
+      this.worldSpriteFiles=this.worldSpriteFiles||{};
+      const worldFiles=this.worldSpriteFiles[this.world]||(this.worldSpriteFiles[this.world]=new Set(this.bundle.spriteFiles?.[this.world]||[]));
+      if(!this.rootSpriteFiles.has(file)&&worldFiles.has(file)) base=`${DATA_ROOT}Worlds/${this.world}/Sprites/`;
+    }
+    return encodeURI(`${base}${file}`);
   }
   getImage(path) {
     let rec=this.images.get(path);
