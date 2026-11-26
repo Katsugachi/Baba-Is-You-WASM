@@ -104,6 +104,7 @@ class Runtime {
     this.started = false;
     this.tilemap = this.makeTilemap(35, 20);
     this.transitioning = false;
+    this.titleVisible = true;
   }
 
   log(...a) { console.log('[baba]', ...a); }
@@ -697,7 +698,7 @@ end
   }
 
   input(name) {
-    if (!this.started || this.transitioning || this.events.length) return;
+    if (this.titleVisible || !this.started || this.transitioning || this.events.length) return;
     if (this.music && this.music.paused) this.music.play().catch(() => {});
     if (this.mapMode) {
       if (name === 'idle') this.enterMapCursor();
@@ -799,6 +800,7 @@ end
       ctx.globalAlpha=1;
     }
     this.renderControlSpecials(ctx);
+    this.renderTitle(ctx);
     if(this.mapMode&&this.mapData) {
       const data=this.mapData;
       ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='bold 8px monospace';
@@ -817,6 +819,24 @@ end
         ctx.fillStyle=done?'#5a4b00':unlocked?'#201000':'#666';
         ctx.fillText(String(n.number),cx,cy+1);
       }
+    }
+  }
+
+  renderTitle(ctx) {
+    if(!this.titleVisible) return;
+    ctx.fillStyle='#000';
+    ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
+    const title=this.getImage('web/assets/title.png');
+    if(title) {
+      const scale=Math.min(1,(this.canvas.width-48)/title.width);
+      const w=title.width*scale,h=title.height*scale;
+      ctx.drawImage(title,(this.canvas.width-w)/2,24,w,h);
+    }
+    const press=this.getImage('web/assets/press_any_key.png');
+    if(press && Math.floor(this.tick/30)%2===0) {
+      const scale=Math.min(1,this.canvas.width/press.width*.42);
+      const w=press.width*scale,h=press.height*scale;
+      ctx.drawImage(press,(this.canvas.width-w)/2,this.canvas.height-h-32,w,h);
     }
   }
 
@@ -934,6 +954,7 @@ async function main() {
     const keymap={ArrowRight:'right',ArrowUp:'up',ArrowLeft:'left',ArrowDown:'down',z:'undo',Z:'undo',r:'restart_instant',R:'restart_instant',' ':'idle',Enter:'idle'};
     window.addEventListener('keydown',e=>{
       const k=keymap[e.key];
+      if(rt.titleVisible){e.preventDefault();rt.titleVisible=false;rt.canvas.focus();return}
       if(k){e.preventDefault();rt.keysDown.add(k);rt.input(k)}
     });
     window.addEventListener('keyup',e=>{const k=keymap[e.key];if(k)rt.keysDown.delete(k)});
