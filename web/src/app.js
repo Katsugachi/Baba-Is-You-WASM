@@ -302,6 +302,76 @@ class Runtime {
     console.error('[lua]', where, e);
     if (this.errorCount < 8) this.setStatus(`Lua error in ${where}: ${e?.message || e}`);
   }
+  transitionBlobs() {
+    const sw=this.canvas.width*0.5,sh=this.canvas.height*0.5;
+    const blobs=[];
+    const add=(count,mult,steps,big,startIndex)=>{
+      const increment=360/count;
+      for(let n=0;n<count;n++) {
+        const i=n+startIndex;
+        const x=sw+Math.cos((increment*Math.PI/180)*i)*sw*mult;
+        const y=sh-Math.sin((increment*Math.PI/180)*i)*sh*mult;
+        const dist=Math.sqrt((y-sh)**2+(x-sw)**2);
+        const spd=dist/steps*5+(big?0:(Math.random()*16-9));
+        const dir=-Math.atan2(sh-y,sw-x);
+        blobs.push({x,y,vx:Math.cos(dir)*spd*(big?1.01:1),vy:-Math.sin(dir)*spd,big});
+      }
+    };
+    add(36,1.5,50,false,0);
+    add(12,1.8,72,true,1);
+    for(const [lx,ly] of [[-1,-1],[1,-1],[1,1],[-1,1]]) {
+      const x=sw+lx*sw*1.8,y=sh+ly*sh*1.8;
+      const dist=Math.sqrt((y-sh)**2+(x-sw)**2),spd=dist/72*5;
+      const dir=-Math.atan2(sh-y,sw-x);
+      blobs.push({x,y,vx:Math.cos(dir)*spd*1.01,vy:-Math.sin(dir)*spd,big:true});
+    }
+    return blobs;
+  }
+
+  transitionImage() {
+    const path='web/assets/transition_blob.png';
+    if(this.transitionMask) return this.transitionMask;
+    const img=this.getImage(path);
+    if(!img) return null;
+    const c=document.createElement('canvas');
+    c.width=img.width;c.height=img.height;
+    const cx=c.getContext('2d');
+    cx.drawImage(img,0,0);
+    cx.globalCompositeOperation='source-in';
+    cx.fillStyle='#000';cx.fillRect(0,0,c.width,c.height);
+    this.transitionMask=c;
+    return c;
+  }
+
+  renderTransition(ctx) {
+    if(!this.transition) return;
+    const img=this.transitionImage();
+    if(!img) return;
+    const elapsed=(performance.now()-this.transition.start)/1000;
+    for(const b of this.transition.blobs) {
+      const x=b.x+b.vx*elapsed*12;
+      const y=b.y+b.vy*elapsed*12;
+      const size=44*(b.big?1.15:1);
+      ctx.drawImage(img,x-size/2,y-size/2,size,size);
+    }
+  }
+
+  async visualTransition(action) {
+    if(this.transition) return;
+    this.transitioning=true;
+    const close=this.transitionBlobs();
+    this.transition={blobs:close,start:performance.now()};
+    await new Promise(r=>setTimeout(r,900));
+    await action();
+    this.transitioning=true;
+    const elapsed=0.9;
+    const open=close.map(b=>({x:b.x+b.vx*elapsed*12,y:b.y+b.vy*elapsed*12,vx:-b.vx,vy:-b.vy,big:b.big}));
+    this.transition={blobs:open,start:performance.now()};
+    await new Promise(r=>setTimeout(r,900));
+    this.transition=null;
+    this.transitioning=false;
+  }
+
   queueEvent(name) {
     if (!this.events.includes(name)) this.events.push(name);
   }
@@ -677,7 +747,7 @@ end
     if (!this.events.length || this.transitioning) return;
     const ev = this.events.shift();
     if (ev === 'restart') {
-      await this.bootLevel(this.world,this.level);
+      await this.visualTransition(()=>this.bootLevel(this.world,this.level));
     } else if (ev === 'win') {
       this.setStatus('level complete');
       this.store.store('save',this.world,this.level,'3');
@@ -694,7 +764,8 @@ end
           if (this.bundle.levels[this.world]?.[n] && Number(this.levelMeta(this.world,n).leveltype)!==1) next=n;
         }
       }
-      setTimeout(() => { if (next) this.bootLevel(this.world,next).catch(e=>this.reportLuaError(e,'transition')); else this.setStatus('level complete'); }, 700);
+      const target=next;
+      await this.visualTransition(async()=>{ if(target) await this.bootLevel(this.world,target); else this.setStatus('level complete'); });
     }
   }
 
@@ -820,6 +891,7 @@ end
         ctx.fillText(String(n.number),cx,cy+1);
       }
     }
+    this.renderTransition(ctx);
     this.renderTitle(ctx);
   }
 
