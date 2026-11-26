@@ -1180,20 +1180,25 @@ end
   async loadPalette(name='default.png',root=true,world=this.world) {
     const path=(root?DATA_ROOT+'Palettes/':`${DATA_ROOT}Worlds/${world}/Palettes/`)+name;
     this.paletteCache=this.paletteCache||new Map();
+    const previousPath=this.palettePath;
     if(this.paletteCache.has(path)) {
       this.palette=this.paletteCache.get(path);
-      this.paletteReady=true;
-      return;
+    } else {
+      const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=encodeURI(path)});
+      const c=document.createElement('canvas');c.width=img.width;c.height=img.height;
+      const x=c.getContext('2d');x.drawImage(img,0,0);
+      const d=x.getImageData(0,0,img.width,img.height).data;
+      const palette=new Uint8Array(img.width*img.height*3);
+      for(let i=0,j=0;i<d.length;i+=4,j+=3){palette[j]=d[i];palette[j+1]=d[i+1];palette[j+2]=d[i+2]}
+      this.palette=palette;
+      this.paletteCache.set(path,palette);
     }
-    const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=encodeURI(path)});
-    const c=document.createElement('canvas');c.width=img.width;c.height=img.height;
-    const x=c.getContext('2d');x.drawImage(img,0,0);
-    const d=x.getImageData(0,0,img.width,img.height).data;
-    const palette=new Uint8Array(img.width*img.height*3);
-    for(let i=0,j=0;i<d.length;i+=4,j+=3){palette[j]=d[i];palette[j+1]=d[i+1];palette[j+2]=d[i+2]}
-    this.palette=palette;
-    this.paletteCache.set(path,palette);
-    this.tinted.clear();
+    this.palettePath=path;
+    if(previousPath!==path) {
+      this.tinted.clear();
+      this.specialCache?.clear();
+      this.mapCursorCache?.clear();
+    }
     this.paletteReady=true;
   }
 
