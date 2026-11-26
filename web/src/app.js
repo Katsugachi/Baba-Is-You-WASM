@@ -983,9 +983,11 @@ end
     if(this.particleType!=='world') return;
     const img=this.getImage('web/assets/big_flower.png');
     if(!img) return;
-    const spots=[[.08,.22,7.2,0],[.32,.12,6.4,1],[.58,.18,7.8,0],[.84,.16,6.8,1],[.18,.58,7.4,1],[.52,.55,6.7,0],[.82,.58,7.5,1]];
-    for(const [fx,fy,sizeTiles,dark] of spots) {
-      const col=this.paletteColor(4,dark?0:1);
+    let seed=0;for(const ch of String(this.level)) seed=(seed*31+ch.charCodeAt(0))>>>0;
+    const rnd=()=>((seed=(seed*1664525+1013904223)>>>0)/4294967296);
+    const spots=[];for(let i=0;i<40;i++) spots.push([rnd(),rnd(),.2+rnd()*4]);
+    for(const [fx,fy,scale] of spots) {
+      const col=this.paletteColor(4,0);
       const key=`world-flower:${col.join(',')}`;
       this.specialCache=this.specialCache||new Map();
       let sprite=this.specialCache.get(key);
@@ -1002,7 +1004,7 @@ end
         } catch(_) {}
         this.specialCache.set(key,sprite);
       }
-      const size=this.tile*sizeTiles;
+      const size=this.tile*scale;
       const cx=this.xoffset+this.width*this.tile*fx,cy=this.yoffset+this.height*this.tile*fy;
       ctx.globalAlpha=.72;
       ctx.drawImage(sprite,Math.round(cx-size/2),Math.round(cy-size*.53),size,size*img.height/img.width);
@@ -1025,10 +1027,12 @@ end
     for(const sp of this.specials||[]) {
       const parts=sp.data.split(',');
       if(parts[0]!=='flower') continue;
-      const img=this.getImage('web/assets/big_flower.png');
+      const variant=Math.max(1,Number(parts[3])||1);
+      const frame=((Math.floor(this.tick/12)+variant)%3)+1;
+      const img=this.getImage(`web/assets/flower_small_${frame}.png`);
       if(!img) continue;
       const col=this.paletteColor(Number(parts[1])||0,Number(parts[2])||3);
-      const key=`special-flower:${col.join(',')}`;
+      const key=`special-flower:${frame}:${col.join(',')}`;
       this.specialCache=this.specialCache||new Map();
       let sprite=this.specialCache.get(key);
       if(!sprite) {
@@ -1049,8 +1053,8 @@ end
         this.specialCache.set(key,sprite);
       }
       const cx=this.xoffset+(sp.x+.5)*this.tile,cy=this.yoffset+(sp.y+.5)*this.tile;
-      const size=this.tile*2.2;
-      ctx.drawImage(sprite,Math.round(cx-size/2),Math.round(cy-size*0.53),size,size*img.height/img.width);
+      const size=this.tile;
+      ctx.drawImage(sprite,Math.round(cx-size/2),Math.round(cy-size/2),size,size);
     }
   }
 
