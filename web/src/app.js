@@ -945,7 +945,7 @@ end
       for(const n of data.nodes) {
         const unlocked=data.unlocked?.has(n.file),done=this.completion(n.file)>=3;
         const cx=this.xoffset+(n.x+.5)*this.tile,cy=this.yoffset+(n.y+.5)*this.tile;
-        if(n.state===0) continue;
+        if(n.state===0 && !unlocked) continue;
         const nc=this.paletteColor(...(done?n.clearcolour:n.colour));
         const size=this.tile*.76;
         ctx.fillStyle=`rgb(${nc[0]|0},${nc[1]|0},${nc[2]|0})`;
