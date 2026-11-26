@@ -95,6 +95,10 @@ class Runtime {
     this.level = '0level';
     this.width = 35; this.height = 20;
     this.tile = 24;
+    this.screenW = 854;
+    this.screenH = 480;
+    this.xoffset = 0;
+    this.yoffset = 0;
     this.tick = 0;
     this.events = [];
     this.classSprites = {};
@@ -198,7 +202,7 @@ class Runtime {
       MF_create: cls => R.makeObject(cls).fixed,
       MF_emptycreate: (cls, x, y) => {
         const o = R.makeObject(cls); o.values[3] = x || 0; o.values[4] = y || 0;
-        o.x=(o.values[3]+0.5)*R.tile; o.y=(o.values[4]+0.5)*R.tile; o.positioned=true;
+        o.x=R.xoffset+(o.values[3]+0.5)*R.tile; o.y=R.yoffset+(o.values[4]+0.5)*R.tile; o.positioned=true;
         return o.fixed;
       },
       MF_specialcreate: cls => { const o = R.makeObject(cls); o.pixel = true; return o.fixed; },
@@ -524,8 +528,10 @@ end
     if (!info) throw new Error('missing level ' + world + '/' + level);
     this.width = info.w; this.height = info.h;
     this.tilemap = this.makeTilemap(info.w, info.h);
-    this.canvas.width = info.w * this.tile;
-    this.canvas.height = info.h * this.tile;
+    this.canvas.width = this.screenW;
+    this.canvas.height = this.screenH;
+    this.xoffset = Math.max(0,(this.screenW-info.w*this.tile)/2);
+    this.yoffset = Math.max(0,(this.screenH-info.h*this.tile)/2);
     this.resizeCanvas();
     this.store.setFile('level', `Data/Worlds/${world}/${level}.ld`);
     this.store.setFile('world', `Data/Worlds/${world}/world_data.txt`);
@@ -548,7 +554,7 @@ end
     }
     this.setupObjects();
     const s=this.system;
-    const args=[0,info.w,info.h,12,0,0,s.generaldata.fixed,s.generaldata2.fixed,s.generaldata3.fixed,s.generaldata4.fixed,s.generaldata5.fixed,s.spritedata.fixed,s.vardata.fixed,info.w*this.tile,info.h*this.tile];
+    const args=[0,info.w,info.h,12,this.xoffset,this.yoffset,s.generaldata.fixed,s.generaldata2.fixed,s.generaldata3.fixed,s.generaldata4.fixed,s.generaldata5.fixed,s.spritedata.fixed,s.vardata.fixed,this.screenW,this.screenH];
     this.callLua('init',...args);
     this.callLua('setupmenu',s.editor.fixed,s.editor2.fixed,s.editor3.fixed,s.editor4.fixed,s.editor_selector.fixed,s.editor_placer.fixed,true);
     this.callLua('__import_level_changes');
@@ -571,7 +577,7 @@ end
     for (const p of placements) {
       const o=this.makeObject(p.cls);
       o.values[0]=1; o.values[3]=p.x; o.values[4]=p.y; o.values[5]=p.d; o.values[20]=-1;
-      o.x=(p.x+0.5)*this.tile; o.y=(p.y+0.5)*this.tile; o.positioned=true;
+      o.x=this.xoffset+(p.x+0.5)*this.tile; o.y=this.yoffset+(p.y+0.5)*this.tile; o.positioned=true;
       o.direction = p.d * 8;
       this.callLua('addunit',o.fixed,false,true);
     }
@@ -802,7 +808,8 @@ end
 
   imagePath(obj, dir, frame) {
     const base = obj.root === false ? `${DATA_ROOT}Worlds/${this.world}/Sprites/` : `${DATA_ROOT}Sprites/`;
-    return encodeURI(`${base}${obj.sprite}_${dir}_${frame}.png`);
+    const sprite = obj.className === 'edge' ? 'wall' : obj.sprite;
+    return encodeURI(`${base}${sprite}_${dir}_${frame}.png`);
   }
   getImage(path) {
     let rec=this.images.get(path);
@@ -857,21 +864,24 @@ end
 
   render() {
     const ctx=this.ctx;
+    const edgebg=this.paletteColor(1,0);
+    ctx.fillStyle=`rgb(${edgebg[0]|0},${edgebg[1]|0},${edgebg[2]|0})`;
+    ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
     const bg=this.paletteColor(this.backcolour[0],this.backcolour[1]);
     ctx.fillStyle=`rgb(${bg[0]|0},${bg[1]|0},${bg[2]|0})`;
-    ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
+    ctx.fillRect(this.xoffset+this.tile,this.yoffset+this.tile,(this.width-2)*this.tile,(this.height-2)*this.tile);
     if (!this.started) return;
     const objs=[...this.objects.values()].filter(o=>!o.system&&!o.dead&&o.visible!==false&&o.className!=='edge');
     objs.sort((a,b)=>(a.values[14]-b.values[14])||(a.fixed-b.fixed));
     ctx.imageSmoothingEnabled=false;
     for (const o of objs) {
       if(!o.pixel&&o.positioned&&o.values[21]===0) {
-        const tx=(o.values[3]+0.5)*this.tile,ty=(o.values[4]+0.5)*this.tile;
+        const tx=this.xoffset+(o.values[3]+0.5)*this.tile,ty=this.yoffset+(o.values[4]+0.5)*this.tile;
         if(Math.abs(tx-o.x)+Math.abs(ty-o.y)<0.4) { o.x=tx;o.y=ty; }
         else { o.x+=(tx-o.x)*0.35;o.y+=(ty-o.y)*0.35; }
       }
-      const x=o.pixel||o.positioned ? o.x : (o.values[3]+0.5)*this.tile;
-      const y=o.pixel||o.positioned ? o.y : (o.values[4]+0.5)*this.tile;
+      const x=o.pixel||o.positioned ? o.x : this.xoffset+(o.values[3]+0.5)*this.tile;
+      const y=o.pixel||o.positioned ? o.y : this.yoffset+(o.values[4]+0.5)*this.tile;
       const frame=((Math.floor(this.tick/12)+(o.frame||0))%3)+1;
       let img=this.tintedImage(o,this.spriteDir(o),frame);
       if (!img) img=this.tintedImage(o,0,frame) || this.tintedImage(o,this.spriteDir(o),1) || this.tintedImage(o,0,1);
@@ -963,7 +973,7 @@ end
       for(const item of group.items) { minx=Math.min(minx,item.x);maxx=Math.max(maxx,item.x);maxy=Math.max(maxy,item.y); }
       for(const s of group.items) {
         const base=s.control.replace(/2$/,'');
-        const cx=(s.x+0.5)*this.tile,cy=(s.y+0.5)*this.tile;
+        const cx=this.xoffset+(s.x+0.5)*this.tile,cy=this.yoffset+(s.y+0.5)*this.tile;
         const wide=base==='idle'||base==='wait';
         const rw=this.tile*(wide?0.82:0.42),rh=this.tile*0.42;
         ctx.fillStyle='rgba(0,0,0,.45)';
@@ -977,7 +987,7 @@ end
           const img=this.tintedImage(arrow,dirs[base],1);
           if(img) ctx.drawImage(img,cx-rh*.62,cy-rh*.62,rh*1.24,rh*1.24);
         } else {
-          const keytext={undo:'Z',pause:'ESC',restart:'R',confirm:'ENTER'}[base]||'';
+          const keytext={undo:'Z',pause:'P',restart:'R',confirm:'ENTER'}[base]||'';
           if(keytext) {
             ctx.fillStyle='rgba(255,255,255,.92)';
             ctx.font=`bold ${Math.max(7,this.tile*(keytext.length>1?0.24:0.42))}px monospace`;
@@ -996,8 +1006,8 @@ end
       const label={sprite:'button_'+group.family,root:false,colour:[0,3],values:{2:0,5:0,9:0},direction:0,frame:0,className:'button'};
       const img=this.tintedImage(label,0,((Math.floor(this.tick/12))%3)+1);
       if(img) {
-        const cx=(minx+maxx+1)/2*this.tile;
-        const y=(maxy+1)*this.tile+this.tile*.25;
+        const cx=this.xoffset+(minx+maxx+1)/2*this.tile;
+        const y=this.yoffset+(maxy+1)*this.tile+this.tile*.25;
         ctx.drawImage(img,cx-this.tile,y,this.tile*2,this.tile);
       }
     }
