@@ -861,27 +861,62 @@ end
     const specials=this.controlSpecials();
     if(!specials.length) return;
     const dirs={right:0,up:8,left:16,down:24};
-    let minx=Infinity,maxx=-Infinity,miny=Infinity,maxy=-Infinity;
-    for(const s of specials) { minx=Math.min(minx,s.x);maxx=Math.max(maxx,s.x);miny=Math.min(miny,s.y);maxy=Math.max(maxy,s.y); }
-    for(const s of specials) {
-      const cx=(s.x+0.5)*this.tile,cy=(s.y+0.5)*this.tile,r=this.tile*0.42;
-      ctx.fillStyle='rgba(0,0,0,.45)';
-      ctx.strokeStyle='rgba(255,255,255,.92)';
-      ctx.lineWidth=Math.max(1.5,this.tile/12);
-      ctx.beginPath();
-      ctx.roundRect(cx-r,cy-r,r*2,r*2,this.tile/6);
-      ctx.fill();ctx.stroke();
-      const arrow={sprite:'arrow',root:true,colour:[0,3],values:{2:1,5:dirs[s.control]??0,9:0},direction:(dirs[s.control]??0)*8,frame:0,className:'arrow'};
-      const img=this.tintedImage(arrow,dirs[s.control]??0,1);
-      if(img) ctx.drawImage(img,cx-r*.62,cy-r*.62,r*1.24,r*1.24);
+    const familyOf=control=>{
+      const base=control.replace(/2$/,'');
+      if(dirs[base]!==undefined) return 'move';
+      if(base==='idle'||base==='wait') return 'wait';
+      if(base==='pause') return 'menu';
+      return base;
+    };
+    const groups=[];
+    for(const special of specials) {
+      const family=familyOf(special.control);
+      let group=groups.find(g=>g.family===family&&g.items.some(o=>Math.abs(o.x-special.x)<=1&&Math.abs(o.y-special.y)<=1));
+      if(!group) { group={family,items:[]}; groups.push(group); }
+      group.items.push(special);
     }
-    const control=specials[0].control;
-    const label={sprite:'button_'+({up:'move',down:'move',left:'move',right:'move',undo:'undo',restart:'restart',idle:'wait',wait:'wait',menu:'menu'}[control]||control),root:false,colour:[0,3],values:{2:0,5:0,9:0},direction:0,frame:0,className:'button'};
-    const img=this.tintedImage(label,0,((Math.floor(this.tick/12))%3)+1);
-    if(img) {
-      const cx=(minx+maxx+1)/2*this.tile;
-      const y=(maxy+1)*this.tile+this.tile*.25;
-      ctx.drawImage(img,cx-this.tile,y,this.tile*2,this.tile);
+    for(const group of groups) {
+      let minx=Infinity,maxx=-Infinity,maxy=-Infinity;
+      for(const item of group.items) { minx=Math.min(minx,item.x);maxx=Math.max(maxx,item.x);maxy=Math.max(maxy,item.y); }
+      for(const s of group.items) {
+        const base=s.control.replace(/2$/,'');
+        const cx=(s.x+0.5)*this.tile,cy=(s.y+0.5)*this.tile;
+        const wide=base==='idle'||base==='wait';
+        const rw=this.tile*(wide?0.82:0.42),rh=this.tile*0.42;
+        ctx.fillStyle='rgba(0,0,0,.45)';
+        ctx.strokeStyle='rgba(255,255,255,.92)';
+        ctx.lineWidth=Math.max(1.5,this.tile/12);
+        ctx.beginPath();
+        ctx.roundRect(cx-rw,cy-rh,rw*2,rh*2,this.tile/6);
+        ctx.fill();ctx.stroke();
+        if(dirs[base]!==undefined) {
+          const arrow={sprite:'arrow',root:true,colour:[0,3],values:{2:1,5:dirs[base],9:0},direction:dirs[base]*8,frame:0,className:'arrow'};
+          const img=this.tintedImage(arrow,dirs[base],1);
+          if(img) ctx.drawImage(img,cx-rh*.62,cy-rh*.62,rh*1.24,rh*1.24);
+        } else {
+          const keytext={undo:'Z',pause:'ESC',restart:'R',confirm:'ENTER'}[base]||'';
+          if(keytext) {
+            ctx.fillStyle='rgba(255,255,255,.92)';
+            ctx.font=`bold ${Math.max(7,this.tile*(keytext.length>1?0.24:0.42))}px monospace`;
+            ctx.textAlign='center';ctx.textBaseline='middle';
+            ctx.fillText(keytext,cx,cy+1);
+          } else if(wide) {
+            ctx.strokeStyle='rgba(255,255,255,.92)';
+            ctx.lineWidth=Math.max(1,this.tile/18);
+            ctx.beginPath();
+            ctx.moveTo(cx-rw*.62,cy+rh*.25);
+            ctx.lineTo(cx+rw*.62,cy+rh*.25);
+            ctx.stroke();
+          }
+        }
+      }
+      const label={sprite:'button_'+group.family,root:false,colour:[0,3],values:{2:0,5:0,9:0},direction:0,frame:0,className:'button'};
+      const img=this.tintedImage(label,0,((Math.floor(this.tick/12))%3)+1);
+      if(img) {
+        const cx=(minx+maxx+1)/2*this.tile;
+        const y=(maxy+1)*this.tile+this.tile*.25;
+        ctx.drawImage(img,cx-this.tile,y,this.tile*2,this.tile);
+      }
     }
   }
 
