@@ -530,8 +530,10 @@ end
     this.tilemap = this.makeTilemap(info.w, info.h);
     this.canvas.width = this.screenW;
     this.canvas.height = this.screenH;
-    this.xoffset = Math.max(0,(this.screenW-info.w*this.tile)/2);
-    this.yoffset = Math.max(0,(this.screenH-info.h*this.tile)/2);
+    const zoom=Math.max(1,Math.floor(Math.min(this.screenW/(info.w*24),this.screenH/(info.h*24))));
+    this.tile=24*zoom;
+    this.xoffset=Math.max(0,(this.screenW-info.w*this.tile)/2);
+    this.yoffset=Math.max(0,(this.screenH-info.h*this.tile)/2);
     this.resizeCanvas();
     this.store.setFile('level', `Data/Worlds/${world}/${level}.ld`);
     this.store.setFile('world', `Data/Worlds/${world}/world_data.txt`);
@@ -557,6 +559,7 @@ end
     }
     this.setupObjects();
     const s=this.system;
+    s.generaldata2.values[12]=zoom;
     const args=[0,info.w,info.h,12,this.xoffset,this.yoffset,s.generaldata.fixed,s.generaldata2.fixed,s.generaldata3.fixed,s.generaldata4.fixed,s.generaldata5.fixed,s.spritedata.fixed,s.vardata.fixed,this.screenW,this.screenH];
     this.callLua('init',...args);
     this.callLua('setupmenu',s.editor.fixed,s.editor2.fixed,s.editor3.fixed,s.editor4.fixed,s.editor_selector.fixed,s.editor_placer.fixed,true);
@@ -902,7 +905,7 @@ end
       const pathcol=this.paletteColor(0,3);
       ctx.fillStyle=`rgba(${pathcol[0]|0},${pathcol[1]|0},${pathcol[2]|0},.92)`;
       for(const p of data.paths) {
-        if(p.style===0 && !data.unlocked?.size) continue;
+        if(p.style===0) continue;
         const cx=this.xoffset+(p.x+.5)*this.tile,cy=this.yoffset+(p.y+.5)*this.tile;
         const vertical=data.pathSet.has(p.x+','+(p.y-1))||data.pathSet.has(p.x+','+(p.y+1));
         const horizontal=data.pathSet.has((p.x-1)+','+p.y)||data.pathSet.has((p.x+1)+','+p.y);
@@ -910,6 +913,11 @@ end
           if(vertical||!horizontal) ctx.fillRect(Math.round(cx-1.5),Math.round(cy+o-1.5),3,3);
           if(horizontal) ctx.fillRect(Math.round(cx+o-1.5),Math.round(cy-1.5),3,3);
         }
+      }
+      const curNode=data.nodes.find(n=>n.file===this.mapCursor);
+      if(curNode) {
+        const cx=this.xoffset+(curNode.x+.5)*this.tile,cy=this.yoffset+(curNode.y+.5)*this.tile;
+        this.drawMapCursor(ctx,cx,cy);
       }
       for(const n of data.nodes) {
         const unlocked=data.unlocked?.has(n.file),done=this.completion(n.file)>=3;
@@ -938,6 +946,26 @@ end
     }
     this.renderTransition(ctx);
     this.renderTitle(ctx);
+  }
+
+  drawMapCursor(ctx,cx,cy) {
+    const img=this.getImage('web/assets/map_cursor.png');
+    if(!img) return;
+    const col=this.paletteColor(4,1);
+    const key=`cursor:${col.join(',')}`;
+    this.mapCursorCache=this.mapCursorCache||new Map();
+    let sprite=this.mapCursorCache.get(key);
+    if(!sprite) {
+      sprite=document.createElement('canvas');
+      sprite.width=img.width;sprite.height=img.height;
+      const c=sprite.getContext('2d');
+      c.drawImage(img,0,0);
+      c.globalCompositeOperation='source-in';
+      c.fillStyle=`rgb(${col[0]|0},${col[1]|0},${col[2]|0})`;
+      c.fillRect(0,0,sprite.width,sprite.height);
+      this.mapCursorCache.set(key,sprite);
+    }
+    ctx.drawImage(sprite,Math.round(cx-11),Math.round(cy-11),22,22);
   }
 
   renderTitle(ctx) {
