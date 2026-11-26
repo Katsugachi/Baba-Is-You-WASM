@@ -634,7 +634,7 @@ end
       const file=read('levels',i,'file');
       if (!file) continue;
       data.nodes.push({
-        file,x:Number(read('levels',i,'X'))||0,y:Number(read('levels',i,'Y'))||0,
+        file,name:String(read('levels',i,'name')||''),x:Number(read('levels',i,'X'))||0,y:Number(read('levels',i,'Y'))||0,
         state:Number(read('levels',i,'state'))||0,number:Number(read('levels',i,'number'))||0,
         style:Number(read('levels',i,'style'))||0,
         colour:String(read('levels',i,'colour')||'0,3').split(',').map(Number),
@@ -947,14 +947,14 @@ end
         const cx=this.xoffset+(n.x+.5)*this.tile,cy=this.yoffset+(n.y+.5)*this.tile;
         if(n.state===0 && !unlocked) continue;
         const nc=this.paletteColor(...(done?n.clearcolour:n.colour));
-        const size=this.tile*.76;
+        const size=this.tile*.48;
         ctx.fillStyle=`rgb(${nc[0]|0},${nc[1]|0},${nc[2]|0})`;
         ctx.beginPath();
         ctx.roundRect(cx-size/2,cy-size/2,size,size,Math.max(2,this.tile/8));
         ctx.fill();
         if(unlocked && n.number>0) {
           ctx.fillStyle='rgba(255,255,255,.95)';
-          ctx.font=`${Math.max(10,this.tile*.54)}px BabaFont,monospace`;
+          ctx.font=`${Math.max(7,this.tile*.32)}px BabaFont,monospace`;
           ctx.textAlign='center';ctx.textBaseline='middle';
           const label=n.number<10?String(n.number).padStart(2,'0'):n.number.toString(16).toUpperCase();
           ctx.fillText(label,cx,cy+1);
@@ -968,7 +968,8 @@ end
       ctx.fillStyle='rgba(255,255,255,.95)';
       ctx.font='14px BabaFont,monospace';
       ctx.textAlign='left';ctx.textBaseline='top';
-      ctx.fillText('MAP',13,10);
+      const titleNode=data.nodes.find(n=>n.file===this.mapCursor)||data.nodes.find(n=>n.x===data.selector[0]&&n.y===data.selector[1]);
+      ctx.fillText((titleNode?.name||'map').toUpperCase(),13,10);
       const required=Number(this.levelMeta(this.world,this.level).unlockcount)||0;
       if(required) {
         ctx.textAlign='right';
