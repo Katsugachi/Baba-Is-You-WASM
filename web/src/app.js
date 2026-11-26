@@ -198,8 +198,8 @@ class Runtime {
       MF_emptycreate: (cls, x, y) => {
         const o = R.makeObject(cls); o.values[3] = x || 0; o.values[4] = y || 0; return o.fixed;
       },
-      MF_specialcreate: cls => { const o = R.makeObject('special_' + cls); o.visible = false; return o.fixed; },
-      MF_effectcreate: cls => { const o = R.makeObject('effect_' + cls); o.visible = false; return o.fixed; },
+      MF_specialcreate: cls => { const o = R.makeObject(cls); o.pixel = true; return o.fixed; },
+      MF_effectcreate: cls => { const o = R.makeObject(cls); o.pixel = true; return o.fixed; },
       MF_remove: id => R.removeObject(id),
       MF_cleanremove: id => { const o=R.obj(id); const n=o?.strings?.[0]||''; R.removeObject(id); return n; },
       MF_cleanspecialremove: id => { R.removeObject(id); return ''; },
@@ -327,7 +327,7 @@ class Runtime {
     gd3.values[4]=50; gd3.values[5]=50; gd3.values[6]=150;
     gd4.values[22]=0;
     gd5.values[15]=0; gd5.values[16]=0; gd5.values[17]=0;
-    sd.values[0]=24; sd.values[1]=1; sd.values[2]=1; sd.values[8]=24; sd.values[16]=0; sd.values[20]=1;
+    sd.values[0]=24; sd.values[1]=1; sd.values[2]=2; sd.values[8]=24; sd.values[16]=0; sd.values[20]=1;
   }
 
   luaBootstraps() {
@@ -787,16 +787,18 @@ end
     objs.sort((a,b)=>(a.values[14]-b.values[14])||(a.fixed-b.fixed));
     ctx.imageSmoothingEnabled=false;
     for (const o of objs) {
-      const x=(o.values[3]+0.5)*this.tile, y=(o.values[4]+0.5)*this.tile;
+      const x=o.pixel ? o.x : (o.values[3]+0.5)*this.tile;
+      const y=o.pixel ? o.y : (o.values[4]+0.5)*this.tile;
       const frame=((Math.floor(this.tick/12)+(o.frame||0))%3)+1;
       let img=this.tintedImage(o,this.spriteDir(o),frame);
       if (!img) img=this.tintedImage(o,0,frame) || this.tintedImage(o,this.spriteDir(o),1) || this.tintedImage(o,0,1);
       if (!img) continue;
-      const w=this.tile,h=this.tile;
+      const w=this.tile*(o.scaleX||1),h=this.tile*(o.scaleY||1);
       if (o.values[17]===true || o.flags?.[17]===true) ctx.globalAlpha=.35;
       ctx.drawImage(img,Math.round(x-w/2),Math.round(y-h/2),w,h);
       ctx.globalAlpha=1;
     }
+    this.renderControlSpecials(ctx);
     if(this.mapMode&&this.mapData) {
       const data=this.mapData;
       ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='bold 8px monospace';
@@ -815,6 +817,51 @@ end
         ctx.fillStyle=done?'#5a4b00':unlocked?'#201000':'#666';
         ctx.fillText(String(n.number),cx,cy+1);
       }
+    }
+  }
+
+  controlSpecials() {
+    const meta=this.store.files[`Data/Worlds/${this.world}/${this.level}.ld`] || {};
+    const count=Math.min(Number(meta.general?.specials)||0,100);
+    const result=[];
+    for(let i=0;i<count;i++) {
+      const data=meta.specials?.[`${i}data`] || '';
+      const parts=data.split(',');
+      if(parts[0]!=='controls') continue;
+      result.push({
+        x:Number(meta.specials?.[`${i}X`])||0,
+        y:Number(meta.specials?.[`${i}Y`])||0,
+        control:parts[1]||'right'
+      });
+    }
+    return result;
+  }
+
+  renderControlSpecials(ctx) {
+    const specials=this.controlSpecials();
+    if(!specials.length) return;
+    const dirs={right:0,up:8,left:16,down:24};
+    let minx=Infinity,maxx=-Infinity,miny=Infinity,maxy=-Infinity;
+    for(const s of specials) { minx=Math.min(minx,s.x);maxx=Math.max(maxx,s.x);miny=Math.min(miny,s.y);maxy=Math.max(maxy,s.y); }
+    for(const s of specials) {
+      const cx=(s.x+0.5)*this.tile,cy=(s.y+0.5)*this.tile,r=this.tile*0.42;
+      ctx.fillStyle='rgba(0,0,0,.45)';
+      ctx.strokeStyle='rgba(255,255,255,.92)';
+      ctx.lineWidth=Math.max(1.5,this.tile/12);
+      ctx.beginPath();
+      ctx.roundRect(cx-r,cy-r,r*2,r*2,this.tile/6);
+      ctx.fill();ctx.stroke();
+      const arrow={sprite:'arrow',root:true,colour:[0,3],values:{2:1,5:dirs[s.control]??0,9:0},direction:(dirs[s.control]??0)*8,frame:0,className:'arrow'};
+      const img=this.tintedImage(arrow,dirs[s.control]??0,1);
+      if(img) ctx.drawImage(img,cx-r*.62,cy-r*.62,r*1.24,r*1.24);
+    }
+    const control=specials[0].control;
+    const label={sprite:'button_'+({up:'move',down:'move',left:'move',right:'move',undo:'undo',restart:'restart',idle:'wait',wait:'wait',menu:'menu'}[control]||control),root:false,colour:[0,3],values:{2:0,5:0,9:0},direction:0,frame:0,className:'button'};
+    const img=this.tintedImage(label,0,((Math.floor(this.tick/12))%3)+1);
+    if(img) {
+      const cx=(minx+maxx+1)/2*this.tile;
+      const y=(maxy+1)*this.tile+this.tile*.25;
+      ctx.drawImage(img,cx-this.tile,y,this.tile*2,this.tile);
     }
   }
 
