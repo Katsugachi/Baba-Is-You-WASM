@@ -800,7 +800,6 @@ end
       ctx.globalAlpha=1;
     }
     this.renderControlSpecials(ctx);
-    this.renderTitle(ctx);
     if(this.mapMode&&this.mapData) {
       const data=this.mapData;
       ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='bold 8px monospace';
@@ -820,6 +819,7 @@ end
         ctx.fillText(String(n.number),cx,cy+1);
       }
     }
+    this.renderTitle(ctx);
   }
 
   renderTitle(ctx) {
