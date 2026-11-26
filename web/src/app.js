@@ -896,6 +896,9 @@ end
     const ctx=this.ctx;
     ctx.fillStyle='rgb(21,24,31)';
     ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
+    const edgebg=this.paletteColor(1,0);
+    ctx.fillStyle=`rgb(${edgebg[0]|0},${edgebg[1]|0},${edgebg[2]|0})`;
+    ctx.fillRect(this.xoffset,this.yoffset,this.width*this.tile,this.height*this.tile);
     const bg=this.paletteColor(this.backcolour[0],this.backcolour[1]);
     ctx.fillStyle=`rgb(${bg[0]|0},${bg[1]|0},${bg[2]|0})`;
     ctx.fillRect(this.xoffset+this.tile,this.yoffset+this.tile,(this.width-2)*this.tile,(this.height-2)*this.tile);
