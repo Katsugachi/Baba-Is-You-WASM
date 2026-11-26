@@ -90,7 +90,11 @@ for sub in ['Themes']:
     for fn in sorted(os.listdir(d)):
         p=os.path.join(d,fn)
         if os.path.isfile(p): texts[f'Data/{sub}/{fn}']=open(p,encoding='utf-8',errors='replace').read()
-bundle={'tiles':tiles,'nameToClass':nameToClass,'levels':levels,'texts':texts}
+spriteFiles={'root':sorted(fn for fn in os.listdir(os.path.join(base,'Sprites')) if fn.endswith('.png'))}
+for world in sorted(os.listdir(wroot)):
+    sd=os.path.join(wroot,world,'Sprites')
+    if os.path.isdir(sd): spriteFiles[world]=sorted(fn for fn in os.listdir(sd) if fn.endswith('.png'))
+bundle={'tiles':tiles,'nameToClass':nameToClass,'levels':levels,'texts':texts,'spriteFiles':spriteFiles}
 os.makedirs(outdir,exist_ok=True)
 with open(os.path.join(outdir,'game-data.json'),'w') as f: json.dump(bundle,f,separators=(',',':'))
 print('tiles',len(tiles),'worlds',{k:len(v) for k,v in levels.items()},'texts',len(texts),'size',os.path.getsize(os.path.join(outdir,'game-data.json')))
