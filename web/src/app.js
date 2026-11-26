@@ -504,6 +504,7 @@ end
     }
     this.callLua('levelborder');
     this.callLua('setunitmap');
+    this.callLua('dynamictiling');
     this.callLua('code');
     this.callLua('effectblock');
     if ((this.store.read('level','general','music') || '') !== '') this.playMusic(this.store.read('level','general','music'),0);
