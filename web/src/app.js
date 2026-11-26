@@ -894,8 +894,7 @@ end
 
   render() {
     const ctx=this.ctx;
-    const edgebg=this.paletteColor(1,0);
-    ctx.fillStyle=`rgb(${edgebg[0]|0},${edgebg[1]|0},${edgebg[2]|0})`;
+    ctx.fillStyle='rgb(21,24,31)';
     ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
     const bg=this.paletteColor(this.backcolour[0],this.backcolour[1]);
     ctx.fillStyle=`rgb(${bg[0]|0},${bg[1]|0},${bg[2]|0})`;
