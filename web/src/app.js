@@ -560,11 +560,11 @@ end
     const args=[0,info.w,info.h,12,this.xoffset,this.yoffset,s.generaldata.fixed,s.generaldata2.fixed,s.generaldata3.fixed,s.generaldata4.fixed,s.generaldata5.fixed,s.spritedata.fixed,s.vardata.fixed,this.screenW,this.screenH];
     this.callLua('init',...args);
     this.callLua('setupmenu',s.editor.fixed,s.editor2.fixed,s.editor3.fixed,s.editor4.fixed,s.editor_selector.fixed,s.editor_placer.fixed,true);
-    this.callLua('__import_level_changes');
     this.callLua('worldinit');
+    this.callLua('clearunits');
+    this.callLua('__import_level_changes');
     this.callLua('handleobjectchanges');
     this.callLua('createobjectpalette');
-    this.callLua('clearunits');
 
     const tileToClass = {};
     for (const [cls,m] of Object.entries(this.bundle.tiles)) tileToClass[m.tile.join(',')] = cls;
@@ -584,6 +584,7 @@ end
       o.direction = p.d * 8;
       this.callLua('addunit',o.fixed,false,true);
     }
+    this.callLua('handleobjectchanges');
     this.callLua('levelborder');
     this.callLua('setunitmap');
     this.callLua('dynamictiling');
@@ -622,7 +623,7 @@ end
       });
     }
     const paths=Number(meta.paths)||0;
-    for(let i=0;i<paths;i++) data.paths.push({x:Number(read('paths',i,'X'))||0,y:Number(read('paths',i,'Y'))||0});
+    for(let i=0;i<paths;i++) data.paths.push({x:Number(read('paths',i,'X'))||0,y:Number(read('paths',i,'Y'))||0,style:Number(read('paths',i,'style'))||0,dir:Number(read('paths',i,'dir'))||0});
     data.nodeAt=new Map(data.nodes.map(n=>[n.x+','+n.y,n]));
     data.pathSet=new Set(data.paths.map(p=>p.x+','+p.y));
     data.edges=new Map(data.nodes.map(n=>[n.file,new Set()]));
@@ -898,20 +899,41 @@ end
     if(this.mapMode&&this.mapData) {
       const data=this.mapData;
       ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='bold 8px monospace';
+      const pathcol=this.paletteColor(0,3);
+      ctx.fillStyle=`rgba(${pathcol[0]|0},${pathcol[1]|0},${pathcol[2]|0},.92)`;
       for(const p of data.paths) {
-        ctx.fillStyle='rgba(150,120,70,.45)';
-        ctx.fillRect(p.x*this.tile+8,p.y*this.tile+10,8,4);
+        if(p.style===0 && !data.unlocked?.size) continue;
+        const cx=this.xoffset+(p.x+.5)*this.tile,cy=this.yoffset+(p.y+.5)*this.tile;
+        const vertical=data.pathSet.has(p.x+','+(p.y-1))||data.pathSet.has(p.x+','+(p.y+1));
+        const horizontal=data.pathSet.has((p.x-1)+','+p.y)||data.pathSet.has((p.x+1)+','+p.y);
+        for(const o of [-7,0,7]) {
+          if(vertical||!horizontal) ctx.fillRect(Math.round(cx-1.5),Math.round(cy+o-1.5),3,3);
+          if(horizontal) ctx.fillRect(Math.round(cx+o-1.5),Math.round(cy-1.5),3,3);
+        }
       }
       for(const n of data.nodes) {
-        const unlocked=data.unlocked?.has(n.file),done=this.completion(n.file)>=3,selected=n.file===this.mapCursor;
-        const cx=(n.x+.5)*this.tile,cy=(n.y+.5)*this.tile;
-        ctx.fillStyle=done?'#e6d264':unlocked?'#b88746':'#292929';
-        ctx.strokeStyle=selected?'#ffffff':unlocked?'#806040':'#151515';
-        ctx.lineWidth=selected?2:1;
-        ctx.fillRect(cx-9,cy-9,18,18);
-        ctx.strokeRect(cx-9,cy-9,18,18);
-        ctx.fillStyle=done?'#5a4b00':unlocked?'#201000':'#666';
-        ctx.fillText(String(n.number),cx,cy+1);
+        const unlocked=data.unlocked?.has(n.file),done=this.completion(n.file)>=3;
+        const cx=this.xoffset+(n.x+.5)*this.tile,cy=this.yoffset+(n.y+.5)*this.tile;
+        if(!unlocked) {
+          const lc=this.paletteColor(1,1);
+          ctx.strokeStyle=`rgb(${lc[0]|0},${lc[1]|0},${lc[2]|0})`;
+          ctx.lineWidth=2;
+          ctx.strokeRect(cx-8,cy-8,16,16);
+        } else if(n.number>0 && n.style!==2) {
+          ctx.fillStyle=done?'#e6d264':'rgba(255,255,255,.95)';
+          ctx.font='13px BabaFont,monospace';
+          ctx.textAlign='center';ctx.textBaseline='middle';
+          ctx.fillText(String(n.number).padStart(2,'0'),cx,cy+1);
+        }
+      }
+      ctx.fillStyle='rgba(255,255,255,.95)';
+      ctx.font='14px BabaFont,monospace';
+      ctx.textAlign='left';ctx.textBaseline='top';
+      ctx.fillText('MAP',13,10);
+      const required=Number(this.levelMeta(this.world,this.level).unlockcount)||0;
+      if(required) {
+        ctx.textAlign='right';
+        ctx.fillText('0/'+required,this.canvas.width-18,10);
       }
     }
     this.renderTransition(ctx);
