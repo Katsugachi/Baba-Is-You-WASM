@@ -598,6 +598,19 @@ end
     this.mapData=this.readMapData();
     this.mapMode=!!this.mapData;
     if(this.mapMode) this.refreshMapUnlocks();
+    this.specials=[];
+    const ldfile=this.store.files[`Data/Worlds/${world}/${level}.ld`]||{};
+    const specialCount=Number(ldfile.general?.specials)||0;
+    for(let i=0;i<specialCount;i++) {
+      const data=ldfile.specials?.[`${i}data`]||'';
+      this.specials.push({x:Number(ldfile.specials?.[`${i}X`])||0,y:Number(ldfile.specials?.[`${i}Y`])||0,z:Number(ldfile.specials?.[`${i}Z`])||0,data});
+    }
+    this.levelImages=[];
+    const imageCount=Number(ldfile.images?.total)||0;
+    for(let i=0;i<imageCount;i++) {
+      const name=ldfile.images?.[String(i)]||'';
+      if(name) this.levelImages.push(name);
+    }
     this.started = true;
     const selector=document.getElementById('level-select');
     if (selector) selector.value=this.world+'/'+this.level;
@@ -877,6 +890,8 @@ end
     const bg=this.paletteColor(this.backcolour[0],this.backcolour[1]);
     ctx.fillStyle=`rgb(${bg[0]|0},${bg[1]|0},${bg[2]|0})`;
     ctx.fillRect(this.xoffset+this.tile,this.yoffset+this.tile,(this.width-2)*this.tile,(this.height-2)*this.tile);
+    this.renderLevelImages(ctx);
+    this.renderLevelSpecials(ctx);
     if (!this.started) return;
     const objs=[...this.objects.values()].filter(o=>!o.system&&!o.dead&&o.visible!==false&&o.className!=='edge');
     objs.sort((a,b)=>(a.values[14]-b.values[14])||(a.fixed-b.fixed));
@@ -946,6 +961,51 @@ end
     }
     this.renderTransition(ctx);
     this.renderTitle(ctx);
+  }
+
+  renderLevelImages(ctx) {
+    if(!this.levelImages?.length) return;
+    const x=this.xoffset+this.tile,y=this.yoffset+this.tile;
+    const w=(this.width-2)*this.tile,h=(this.height-2)*this.tile;
+    const frame=((Math.floor(this.tick/24))%3)+1;
+    for(const name of this.levelImages) {
+      const img=this.getImage(`${DATA_ROOT}Worlds/${this.world}/Images/${name}_${frame}.png`)||this.getImage(`${DATA_ROOT}Worlds/${this.world}/Images/${name}_1.png`);
+      if(img) ctx.drawImage(img,Math.round(x),Math.round(y),Math.round(w),Math.round(h));
+    }
+  }
+
+  renderLevelSpecials(ctx) {
+    for(const sp of this.specials||[]) {
+      const parts=sp.data.split(',');
+      if(parts[0]!=='flower') continue;
+      const img=this.getImage('web/assets/big_flower.png');
+      if(!img) continue;
+      const flowerColor=Number(parts[2])||2;
+      const col=this.paletteColor(4,flowerColor===2?2:0);
+      const key=`special-flower:${col.join(',')}`;
+      this.specialCache=this.specialCache||new Map();
+      let sprite=this.specialCache.get(key);
+      if(!sprite) {
+        sprite=document.createElement('canvas');
+        sprite.width=img.width;sprite.height=img.height;
+        const c=sprite.getContext('2d');
+        c.drawImage(img,0,0);
+        try {
+          const pixels=c.getImageData(0,0,img.width,img.height);
+          for(let i=0;i<pixels.data.length;i+=4) {
+            const lum=pixels.data[i]/255;
+            pixels.data[i]=col[0]*lum;
+            pixels.data[i+1]=col[1]*lum;
+            pixels.data[i+2]=col[2]*lum;
+          }
+          c.putImageData(pixels,0,0);
+        } catch(_) {}
+        this.specialCache.set(key,sprite);
+      }
+      const cx=this.xoffset+(sp.x+.5)*this.tile,cy=this.yoffset+(sp.y+.5)*this.tile;
+      const size=this.tile*((Number(parts[1])||3)+1);
+      ctx.drawImage(sprite,Math.round(cx-size/2),Math.round(cy-size*0.53),size,size*img.height/img.width);
+    }
   }
 
   drawMapCursor(ctx,cx,cy) {
