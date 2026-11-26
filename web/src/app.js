@@ -530,7 +530,7 @@ end
     this.tilemap = this.makeTilemap(info.w, info.h);
     this.canvas.width = this.screenW;
     this.canvas.height = this.screenH;
-    const zoom=Math.max(1,Math.floor(Math.min(this.screenW/(info.w*24),this.screenH/(info.h*24))));
+    const zoom=Math.min(2,Math.max(1,Math.floor(Math.min(this.screenW/(Math.max(1,info.w-2)*24),this.screenH/(Math.max(1,info.h-2)*24)))));
     this.tile=24*zoom;
     this.xoffset=Math.max(0,(this.screenW-info.w*this.tile)/2);
     this.yoffset=Math.max(0,(this.screenH-info.h*this.tile)/2);
