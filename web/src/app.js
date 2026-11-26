@@ -536,6 +536,9 @@ end
     this.store.setFile('level', `Data/Worlds/${world}/${level}.ld`);
     this.store.setFile('world', `Data/Worlds/${world}/world_data.txt`);
     this.store.setFile('lang', 'Data/Languages/lang_en.txt');
+    const paletteName=this.store.read('level','general','palette')||'default.png';
+    const paletteRoot=Number(this.store.read('level','general','paletteroot')||1)!==0;
+    await this.loadPalette(paletteName,paletteRoot,world);
     try { localStorage.setItem('baba-wasm-current', JSON.stringify({world, level})); } catch (_) {}
     this.parentMapCache={};
     this.mapData=null;
@@ -990,7 +993,7 @@ end
           const keytext={undo:'Z',pause:'P',restart:'R',confirm:'ENTER'}[base]||'';
           if(keytext) {
             ctx.fillStyle='rgba(255,255,255,.92)';
-            ctx.font=`bold ${Math.max(7,this.tile*(keytext.length>1?0.24:0.42))}px monospace`;
+            ctx.font=`${Math.max(8,this.tile*(keytext.length>1?0.28:0.46))}px BabaFont,monospace`;
             ctx.textAlign='center';ctx.textBaseline='middle';
             ctx.fillText(keytext,cx,cy+1);
           } else if(wide) {
@@ -1003,23 +1006,38 @@ end
           }
         }
       }
-      const label={sprite:'button_'+group.family,root:false,colour:[0,3],values:{2:0,5:0,9:0},direction:0,frame:0,className:'button'};
-      const img=this.tintedImage(label,0,((Math.floor(this.tick/12))%3)+1);
-      if(img) {
-        const cx=this.xoffset+(minx+maxx+1)/2*this.tile;
-        const y=this.yoffset+(maxy+1)*this.tile+this.tile*.25;
-        ctx.drawImage(img,cx-this.tile,y,this.tile*2,this.tile);
+      const cx=this.xoffset+(minx+maxx+1)/2*this.tile;
+      const y=this.yoffset+(maxy+1)*this.tile+this.tile*.25;
+      if(group.family==='menu') {
+        ctx.fillStyle='rgba(255,255,255,.92)';
+        ctx.font='11px BabaFont,monospace';
+        ctx.textAlign='center';ctx.textBaseline='middle';
+        ctx.fillText('PAUSE',cx,y+this.tile*.48);
+      } else {
+        const label={sprite:'button_'+group.family,root:false,colour:[0,3],values:{2:0,5:0,9:0},direction:0,frame:0,className:'button'};
+        const img=this.tintedImage(label,0,((Math.floor(this.tick/12))%3)+1);
+        if(img) ctx.drawImage(img,cx-this.tile,y,this.tile*2,this.tile);
       }
     }
   }
 
-  async loadPalette() {
-    const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=encodeURI(DATA_ROOT+'Palettes/default.png')});
+  async loadPalette(name='default.png',root=true,world=this.world) {
+    const path=(root?DATA_ROOT+'Palettes/':`${DATA_ROOT}Worlds/${world}/Palettes/`)+name;
+    this.paletteCache=this.paletteCache||new Map();
+    if(this.paletteCache.has(path)) {
+      this.palette=this.paletteCache.get(path);
+      this.paletteReady=true;
+      return;
+    }
+    const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=encodeURI(path)});
     const c=document.createElement('canvas');c.width=img.width;c.height=img.height;
     const x=c.getContext('2d');x.drawImage(img,0,0);
     const d=x.getImageData(0,0,img.width,img.height).data;
-    this.palette=new Uint8Array(img.width*img.height*3);
-    for(let i=0,j=0;i<d.length;i+=4,j+=3){this.palette[j]=d[i];this.palette[j+1]=d[i+1];this.palette[j+2]=d[i+2]}
+    const palette=new Uint8Array(img.width*img.height*3);
+    for(let i=0,j=0;i<d.length;i+=4,j+=3){palette[j]=d[i];palette[j+1]=d[i+1];palette[j+2]=d[i+2]}
+    this.palette=palette;
+    this.paletteCache.set(path,palette);
+    this.tinted.clear();
     this.paletteReady=true;
   }
 
