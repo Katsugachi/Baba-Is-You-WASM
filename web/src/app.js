@@ -197,7 +197,9 @@ class Runtime {
       MF_resetlog: () => {}, MF_savelog: () => {},
       MF_create: cls => R.makeObject(cls).fixed,
       MF_emptycreate: (cls, x, y) => {
-        const o = R.makeObject(cls); o.values[3] = x || 0; o.values[4] = y || 0; return o.fixed;
+        const o = R.makeObject(cls); o.values[3] = x || 0; o.values[4] = y || 0;
+        o.x=(o.values[3]+0.5)*R.tile; o.y=(o.values[4]+0.5)*R.tile; o.positioned=true;
+        return o.fixed;
       },
       MF_specialcreate: cls => { const o = R.makeObject(cls); o.pixel = true; return o.fixed; },
       MF_effectcreate: cls => { const o = R.makeObject(cls); o.pixel = true; return o.fixed; },
@@ -569,6 +571,7 @@ end
     for (const p of placements) {
       const o=this.makeObject(p.cls);
       o.values[0]=1; o.values[3]=p.x; o.values[4]=p.y; o.values[5]=p.d; o.values[20]=-1;
+      o.x=(p.x+0.5)*this.tile; o.y=(p.y+0.5)*this.tile; o.positioned=true;
       o.direction = p.d * 8;
       this.callLua('addunit',o.fixed,false,true);
     }
@@ -862,8 +865,13 @@ end
     objs.sort((a,b)=>(a.values[14]-b.values[14])||(a.fixed-b.fixed));
     ctx.imageSmoothingEnabled=false;
     for (const o of objs) {
-      const x=o.pixel ? o.x : (o.values[3]+0.5)*this.tile;
-      const y=o.pixel ? o.y : (o.values[4]+0.5)*this.tile;
+      if(!o.pixel&&o.positioned&&o.values[21]===0) {
+        const tx=(o.values[3]+0.5)*this.tile,ty=(o.values[4]+0.5)*this.tile;
+        if(Math.abs(tx-o.x)+Math.abs(ty-o.y)<0.4) { o.x=tx;o.y=ty; }
+        else { o.x+=(tx-o.x)*0.35;o.y+=(ty-o.y)*0.35; }
+      }
+      const x=o.pixel||o.positioned ? o.x : (o.values[3]+0.5)*this.tile;
+      const y=o.pixel||o.positioned ? o.y : (o.values[4]+0.5)*this.tile;
       const frame=((Math.floor(this.tick/12)+(o.frame||0))%3)+1;
       let img=this.tintedImage(o,this.spriteDir(o),frame);
       if (!img) img=this.tintedImage(o,0,frame) || this.tintedImage(o,this.spriteDir(o),1) || this.tintedImage(o,0,1);
