@@ -605,6 +605,7 @@ end
       const data=ldfile.specials?.[`${i}data`]||'';
       this.specials.push({x:Number(ldfile.specials?.[`${i}X`])||0,y:Number(ldfile.specials?.[`${i}Y`])||0,z:Number(ldfile.specials?.[`${i}Z`])||0,data});
     }
+    this.particleType=ldfile.general?.particles||'';
     this.levelImages=[];
     const imageCount=Number(ldfile.images?.total)||0;
     for(let i=0;i<imageCount;i++) {
@@ -892,6 +893,7 @@ end
     const bg=this.paletteColor(this.backcolour[0],this.backcolour[1]);
     ctx.fillStyle=`rgb(${bg[0]|0},${bg[1]|0},${bg[2]|0})`;
     ctx.fillRect(this.xoffset+this.tile,this.yoffset+this.tile,(this.width-2)*this.tile,(this.height-2)*this.tile);
+    this.renderWorldParticles(ctx);
     this.renderLevelImages(ctx);
     this.renderLevelSpecials(ctx);
     if (!this.started) return;
@@ -970,6 +972,37 @@ end
     this.renderTitle(ctx);
   }
 
+  renderWorldParticles(ctx) {
+    if(this.particleType!=='world') return;
+    const img=this.getImage('web/assets/big_flower.png');
+    if(!img) return;
+    const spots=[[.08,.22,7.2,0],[.32,.12,6.4,1],[.58,.18,7.8,0],[.84,.16,6.8,1],[.18,.58,7.4,1],[.52,.55,6.7,0],[.82,.58,7.5,1]];
+    for(const [fx,fy,sizeTiles,dark] of spots) {
+      const col=this.paletteColor(4,dark?0:1);
+      const key=`world-flower:${col.join(',')}`;
+      this.specialCache=this.specialCache||new Map();
+      let sprite=this.specialCache.get(key);
+      if(!sprite) {
+        sprite=document.createElement('canvas');sprite.width=img.width;sprite.height=img.height;
+        const c=sprite.getContext('2d');c.drawImage(img,0,0);
+        try {
+          const pixels=c.getImageData(0,0,img.width,img.height);
+          for(let i=0;i<pixels.data.length;i+=4) {
+            const lum=pixels.data[i]/255;
+            pixels.data[i]=col[0]*lum;pixels.data[i+1]=col[1]*lum;pixels.data[i+2]=col[2]*lum;
+          }
+          c.putImageData(pixels,0,0);
+        } catch(_) {}
+        this.specialCache.set(key,sprite);
+      }
+      const size=this.tile*sizeTiles;
+      const cx=this.xoffset+this.width*this.tile*fx,cy=this.yoffset+this.height*this.tile*fy;
+      ctx.globalAlpha=.72;
+      ctx.drawImage(sprite,Math.round(cx-size/2),Math.round(cy-size*.53),size,size*img.height/img.width);
+      ctx.globalAlpha=1;
+    }
+  }
+
   renderLevelImages(ctx) {
     if(!this.levelImages?.length) return;
     const x=this.xoffset+this.tile,y=this.yoffset+this.tile;
@@ -987,8 +1020,7 @@ end
       if(parts[0]!=='flower') continue;
       const img=this.getImage('web/assets/big_flower.png');
       if(!img) continue;
-      const flowerColor=Number(parts[2])||2;
-      const col=this.paletteColor(4,flowerColor===2?2:0);
+      const col=this.paletteColor(Number(parts[1])||0,Number(parts[2])||3);
       const key=`special-flower:${col.join(',')}`;
       this.specialCache=this.specialCache||new Map();
       let sprite=this.specialCache.get(key);
@@ -1010,7 +1042,7 @@ end
         this.specialCache.set(key,sprite);
       }
       const cx=this.xoffset+(sp.x+.5)*this.tile,cy=this.yoffset+(sp.y+.5)*this.tile;
-      const size=this.tile*((Number(parts[1])||3)+1);
+      const size=this.tile*2.2;
       ctx.drawImage(sprite,Math.round(cx-size/2),Math.round(cy-size*0.53),size,size*img.height/img.width);
     }
   }
