@@ -636,6 +636,8 @@ end
         file,x:Number(read('levels',i,'X'))||0,y:Number(read('levels',i,'Y'))||0,
         state:Number(read('levels',i,'state'))||0,number:Number(read('levels',i,'number'))||0,
         style:Number(read('levels',i,'style'))||0,
+        colour:String(read('levels',i,'colour')||'0,3').split(',').map(Number),
+        clearcolour:String(read('levels',i,'clearcolour')||read('levels',i,'colour')||'0,3').split(',').map(Number),
       });
     }
     const paths=Number(meta.paths)||0;
@@ -922,32 +924,37 @@ end
       for(const p of data.paths) {
         if(p.style===0) continue;
         const cx=this.xoffset+(p.x+.5)*this.tile,cy=this.yoffset+(p.y+.5)*this.tile;
-        const vertical=data.pathSet.has(p.x+','+(p.y-1))||data.pathSet.has(p.x+','+(p.y+1));
-        const horizontal=data.pathSet.has((p.x-1)+','+p.y)||data.pathSet.has((p.x+1)+','+p.y);
-        for(const o of [-7,0,7]) {
-          if(vertical||!horizontal) ctx.fillRect(Math.round(cx-1.5),Math.round(cy+o-1.5),3,3);
-          if(horizontal) ctx.fillRect(Math.round(cx+o-1.5),Math.round(cy-1.5),3,3);
+        let dir=0;
+        if(data.pathSet.has((p.x+1)+','+p.y)||data.nodeAt.has((p.x+1)+','+p.y)) dir+=1;
+        if(data.pathSet.has(p.x+','+(p.y-1))||data.nodeAt.has(p.x+','+(p.y-1))) dir+=2;
+        if(data.pathSet.has((p.x-1)+','+p.y)||data.nodeAt.has((p.x-1)+','+p.y)) dir+=4;
+        if(data.pathSet.has(p.x+','+(p.y+1))||data.nodeAt.has(p.x+','+(p.y+1))) dir+=8;
+        const line={sprite:'line',root:true,colour:[0,3],values:{2:1,5:dir,9:0},direction:dir,frame:0,className:'line'};
+        const img=this.tintedImage(line,dir,1)||this.tintedImage(line,0,1);
+        if(img) ctx.drawImage(img,Math.round(cx-this.tile/2),Math.round(cy-this.tile/2),this.tile,this.tile);
+      }
+      for(const n of data.nodes) {
+        const unlocked=data.unlocked?.has(n.file),done=this.completion(n.file)>=3;
+        const cx=this.xoffset+(n.x+.5)*this.tile,cy=this.yoffset+(n.y+.5)*this.tile;
+        if(n.state===0) continue;
+        const nc=this.paletteColor(...(done?n.clearcolour:n.colour));
+        const size=this.tile*.76;
+        ctx.fillStyle=`rgb(${nc[0]|0},${nc[1]|0},${nc[2]|0})`;
+        ctx.beginPath();
+        ctx.roundRect(cx-size/2,cy-size/2,size,size,Math.max(2,this.tile/8));
+        ctx.fill();
+        if(unlocked && n.number>0) {
+          ctx.fillStyle='rgba(255,255,255,.95)';
+          ctx.font=`${Math.max(10,this.tile*.54)}px BabaFont,monospace`;
+          ctx.textAlign='center';ctx.textBaseline='middle';
+          const label=n.number<10?String(n.number).padStart(2,'0'):n.number.toString(16).toUpperCase();
+          ctx.fillText(label,cx,cy+1);
         }
       }
       const curNode=data.nodes.find(n=>n.file===this.mapCursor);
       if(curNode) {
         const cx=this.xoffset+(curNode.x+.5)*this.tile,cy=this.yoffset+(curNode.y+.5)*this.tile;
         this.drawMapCursor(ctx,cx,cy);
-      }
-      for(const n of data.nodes) {
-        const unlocked=data.unlocked?.has(n.file),done=this.completion(n.file)>=3;
-        const cx=this.xoffset+(n.x+.5)*this.tile,cy=this.yoffset+(n.y+.5)*this.tile;
-        if(!unlocked) {
-          const lc=this.paletteColor(1,1);
-          ctx.strokeStyle=`rgb(${lc[0]|0},${lc[1]|0},${lc[2]|0})`;
-          ctx.lineWidth=2;
-          ctx.strokeRect(cx-8,cy-8,16,16);
-        } else if(n.number>0 && n.style!==2) {
-          ctx.fillStyle=done?'#e6d264':'rgba(255,255,255,.95)';
-          ctx.font='13px BabaFont,monospace';
-          ctx.textAlign='center';ctx.textBaseline='middle';
-          ctx.fillText(String(n.number).padStart(2,'0'),cx,cy+1);
-        }
       }
       ctx.fillStyle='rgba(255,255,255,.95)';
       ctx.font='14px BabaFont,monospace';
